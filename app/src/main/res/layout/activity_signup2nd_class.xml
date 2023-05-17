@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activities.LoginSignup.Signup2ndClass"
+    android:transitionName="transition_signup_2nd_class"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/signup_2nd_class_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/signup_2nd_class_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:transitionName="transition_back_arrow_btn"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/signup_2nd_class_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_black"
+                android:text="@string/criar_nconta"
+                android:textAllCaps="true"
+                android:textColor="@color/mainColor"
+                android:textSize="50sp"
+                android:transitionName="transition_title_text"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/signup_2nd_class_logo_image"
+                android:layout_width="150dp"
+                android:layout_height="140dp"
+                android:src="@mipmap/logo"
+                android:layout_alignParentEnd="true"
+                android:transitionName="transition_logo"
+                android:contentDescription="@string/logo_boi_no_bolso" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/insira_seu_numero_de_telefone"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/signup_2nd_class_country_code_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_rememberLastSelection="true"
+            app:ccp_showFlag="true"
+            app:ccp_showNameCode="true"
+            app:ccp_showFullName="true"
+            android:background="@drawable/black_border"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_2nd_class_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/telefone"
+            app:startIconDrawable="@drawable/baseline_phone_24"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconTint="@color/black"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:boxStrokeWidthFocused="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/signup_2nd_class_next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="18sp"
+            android:text="@string/proximo"
+            android:backgroundTint="@color/mainColor"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:elevation="5dp"
+            android:transitionName="transition_next_btn"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/bois_no_pasto" />
+
+</RelativeLayout>
+
+
+
+
+

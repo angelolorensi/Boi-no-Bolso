@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginSignup.VerifyOTP">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="558dp"
+        android:background="@drawable/backgroundphone">
+
+        <ImageView
+            android:id="@+id/verify_otp_close_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/baseline_close_24"
+            android:transitionName="transition_back_arrow_btn"
+            android:contentDescription="@string/botao_de_voltar" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="211dp"
+            app:srcCompat="@drawable/logo_redondo"
+            tools:layout_editor_absoluteX="-2dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:contentDescription="@string/logo_boi_no_bolso" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/bungee"
+            android:text="@string/verificar_numero_de_telefone"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/antic"
+            android:text="@string/digite_o_codigo_de_verifica_o_caso_nao_seja_verificado_automaticamente"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-82dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/layout1">
+
+        <com.chaos.view.PinView
+            android:id="@+id/verify_otp_pin_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:itemCount="6"
+            app:itemWidth="50dp"
+            app:itemHeight="50dp"
+            app:lineColor="@color/black"
+            android:itemBackground="@color/white"
+            style="@style/PinWidget.PinView"
+            android:inputType="number"
+            android:cursorVisible="true"
+            app:cursorColor="@color/black"
+            app:hideLineWhenFilled="true"
+            app:itemRadius="5dp"/>
+
+        <Button
+            android:id="@+id/verify_otp_verify_code_btn"
+            android:layout_width="330dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/verify_otp_pin_view"
+            android:layout_marginTop="15dp"
+            android:text="@string/verificar_codigo"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"/>
+
+        <ProgressBar
+            android:id="@+id/verify_otp_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verify_otp_verify_code_btn"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

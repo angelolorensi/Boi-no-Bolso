@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "116483538145",
+    "firebase_url": "https://boi-no-bolso-default-rtdb.firebaseio.com",
+    "project_id": "boi-no-bolso",
+    "storage_bucket": "boi-no-bolso.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116483538145:android:a9d884cab93e5d54210ba0",
+        "android_client_info": {
+          "package_name": "com.example.boinobolsov02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116483538145-dj5pqno68hh5oto5ii3vn4hgclu1jbpv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz4uurknjQNTM0GvPP2VDAp8v-8arIGdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116483538145-dj5pqno68hh5oto5ii3vn4hgclu1jbpv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
