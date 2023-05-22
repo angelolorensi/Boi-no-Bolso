@@ -2,7 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/antic</item>
+        <item>@font/baloo</item>
         <item>@font/bangers</item>
+        <item>@font/bree_serif</item>
         <item>@font/bungee</item>
         <item>@font/muli</item>
         <item>@font/muli_black</item>

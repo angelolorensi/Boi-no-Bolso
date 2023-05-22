@@ -44,4 +44,27 @@
     <string name="confirmar_senha">Confirmar senha</string>
     <string name="ok">Ok</string>
     <string name="reset_de_senha_desc">Digite seu numero de telefone e receba o codigo para resetar sua senha</string>
+    <string name="inicio">Início</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="categorias">Categorias</string>
+    <string name="minha_conta">Minha Conta</string>
+    <string name="sair">Sair</string>
+    <string name="avalie_nos">Avalie-nos</string>
+    <string name="compartilhe">Compartilhe</string>
+    <string name="boi_no_bolso">Boi no Bolso</string>
+    <string name="inicio_caps">INÍCIO</string>
+    <string name="pesquisar_caps">PESQUISAR</string>
+    <string name="categorias_caps">CATEGORIAS</string>
+    <string name="perfil">Perfil</string>
+    <string name="entrar_caps">ENTRAR</string>
+    <string name="minha_conta_caps">MINHA CONTA</string>
+    <string name="sair_caps">SAIR</string>
+    <string name="bovinos_caps">BOVINOS</string>
+    <string name="equinos_caps">EQUINOS</string>
+    <string name="ovinos_caps">OVINOS</string>
+    <string name="suinos_caps">SUINOS</string>
+    <string name="outros">Outros</string>
+    <string name="compartilhe_caps">COMPARTILHE</string>
+    <string name="avalie_nos_caps">AVALIE-NOS</string>
+    <string name="bois_angus">Bois Angus</string>
 </resources>

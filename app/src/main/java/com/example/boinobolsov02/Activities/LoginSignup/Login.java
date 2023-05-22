@@ -26,6 +26,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.hbb20.CountryCodePicker;
 
+import java.util.HashMap;
 import java.util.Objects;
 
 public class Login extends AppCompatActivity {
@@ -51,11 +52,21 @@ public class Login extends AppCompatActivity {
         phoneNo = findViewById(R.id.login_phone_number);
         password = findViewById(R.id.login_password);
         rememberMe = findViewById(R.id.login_remember_me);
+        passwordEditTxt = findViewById(R.id.login_password_edit_txt);
+        phoneNoEditTxt = findViewById(R.id.login_phone_number_edit_txt);
 
         //Methods
         goToForgotPasswordScreen();
         goToSignUpScreen();
         login();
+
+        //Check if phoneNo and password is saved in Shared Preferences
+        SessionManager sessionManager = new SessionManager(Login.this, SessionManager.SESSION_REMEMBERME);
+        if (sessionManager.checkRememberMe()){
+            HashMap<String,String> rememberMeDetails = sessionManager.getRememberMeDetailsFromSession();
+            phoneNoEditTxt.setText(rememberMeDetails.get(SessionManager.KEY_SESSIONPHONENUMBER));
+            passwordEditTxt.setText(rememberMeDetails.get(SessionManager.KEY_SESSIONPASSWORD));
+        }
     }
 
     void login(){
