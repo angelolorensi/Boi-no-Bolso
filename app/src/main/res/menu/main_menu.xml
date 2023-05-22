@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/inicio_caps"
+            android:icon="@drawable/baseline_menu_24"/>
+        <item
+            android:id="@+id/nav_search"
+            android:title="@string/pesquisar_caps"
+            android:icon="@drawable/baseline_search_24"/>
+        <item
+            android:id="@+id/nav_categories"
+            android:title="@string/categorias_caps"
+            android:icon="@drawable/baseline_category_24"/>
+
+    </group>
+
+    <item android:title="@string/perfil">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_login"
+                        android:title="@string/entrar_caps"
+                        android:icon="@drawable/baseline_login_24"/>
+                    <item
+                        android:id="@+id/nav_profile"
+                        android:title="@string/minha_conta_caps"
+                        android:icon="@drawable/baseline_person_24"/>
+                    <item
+                        android:id="@+id/nav_logout"
+                        android:title="@string/sair_caps"
+                        android:icon="@drawable/baseline_logout_24"/>
+                </group>
+            </menu>
+    </item>
+
+    <item android:title="@string/categorias">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_restaurants"
+                    android:title="@string/bovinos_caps"
+                    android:icon="@drawable/cow_icon"/>
+                <item
+                    android:id="@+id/nav_bank"
+                    android:title="@string/equinos_caps"
+                    android:icon="@drawable/horse_icon"/>
+                <item
+                    android:id="@+id/nav_education"
+                    android:title="@string/ovinos_caps"
+                    android:icon="@drawable/sheep_icon"/>
+                <item
+                    android:id="@+id/nav_shops"
+                    android:title="@string/suinos_caps"
+                    android:icon="@drawable/pig_icon"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/outros">
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="@string/compartilhe_caps"
+                    android:icon="@drawable/baseline_share_24"/>
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:title="@string/avalie_nos_caps"
+                    android:icon="@drawable/baseline_star_rate_24"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

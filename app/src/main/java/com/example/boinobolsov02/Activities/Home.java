@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +14,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.boinobolsov02.HelperClasses.Home.ListingsAdapter;
+import com.example.boinobolsov02.HelperClasses.Home.ListingsHelper;
 import com.example.boinobolsov02.R;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -23,6 +29,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     DrawerLayout drawerLayout;
     ImageView menuIcon, addIcon;
     LinearLayout contentView;
+    RecyclerView listingsRecycler;
+    RecyclerView.Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +43,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         addIcon = findViewById(R.id.home_add_icon);
         menuIcon = findViewById(R.id.home_menu_icon);
         contentView = findViewById(R.id.home_content);
+        listingsRecycler = findViewById(R.id.home_listings_recycler);
 
         //Methods
         navigationDrawer();
+        listingsRecycler();
     }
 
     private void navigationDrawer() {
@@ -59,6 +69,22 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         animateNavigationDrawer();
 
+    }
+
+    private void listingsRecycler(){
+
+        listingsRecycler.setHasFixedSize(true);
+        listingsRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        ArrayList<ListingsHelper> listings = new ArrayList<>();
+
+        listings.add(new ListingsHelper(R.drawable.bois_angus, "Bois Angus", "Angus", "Pronto para Abate", "18 cabeças", "R$2000/cabeça"));
+        listings.add(new ListingsHelper(R.drawable.cavalo_quarto_de_milha, "Cavalo Quarto de Milha", "Quarto de Milha", "5 anos", "1 cabeça", "R$10000"));
+        listings.add(new ListingsHelper(R.drawable.ovelha_suffolk, "Ovelhas", "Suffolk", "Pronto para Abate", "6 cabeças", "R$600/cabeça"));
+        listings.add(new ListingsHelper(R.drawable.porco_landrace, "Porco", "Landrace", "Pronto para Abate", "5 cabeças", "R$300/cabeça"));
+
+        adapter = new ListingsAdapter(listings);
+        listingsRecycler.setAdapter(adapter);
     }
 
     private void animateNavigationDrawer() {
