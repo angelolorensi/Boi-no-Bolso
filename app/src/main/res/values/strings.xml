@@ -1,4 +1,27 @@
 <resources>
+    <string-array name="maturitySpinner">
+        <item> </item>
+        <item>0-1 anos</item>
+        <item>1-2 anos</item>
+        <item>2-3 anos</item>
+        <item>3 anos ou mais</item>
+        <item>Pronto para abate</item>
+    </string-array>
+
+    <string-array name="breedSpinner">
+        <item> </item>
+        <item>Bovino</item>
+        <item>Equino</item>
+        <item>Ovino</item>
+        <item>Suíno</item>
+    </string-array>
+
+    <array name="listingStepper">
+        <item>Informações</item>
+        <item>Localização</item>
+        <item>Pagamento</item>
+    </array>
+
     <string name="app_name">Boi no Bolso V0.2</string>
     <string name="slogan">O app de venda de gado do pecuarista brasileiro!</string>
     <string name="logo">Boi no Bolso</string>
@@ -67,4 +90,5615 @@
     <string name="compartilhe_caps">COMPARTILHE</string>
     <string name="avalie_nos_caps">AVALIE-NOS</string>
     <string name="bois_angus">Bois Angus</string>
+    <string name="criar_anuncio">Criar Anúncio</string>
+    <string name="quantidade_de_animais">Quantidade de animais</string>
+    <string name="selecionar_imagem_do_an_ncio">Selecionar imagem do anúncio</string>
+    <string name="selecione_o_tipo_de_animal">Selecione o tipo de animal :</string>
+    <string name="selecione_a_idade_media_dos_animais">Selecione a idade média dos animais :</string>
+    <string name="digite_o_titulo_aqui">Digite o titulo aqui</string>
+    <string name="endereco_desc">Endereço :</string>
+    <string name="endereco_hint">Digite seu endereço aqui</string>
+    <string name="bairro">Bairro :</string>
+    <string name="bairro_hint">Digite seu bairro aqui</string>
+    <string name="cidade">Cidade :</string>
+    <string name="cidade_hint">Digite sua cidade aqui</string>
+    <string name="digite_seu_cep_aqui">Digite seu CEP aqui</string>
+    <string name="cep">CEP :</string>
+    <string name="estado">Estado</string>
+    <string name="permitir_venda_de_unidades_separadas">Permitir venda de unidades separadas</string>
+    <string name="opcoes_de_venda">Opções de venda</string>
+
+    <string-array name="ufs">
+        <item>Selecione um Estado</item>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
+    </string-array>
+
+    <string-array name="cities_array">
+        <item>Abadia de Goiás</item>
+        <item>Abadia dos Dourados</item>
+        <item>Abadiânia</item>
+        <item>Abaetetuba</item>
+        <item>Abaeté</item>
+        <item>Abaiara</item>
+        <item>Abaré</item>
+        <item>Abatiá</item>
+        <item>Abaíra</item>
+        <item>Abdon Batista</item>
+        <item>Abel Figueiredo</item>
+        <item>Abelardo Luz</item>
+        <item>Abre Campo</item>
+        <item>Abreu e Lima</item>
+        <item>Abreulândia</item>
+        <item>Acaiaca</item>
+        <item>Acajutiba</item>
+        <item>Acarapé</item>
+        <item>Acaraú</item>
+        <item>Acari</item>
+        <item>Acará</item>
+        <item>Acauã</item>
+        <item>Aceguá</item>
+        <item>Acopiara</item>
+        <item>Acorizal</item>
+        <item>Acrelândia</item>
+        <item>Acreúna</item>
+        <item>Adamantina</item>
+        <item>Adelândia</item>
+        <item>Adolfo</item>
+        <item>Adrianópolis</item>
+        <item>Adustina</item>
+        <item>Afogados da Ingazeira</item>
+        <item>Afonso Bezerra</item>
+        <item>Afonso Cláudio</item>
+        <item>Afonso Cunha</item>
+        <item>Afrânio</item>
+        <item>Afuá</item>
+        <item>Agrestina</item>
+        <item>Agricolândia</item>
+        <item>Agrolândia</item>
+        <item>Agronômica</item>
+        <item>Aguanil</item>
+        <item>Aguaí</item>
+        <item>Água Azul do Norte</item>
+        <item>Água Boa</item>
+        <item>Água Boa</item>
+        <item>Água Branca</item>
+        <item>Água Branca</item>
+        <item>Água Branca</item>
+        <item>Água Clara</item>
+        <item>Água Comprida</item>
+        <item>Água Doce</item>
+        <item>Água Doce do Maranhão</item>
+        <item>Água Doce do Norte</item>
+        <item>Água Fria</item>
+        <item>Água Fria de Goiás</item>
+        <item>Água Limpa</item>
+        <item>Água Nova</item>
+        <item>Água Preta</item>
+        <item>Água Santa</item>
+        <item>Águas Belas</item>
+        <item>Águas Formosas</item>
+        <item>Águas Frias</item>
+        <item>Águas Lindas de Goiás</item>
+        <item>Águas Mornas</item>
+        <item>Águas Vermelhas</item>
+        <item>Águas da Prata</item>
+        <item>Águas de Chapecó</item>
+        <item>Águas de Lindóia</item>
+        <item>Águas de Santa Bárbara</item>
+        <item>Águas de São Pedro</item>
+        <item>Agudo</item>
+        <item>Agudos</item>
+        <item>Agudos do Sul</item>
+        <item>Aguiar</item>
+        <item>Aguiarnópolis</item>
+        <item>Águia Branca</item>
+        <item>Aimorés</item>
+        <item>Aiquara</item>
+        <item>Aiuaba</item>
+        <item>Aiuruoca</item>
+        <item>Ajuricaba</item>
+        <item>Alagoa</item>
+        <item>Alagoa Grande</item>
+        <item>Alagoa Nova</item>
+        <item>Alagoinha</item>
+        <item>Alagoinha</item>
+        <item>Alagoinha do Piauí</item>
+        <item>Alagoinhas</item>
+        <item>Alambari</item>
+        <item>Albertina</item>
+        <item>Alcantil</item>
+        <item>Alcinópolis</item>
+        <item>Alcobaça</item>
+        <item>Alcântara</item>
+        <item>Alcântaras</item>
+        <item>Aldeias Altas</item>
+        <item>Alecrim</item>
+        <item>Alegre</item>
+        <item>Alegrete</item>
+        <item>Alegrete do Piauí</item>
+        <item>Alegria</item>
+        <item>Alenquer</item>
+        <item>Alexandria</item>
+        <item>Alexânia</item>
+        <item>Alfenas</item>
+        <item>Alfredo Chaves</item>
+        <item>Alfredo Marcondes</item>
+        <item>Alfredo Vasconcelos</item>
+        <item>Alfredo Wagner</item>
+        <item>Algodão de Jandaíra</item>
+        <item>Alhandra</item>
+        <item>Aliança</item>
+        <item>Aliança do Tocantins</item>
+        <item>Almadina</item>
+        <item>Almas</item>
+        <item>Almeirim</item>
+        <item>Almenara</item>
+        <item>Almino Afonso</item>
+        <item>Almirante Tamandaré</item>
+        <item>Almirante Tamandaré do Sul</item>
+        <item>Aloândia</item>
+        <item>Alpercata</item>
+        <item>Alpestre</item>
+        <item>Alpinópolis</item>
+        <item>Alta Floresta</item>
+        <item>Alta Floresta d\'Oeste</item>
+        <item>Altair</item>
+        <item>Altamira</item>
+        <item>Altamira do Maranhão</item>
+        <item>Altamira do Paraná</item>
+        <item>Altaneira</item>
+        <item>Alterosa</item>
+        <item>Altinho</item>
+        <item>Altinópolis</item>
+        <item>Alto Alegre</item>
+        <item>Alto Alegre</item>
+        <item>Alto Alegre</item>
+        <item>Alto Alegre do Maranhão</item>
+        <item>Alto Alegre do Parecis</item>
+        <item>Alto Alegre do Pindaré</item>
+        <item>Alto Araguaia</item>
+        <item>Alto Bela Vista</item>
+        <item>Alto Boa Vista</item>
+        <item>Alto Caparaó</item>
+        <item>Alto Feliz</item>
+        <item>Alto Garças</item>
+        <item>Alto Horizonte</item>
+        <item>Alto Jequitibá</item>
+        <item>Alto Longá</item>
+        <item>Alto Paraguai</item>
+        <item>Alto Paraná</item>
+        <item>Alto Paraíso</item>
+        <item>Alto Paraíso de Goiás</item>
+        <item>Alto Parnaíba</item>
+        <item>Alto Piquiri</item>
+        <item>Alto Rio Doce</item>
+        <item>Alto Rio Novo</item>
+        <item>Alto Santo</item>
+        <item>Alto Taquari</item>
+        <item>Alto do Rodrigues</item>
+        <item>Altos</item>
+        <item>Altônia</item>
+        <item>Alumínio</item>
+        <item>Alvarenga</item>
+        <item>Alvarães</item>
+        <item>Álvares Florence</item>
+        <item>Álvares Machado</item>
+        <item>Álvaro de Carvalho</item>
+        <item>Alvinlândia</item>
+        <item>Alvinópolis</item>
+        <item>Alvorada</item>
+        <item>Alvorada</item>
+        <item>Alvorada d\'Oeste</item>
+        <item>Alvorada de Minas</item>
+        <item>Alvorada do Gurguéia</item>
+        <item>Alvorada do Norte</item>
+        <item>Alvorada do Sul</item>
+        <item>Além Paraíba</item>
+        <item>Amajari</item>
+        <item>Amambaí</item>
+        <item>Amaporã</item>
+        <item>Amapá</item>
+        <item>Amapá do Maranhão</item>
+        <item>Amaraji</item>
+        <item>Amaral Ferrador</item>
+        <item>Amaralina</item>
+        <item>Amarante</item>
+        <item>Amarante do Maranhão</item>
+        <item>Amargosa</item>
+        <item>Amaturá</item>
+        <item>Americana</item>
+        <item>Americano do Brasil</item>
+        <item>Ametista do Sul</item>
+        <item>Amontada</item>
+        <item>Amorinópolis</item>
+        <item>Amparo</item>
+        <item>Amparo</item>
+        <item>Amparo de São Francisco</item>
+        <item>Amparo do Serra</item>
+        <item>Ampére</item>
+        <item>Amélia Rodrigues</item>
+        <item>América Dourada</item>
+        <item>Américo Brasiliense</item>
+        <item>Américo de Campos</item>
+        <item>Anadia</item>
+        <item>Anagé</item>
+        <item>Anahy</item>
+        <item>Anajatuba</item>
+        <item>Anajás</item>
+        <item>Analândia</item>
+        <item>Anamã</item>
+        <item>Ananindeua</item>
+        <item>Ananás</item>
+        <item>Anapu</item>
+        <item>Anapurus</item>
+        <item>Anastácio</item>
+        <item>Anaurilândia</item>
+        <item>Anchieta</item>
+        <item>Anchieta</item>
+        <item>Andaraí</item>
+        <item>Andirá</item>
+        <item>Andorinha</item>
+        <item>Andradas</item>
+        <item>Andradina</item>
+        <item>Andrelândia</item>
+        <item>André da Rocha</item>
+        <item>Angatuba</item>
+        <item>Angelim</item>
+        <item>Angelina</item>
+        <item>Angelândia</item>
+        <item>Angélica</item>
+        <item>Angical</item>
+        <item>Angical do Piauí</item>
+        <item>Angico</item>
+        <item>Angicos</item>
+        <item>Angra dos Reis</item>
+        <item>Anguera</item>
+        <item>Ângulo</item>
+        <item>Anhanguera</item>
+        <item>Anhembi</item>
+        <item>Anhumas</item>
+        <item>Anicuns</item>
+        <item>Anita Garibaldi</item>
+        <item>Anitápolis</item>
+        <item>Anori</item>
+        <item>Anta Gorda</item>
+        <item>Antas</item>
+        <item>Antonina</item>
+        <item>Antonina do Norte</item>
+        <item>Antônio Almeida</item>
+        <item>Antônio Cardoso</item>
+        <item>Antônio Carlos</item>
+        <item>Antônio Carlos</item>
+        <item>Antônio Dias</item>
+        <item>Antônio Gonçalves</item>
+        <item>Antônio João</item>
+        <item>Antônio Martins</item>
+        <item>Antônio Olinto</item>
+        <item>Antônio Prado</item>
+        <item>Antônio Prado de Minas</item>
+        <item>Anápolis</item>
+        <item>Anísio de Abreu</item>
+        <item>Aparecida</item>
+        <item>Aparecida</item>
+        <item>Aparecida d\'Oeste</item>
+        <item>Aparecida de Goiânia</item>
+        <item>Aparecida do Rio Doce</item>
+        <item>Aparecida do Rio Negro</item>
+        <item>Aparecida do Taboado</item>
+        <item>Aperibé</item>
+        <item>Apiacá</item>
+        <item>Apiacás</item>
+        <item>Apiaí</item>
+        <item>Apicum-Açu</item>
+        <item>Apiúna</item>
+        <item>Apodi</item>
+        <item>Aporá</item>
+        <item>Aporé</item>
+        <item>Apuarema</item>
+        <item>Apucarana</item>
+        <item>Apuiarés</item>
+        <item>Apuí</item>
+        <item>Aquidabã</item>
+        <item>Aquidauana</item>
+        <item>Aquiraz</item>
+        <item>Arabutã</item>
+        <item>Aracaju</item>
+        <item>Aracati</item>
+        <item>Aracatu</item>
+        <item>Araci</item>
+        <item>Aracitaba</item>
+        <item>Aracoiaba</item>
+        <item>Aracruz</item>
+        <item>Aragarças</item>
+        <item>Aragoiânia</item>
+        <item>Aragominas</item>
+        <item>Araguacema</item>
+        <item>Araguaiana</item>
+        <item>Araguainha</item>
+        <item>Araguanã</item>
+        <item>Araguanã</item>
+        <item>Araguapaz</item>
+        <item>Araguari</item>
+        <item>Araguatins</item>
+        <item>Araguaçu</item>
+        <item>Araguaína</item>
+        <item>Araioses</item>
+        <item>Aral Moreira</item>
+        <item>Aramari</item>
+        <item>Arambaré</item>
+        <item>Arame</item>
+        <item>Aramina</item>
+        <item>Arandu</item>
+        <item>Arantina</item>
+        <item>Arapeí</item>
+        <item>Arapiraca</item>
+        <item>Arapoema</item>
+        <item>Araponga</item>
+        <item>Arapongas</item>
+        <item>Araporã</item>
+        <item>Arapoti</item>
+        <item>Araputanga</item>
+        <item>Arapuá</item>
+        <item>Arapuã</item>
+        <item>Araquari</item>
+        <item>Arara</item>
+        <item>Araranguá</item>
+        <item>Araraquara</item>
+        <item>Araras</item>
+        <item>Ararendá</item>
+        <item>Arari</item>
+        <item>Araricá</item>
+        <item>Araripe</item>
+        <item>Araripina</item>
+        <item>Araruama</item>
+        <item>Araruna</item>
+        <item>Araruna</item>
+        <item>Arataca</item>
+        <item>Aratiba</item>
+        <item>Aratuba</item>
+        <item>Aratuípe</item>
+        <item>Araucária</item>
+        <item>Arauá</item>
+        <item>Araxá</item>
+        <item>Araçagi</item>
+        <item>Araçariguama</item>
+        <item>Araças</item>
+        <item>Araçatuba</item>
+        <item>Araçaí</item>
+        <item>Araçoiaba</item>
+        <item>Araçoiaba da Serra</item>
+        <item>Araçu</item>
+        <item>Araçuaí</item>
+        <item>Araújos</item>
+        <item>Arceburgo</item>
+        <item>Arco-Íris</item>
+        <item>Arcos</item>
+        <item>Arcoverde</item>
+        <item>Areado</item>
+        <item>Areal</item>
+        <item>Arealva</item>
+        <item>Areia</item>
+        <item>Areia Branca</item>
+        <item>Areia Branca</item>
+        <item>Areia de Baraúnas</item>
+        <item>Areial</item>
+        <item>Areias</item>
+        <item>Areiópolis</item>
+        <item>Arenápolis</item>
+        <item>Arenópolis</item>
+        <item>Argirita</item>
+        <item>Aricanduva</item>
+        <item>Arinos</item>
+        <item>Aripuanã</item>
+        <item>Ariquemes</item>
+        <item>Ariranha</item>
+        <item>Ariranha do Ivaí</item>
+        <item>Armazém</item>
+        <item>Armação de Búzios</item>
+        <item>Arneiroz</item>
+        <item>Aroazes</item>
+        <item>Aroeiras</item>
+        <item>Arraial</item>
+        <item>Arraial do Cabo</item>
+        <item>Arraias</item>
+        <item>Arroio Grande</item>
+        <item>Arroio Trinta</item>
+        <item>Arroio do Meio</item>
+        <item>Arroio do Padre</item>
+        <item>Arroio do Sal</item>
+        <item>Arroio do Tigre</item>
+        <item>Arroio dos Ratos</item>
+        <item>Artur Nogueira</item>
+        <item>Aruanã</item>
+        <item>Arujá</item>
+        <item>Arvoredo</item>
+        <item>Arvorezinha</item>
+        <item>Arês</item>
+        <item>Ascurra</item>
+        <item>Aspásia</item>
+        <item>Assaré</item>
+        <item>Assaí</item>
+        <item>Assis</item>
+        <item>Assis Brasil</item>
+        <item>Assis Chateaubriand</item>
+        <item>Assunção</item>
+        <item>Assunção do Piauí</item>
+        <item>Astolfo Dutra</item>
+        <item>Astorga</item>
+        <item>Atalaia</item>
+        <item>Atalaia</item>
+        <item>Atalaia do Norte</item>
+        <item>Atalanta</item>
+        <item>Ataléia</item>
+        <item>Atibaia</item>
+        <item>Atilio Vivacqua</item>
+        <item>Augustinópolis</item>
+        <item>Augusto Corrêa</item>
+        <item>Augusto Pestana</item>
+        <item>Augusto Severo</item>
+        <item>Augusto de Lima</item>
+        <item>Áurea</item>
+        <item>Aurelino Leal</item>
+        <item>Auriflama</item>
+        <item>Aurilândia</item>
+        <item>Aurora</item>
+        <item>Aurora</item>
+        <item>Aurora do Pará</item>
+        <item>Aurora do Tocantins</item>
+        <item>Autazes</item>
+        <item>Avanhandava</item>
+        <item>Avaré</item>
+        <item>Avaí</item>
+        <item>Aveiro</item>
+        <item>Avelino Lopes</item>
+        <item>Avelinópolis</item>
+        <item>Axixá</item>
+        <item>Axixá do Tocantins</item>
+        <item>Açailândia</item>
+        <item>Açu</item>
+        <item>Açucena</item>
+        <item>Babaçulândia</item>
+        <item>Bacabal</item>
+        <item>Bacabeira</item>
+        <item>Bacuri</item>
+        <item>Bacurituba</item>
+        <item>Bady Bassitt</item>
+        <item>Baependi</item>
+        <item>Bagre</item>
+        <item>Bagé</item>
+        <item>Baianópolis</item>
+        <item>Baixa Grande</item>
+        <item>Baixa Grande do Ribeiro</item>
+        <item>Baixio</item>
+        <item>Baixo Guandu</item>
+        <item>Baião</item>
+        <item>Balbinos</item>
+        <item>Baldim</item>
+        <item>Baliza</item>
+        <item>Balneário Arroio do Silva</item>
+        <item>Balneário Barra do Sul</item>
+        <item>Balneário Camboriú</item>
+        <item>Balneário Gaivota</item>
+        <item>Balneário Pinhal</item>
+        <item>Balsa Nova</item>
+        <item>Balsas</item>
+        <item>Bambuí</item>
+        <item>Banabuiú</item>
+        <item>Bananal</item>
+        <item>Bananeiras</item>
+        <item>Bandeira</item>
+        <item>Bandeira do Sul</item>
+        <item>Bandeirante</item>
+        <item>Bandeirantes</item>
+        <item>Bandeirantes</item>
+        <item>Bandeirantes do Tocantins</item>
+        <item>Bannach</item>
+        <item>Banzaê</item>
+        <item>Baraúna</item>
+        <item>Baraúna</item>
+        <item>Barbacena</item>
+        <item>Barbalha</item>
+        <item>Barbosa</item>
+        <item>Barbosa Ferraz</item>
+        <item>Barcarena</item>
+        <item>Barcelona</item>
+        <item>Barcelos</item>
+        <item>Bariri</item>
+        <item>Barra</item>
+        <item>Barra Bonita</item>
+        <item>Barra Bonita</item>
+        <item>Barra Funda</item>
+        <item>Barra Longa</item>
+        <item>Barra Mansa</item>
+        <item>Barra Velha</item>
+        <item>Barra d\'Alcântara</item>
+        <item>Barra da Estiva</item>
+        <item>Barra de Guabiraba</item>
+        <item>Barra de Santa Rosa</item>
+        <item>Barra de Santana</item>
+        <item>Barra de Santo Antônio</item>
+        <item>Barra de São Francisco</item>
+        <item>Barra de São Miguel</item>
+        <item>Barra de São Miguel</item>
+        <item>Barra do Bugres</item>
+        <item>Barra do Chapéu</item>
+        <item>Barra do Choça</item>
+        <item>Barra do Corda</item>
+        <item>Barra do Garças</item>
+        <item>Barra do Guarita</item>
+        <item>Barra do Jacaré</item>
+        <item>Barra do Mendes</item>
+        <item>Barra do Ouro</item>
+        <item>Barra do Piraí</item>
+        <item>Barra do Quaraí</item>
+        <item>Barra do Ribeiro</item>
+        <item>Barra do Rio Azul</item>
+        <item>Barra do Rocha</item>
+        <item>Barra do Turvo</item>
+        <item>Barra dos Coqueiros</item>
+        <item>Barracão</item>
+        <item>Barracão</item>
+        <item>Barras</item>
+        <item>Barreira</item>
+        <item>Barreiras</item>
+        <item>Barreiras do Piauí</item>
+        <item>Barreirinha</item>
+        <item>Barreirinhas</item>
+        <item>Barreiros</item>
+        <item>Barretos</item>
+        <item>Barrinha</item>
+        <item>Barro</item>
+        <item>Barro Alto</item>
+        <item>Barro Alto</item>
+        <item>Barro Duro</item>
+        <item>Barro Preto</item>
+        <item>Barrocas</item>
+        <item>Barrolândia</item>
+        <item>Barroquinha</item>
+        <item>Barros Cassal</item>
+        <item>Barroso</item>
+        <item>Barueri</item>
+        <item>Barão</item>
+        <item>Barão de Antonina</item>
+        <item>Barão de Cocais</item>
+        <item>Barão de Cotegipe</item>
+        <item>Barão de Grajaú</item>
+        <item>Barão de Melgaço</item>
+        <item>Barão de Monte Alto</item>
+        <item>Barão do Triunfo</item>
+        <item>Bastos</item>
+        <item>Bataguassu</item>
+        <item>Bataiporã</item>
+        <item>Batalha</item>
+        <item>Batalha</item>
+        <item>Batatais</item>
+        <item>Baturité</item>
+        <item>Bauru</item>
+        <item>Bayeux</item>
+        <item>Baía Formosa</item>
+        <item>Baía da Traição</item>
+        <item>Bebedouro</item>
+        <item>Beberibe</item>
+        <item>Bela Cruz</item>
+        <item>Bela Vista</item>
+        <item>Bela Vista da Caroba</item>
+        <item>Bela Vista de Goiás</item>
+        <item>Bela Vista de Minas</item>
+        <item>Bela Vista do Maranhão</item>
+        <item>Bela Vista do Paraíso</item>
+        <item>Bela Vista do Piauí</item>
+        <item>Bela Vista do Toldo</item>
+        <item>Belford Roxo</item>
+        <item>Belmiro Braga</item>
+        <item>Belmonte</item>
+        <item>Belmonte</item>
+        <item>Belo Campo</item>
+        <item>Belo Horizonte</item>
+        <item>Belo Jardim</item>
+        <item>Belo Monte</item>
+        <item>Belo Oriente</item>
+        <item>Belo Vale</item>
+        <item>Belterra</item>
+        <item>Belágua</item>
+        <item>Belém</item>
+        <item>Belém</item>
+        <item>Belém</item>
+        <item>Belém de Maria</item>
+        <item>Belém de São Francisco</item>
+        <item>Belém do Brejo do Cruz</item>
+        <item>Belém do Piauí</item>
+        <item>Beneditinos</item>
+        <item>Benedito Leite</item>
+        <item>Benedito Novo</item>
+        <item>Benevides</item>
+        <item>Benjamin Constan do Sul</item>
+        <item>Benjamin Constant</item>
+        <item>Bento Fernandes</item>
+        <item>Bento Gonçalves</item>
+        <item>Bento de Abreu</item>
+        <item>Bequimão</item>
+        <item>Berilo</item>
+        <item>Berizal</item>
+        <item>Bernardino Batista</item>
+        <item>Bernardino de Campos</item>
+        <item>Bernardo Sayão</item>
+        <item>Bernardo do Mearim</item>
+        <item>Bertioga</item>
+        <item>Bertolínia</item>
+        <item>Bertópolis</item>
+        <item>Beruri</item>
+        <item>Betim</item>
+        <item>Betânia</item>
+        <item>Betânia do Piauí</item>
+        <item>Bezerros</item>
+        <item>Bias Fortes</item>
+        <item>Bicas</item>
+        <item>Biguaçu</item>
+        <item>Bilac</item>
+        <item>Biquinhas</item>
+        <item>Birigui</item>
+        <item>Biritiba-Mirim</item>
+        <item>Biritinga</item>
+        <item>Bituruna</item>
+        <item>Blumenau</item>
+        <item>Boa Esperança</item>
+        <item>Boa Esperança</item>
+        <item>Boa Esperança</item>
+        <item>Boa Esperança do Iguaçu</item>
+        <item>Boa Esperança do Sul</item>
+        <item>Boa Hora</item>
+        <item>Boa Nova</item>
+        <item>Boa Ventura</item>
+        <item>Boa Ventura de São Roque</item>
+        <item>Boa Viagem</item>
+        <item>Boa Vista</item>
+        <item>Boa Vista</item>
+        <item>Boa Vista da Aparecida</item>
+        <item>Boa Vista das Missões</item>
+        <item>Boa Vista do Buricá</item>
+        <item>Boa Vista do Cadeado</item>
+        <item>Boa Vista do Gurupi</item>
+        <item>Boa Vista do Incra</item>
+        <item>Boa Vista do Ramos</item>
+        <item>Boa Vista do Sul</item>
+        <item>Boa Vista do Tupim</item>
+        <item>Boca da Mata</item>
+        <item>Boca do Acre</item>
+        <item>Bocaina</item>
+        <item>Bocaina</item>
+        <item>Bocaina de Minas</item>
+        <item>Bocaina do Sul</item>
+        <item>Bocaiúva</item>
+        <item>Bocaiúva do Sul</item>
+        <item>Bodocó</item>
+        <item>Bodoquena</item>
+        <item>Bodó</item>
+        <item>Bofete</item>
+        <item>Boituva</item>
+        <item>Bom Conselho</item>
+        <item>Bom Despacho</item>
+        <item>Bom Jardim</item>
+        <item>Bom Jardim</item>
+        <item>Bom Jardim</item>
+        <item>Bom Jardim da Serra</item>
+        <item>Bom Jardim de Goiás</item>
+        <item>Bom Jardim de Minas</item>
+        <item>Bom Jesus</item>
+        <item>Bom Jesus</item>
+        <item>Bom Jesus</item>
+        <item>Bom Jesus</item>
+        <item>Bom Jesus</item>
+        <item>Bom Jesus da Lapa</item>
+        <item>Bom Jesus da Penha</item>
+        <item>Bom Jesus da Serra</item>
+        <item>Bom Jesus das Selvas</item>
+        <item>Bom Jesus de Goiás</item>
+        <item>Bom Jesus do Amparo</item>
+        <item>Bom Jesus do Araguaia</item>
+        <item>Bom Jesus do Galho</item>
+        <item>Bom Jesus do Itabapoana</item>
+        <item>Bom Jesus do Norte</item>
+        <item>Bom Jesus do Oeste</item>
+        <item>Bom Jesus do Sul</item>
+        <item>Bom Jesus do Tocantins</item>
+        <item>Bom Jesus do Tocantins</item>
+        <item>Bom Jesus dos Perdões</item>
+        <item>Bom Lugar</item>
+        <item>Bom Princípio</item>
+        <item>Bom Princípio do Piauí</item>
+        <item>Bom Progresso</item>
+        <item>Bom Repouso</item>
+        <item>Bom Retiro</item>
+        <item>Bom Retiro do Sul</item>
+        <item>Bom Sucesso</item>
+        <item>Bom Sucesso</item>
+        <item>Bom Sucesso</item>
+        <item>Bom Sucesso de Itararé</item>
+        <item>Bom Sucesso do Sul</item>
+        <item>Bombinhas</item>
+        <item>Bonfim</item>
+        <item>Bonfim</item>
+        <item>Bonfim do Piauí</item>
+        <item>Bonfinópolis</item>
+        <item>Bonfinópolis de Minas</item>
+        <item>Boninal</item>
+        <item>Bonito</item>
+        <item>Bonito</item>
+        <item>Bonito</item>
+        <item>Bonito</item>
+        <item>Bonito de Minas</item>
+        <item>Bonito de Santa Fé</item>
+        <item>Bonópolis</item>
+        <item>Boqueirão</item>
+        <item>Boqueirão do Leão</item>
+        <item>Boqueirão do Piauí</item>
+        <item>Boquim</item>
+        <item>Boquira</item>
+        <item>Boracéia</item>
+        <item>Borba</item>
+        <item>Borborema</item>
+        <item>Borborema</item>
+        <item>Borda da Mata</item>
+        <item>Borebi</item>
+        <item>Borrazópolis</item>
+        <item>Borá</item>
+        <item>Bossoroca</item>
+        <item>Botelhos</item>
+        <item>Botucatu</item>
+        <item>Botumirim</item>
+        <item>Botuporã</item>
+        <item>Botuverá</item>
+        <item>Bozano</item>
+        <item>Braga</item>
+        <item>Braganey</item>
+        <item>Bragança</item>
+        <item>Bragança Paulista</item>
+        <item>Branquinha</item>
+        <item>Brasil Novo</item>
+        <item>Brasileira</item>
+        <item>Brasilândia</item>
+        <item>Brasilândia de Minas</item>
+        <item>Brasilândia do Sul</item>
+        <item>Brasilândia do Tocantins</item>
+        <item>Brasiléia</item>
+        <item>Brasnorte</item>
+        <item>Brasília</item>
+        <item>Brasília de Minas</item>
+        <item>Brasópolis</item>
+        <item>Brazabrantes</item>
+        <item>Braço do Norte</item>
+        <item>Braço do Trombudo</item>
+        <item>Braúna</item>
+        <item>Braúnas</item>
+        <item>Brejetuba</item>
+        <item>Brejinho</item>
+        <item>Brejinho</item>
+        <item>Brejinho de Nazaré</item>
+        <item>Brejo</item>
+        <item>Brejo Alegre</item>
+        <item>Brejo Grande</item>
+        <item>Brejo Grande do Araguaia</item>
+        <item>Brejo Santo</item>
+        <item>Brejo da Madre de Deus</item>
+        <item>Brejo de Areia</item>
+        <item>Brejo do Cruz</item>
+        <item>Brejo do Piauí</item>
+        <item>Brejo dos Santos</item>
+        <item>Brejolândia</item>
+        <item>Brejão</item>
+        <item>Brejões</item>
+        <item>Breu Branco</item>
+        <item>Breves</item>
+        <item>Britânia</item>
+        <item>Brochier</item>
+        <item>Brodowski</item>
+        <item>Brotas</item>
+        <item>Brotas de Macaúbas</item>
+        <item>Brumadinho</item>
+        <item>Brumado</item>
+        <item>Brunópolis</item>
+        <item>Brusque</item>
+        <item>Brás Pires</item>
+        <item>Bueno Brandão</item>
+        <item>Buenos Aires</item>
+        <item>Buenópolis</item>
+        <item>Buerarema</item>
+        <item>Bugre</item>
+        <item>Bujari</item>
+        <item>Bujaru</item>
+        <item>Buri</item>
+        <item>Buritama</item>
+        <item>Buriti</item>
+        <item>Buriti Alegre</item>
+        <item>Buriti Bravo</item>
+        <item>Buriti de Goiás</item>
+        <item>Buriti do Tocantins</item>
+        <item>Buriti dos Lopes</item>
+        <item>Buriti dos Montes</item>
+        <item>Buriticupu</item>
+        <item>Buritinópolis</item>
+        <item>Buritirama</item>
+        <item>Buritirana</item>
+        <item>Buritis</item>
+        <item>Buritis</item>
+        <item>Buritizal</item>
+        <item>Buritizeiro</item>
+        <item>Butiá</item>
+        <item>Buíque</item>
+        <item>Bálsamo</item>
+        <item>Caapiranga</item>
+        <item>Caaporã</item>
+        <item>Caarapó</item>
+        <item>Caatiba</item>
+        <item>Cabaceiras</item>
+        <item>Cabaceiras do Paraguaçu</item>
+        <item>Cabeceira Grande</item>
+        <item>Cabeceiras</item>
+        <item>Cabeceiras do Piauí</item>
+        <item>Cabedelo</item>
+        <item>Cabixi</item>
+        <item>Cabo Frio</item>
+        <item>Cabo Verde</item>
+        <item>Cabo de Santo Agostinho</item>
+        <item>Cabreúva</item>
+        <item>Cabrobó</item>
+        <item>Cabrália Paulista</item>
+        <item>Cacaulândia</item>
+        <item>Cacequi</item>
+        <item>Cachoeira</item>
+        <item>Cachoeira Alta</item>
+        <item>Cachoeira Dourada</item>
+        <item>Cachoeira Dourada</item>
+        <item>Cachoeira Grande</item>
+        <item>Cachoeira Paulista</item>
+        <item>Cachoeira da Prata</item>
+        <item>Cachoeira de Goiás</item>
+        <item>Cachoeira de Minas</item>
+        <item>Cachoeira de Pajeú</item>
+        <item>Cachoeira do Arari</item>
+        <item>Cachoeira do Piriá</item>
+        <item>Cachoeira do Sul</item>
+        <item>Cachoeira dos Índios</item>
+        <item>Cachoeiras de Macacu</item>
+        <item>Cachoeirinha</item>
+        <item>Cachoeirinha</item>
+        <item>Cachoeirinha</item>
+        <item>Cachoeiro de Itapemirim</item>
+        <item>Cacimba de Areia</item>
+        <item>Cacimba de Dentro</item>
+        <item>Cacimbas</item>
+        <item>Cacimbinhas</item>
+        <item>Cacique Doble</item>
+        <item>Cacoal</item>
+        <item>Caconde</item>
+        <item>Caculé</item>
+        <item>Caetanos</item>
+        <item>Caetanópolis</item>
+        <item>Caetité</item>
+        <item>Caeté</item>
+        <item>Caetés</item>
+        <item>Cafarnaum</item>
+        <item>Cafeara</item>
+        <item>Cafelândia</item>
+        <item>Cafelândia</item>
+        <item>Cafezal do Sul</item>
+        <item>Caiabu</item>
+        <item>Caiana</item>
+        <item>Caiapônia</item>
+        <item>Caibaté</item>
+        <item>Caibi</item>
+        <item>Caicó</item>
+        <item>Caieiras</item>
+        <item>Cairu</item>
+        <item>Caiuá</item>
+        <item>Caiçara</item>
+        <item>Caiçara</item>
+        <item>Caiçara do Norte</item>
+        <item>Caiçara do Rio do Vento</item>
+        <item>Cajamar</item>
+        <item>Cajapió</item>
+        <item>Cajari</item>
+        <item>Cajati</item>
+        <item>Cajazeiras</item>
+        <item>Cajazeiras do Piauí</item>
+        <item>Cajazeirinhas</item>
+        <item>Cajobi</item>
+        <item>Cajueiro</item>
+        <item>Cajueiro da Praia</item>
+        <item>Cajuri</item>
+        <item>Cajuru</item>
+        <item>Caldas</item>
+        <item>Caldas Brandão</item>
+        <item>Caldas Novas</item>
+        <item>Caldazinha</item>
+        <item>Caldeirão Grande</item>
+        <item>Caldeirão Grande do Piauí</item>
+        <item>Califórnia</item>
+        <item>Calmon</item>
+        <item>Calumbi</item>
+        <item>Calçado</item>
+        <item>Calçoene</item>
+        <item>Camacan</item>
+        <item>Camacho</item>
+        <item>Camalaú</item>
+        <item>Camamu</item>
+        <item>Camanducaia</item>
+        <item>Camapuã</item>
+        <item>Camaquã</item>
+        <item>Camaragibe</item>
+        <item>Camargo</item>
+        <item>Camaçari</item>
+        <item>Cambará</item>
+        <item>Cambará do Sul</item>
+        <item>Cambira</item>
+        <item>Camboriú</item>
+        <item>Cambuci</item>
+        <item>Cambuquira</item>
+        <item>Cambuí</item>
+        <item>Cambé</item>
+        <item>Cametá</item>
+        <item>Camocim</item>
+        <item>Camocim de São Félix</item>
+        <item>Campanha</item>
+        <item>Campanário</item>
+        <item>Campestre</item>
+        <item>Campestre</item>
+        <item>Campestre da Serra</item>
+        <item>Campestre de Goiás</item>
+        <item>Campestre do Maranhão</item>
+        <item>Campina Grande</item>
+        <item>Campina Grande do Sul</item>
+        <item>Campina Verde</item>
+        <item>Campina da Lagoa</item>
+        <item>Campina das Missões</item>
+        <item>Campina do Monte Alegre</item>
+        <item>Campina do Simão</item>
+        <item>Campinas</item>
+        <item>Campinas do Piauí</item>
+        <item>Campinas do Sul</item>
+        <item>Campinaçu</item>
+        <item>Campinorte</item>
+        <item>Campinápolis</item>
+        <item>Campo Alegre</item>
+        <item>Campo Alegre</item>
+        <item>Campo Alegre de Goiás</item>
+        <item>Campo Alegre de Lourdes</item>
+        <item>Campo Alegre do Fidalgo</item>
+        <item>Campo Azul</item>
+        <item>Campo Belo</item>
+        <item>Campo Belo do Sul</item>
+        <item>Campo Bom</item>
+        <item>Campo Bonito</item>
+        <item>Campo Erê</item>
+        <item>Campo Florido</item>
+        <item>Campo Formoso</item>
+        <item>Campo Grande</item>
+        <item>Campo Grande</item>
+        <item>Campo Grande do Piauí</item>
+        <item>Campo Largo</item>
+        <item>Campo Largo do Piauí</item>
+        <item>Campo Limpo Paulista</item>
+        <item>Campo Magro</item>
+        <item>Campo Maior</item>
+        <item>Campo Mourão</item>
+        <item>Campo Novo</item>
+        <item>Campo Novo de Rondônia</item>
+        <item>Campo Novo do Parecis</item>
+        <item>Campo Redondo</item>
+        <item>Campo Verde</item>
+        <item>Campo de Santana</item>
+        <item>Campo do Brito</item>
+        <item>Campo do Meio</item>
+        <item>Campo do Tenente</item>
+        <item>Campos Altos</item>
+        <item>Campos Belos</item>
+        <item>Campos Borges</item>
+        <item>Campos Gerais</item>
+        <item>Campos Limpo de Goiás</item>
+        <item>Campos Lindos</item>
+        <item>Campos Novos</item>
+        <item>Campos Novos Paulista</item>
+        <item>Campos Sales</item>
+        <item>Campos Verdes</item>
+        <item>Campos de Júlio</item>
+        <item>Campos do Jordão</item>
+        <item>Campos dos Goytacazes</item>
+        <item>Camutanga</item>
+        <item>Cana Verde</item>
+        <item>Canabrava do Norte</item>
+        <item>Cananéia</item>
+        <item>Canapi</item>
+        <item>Canarana</item>
+        <item>Canarana</item>
+        <item>Canas</item>
+        <item>Canavieira</item>
+        <item>Canavieiras</item>
+        <item>Canaã</item>
+        <item>Canaã dos Carajás</item>
+        <item>Candeal</item>
+        <item>Candeias</item>
+        <item>Candeias</item>
+        <item>Candeias do Jamari</item>
+        <item>Candelária</item>
+        <item>Candiba</item>
+        <item>Candiota</item>
+        <item>Candói</item>
+        <item>Canela</item>
+        <item>Canelinha</item>
+        <item>Canguaretama</item>
+        <item>Canguçu</item>
+        <item>Canhoba</item>
+        <item>Canhotinho</item>
+        <item>Canindé</item>
+        <item>Canindé de São Francisco</item>
+        <item>Canitar</item>
+        <item>Canoas</item>
+        <item>Canoinhas</item>
+        <item>Cansanção</item>
+        <item>Cantagalo</item>
+        <item>Cantagalo</item>
+        <item>Cantagalo</item>
+        <item>Cantanhede</item>
+        <item>Canto do Buriti</item>
+        <item>Cantá</item>
+        <item>Canudos</item>
+        <item>Canudos do Vale</item>
+        <item>Canutama</item>
+        <item>Canápolis</item>
+        <item>Canápolis</item>
+        <item>Capanema</item>
+        <item>Capanema</item>
+        <item>Caparaó</item>
+        <item>Capela</item>
+        <item>Capela</item>
+        <item>Capela Nova</item>
+        <item>Capela de Santana</item>
+        <item>Capela do Alto</item>
+        <item>Capela do Alto Alegre</item>
+        <item>Capelinha</item>
+        <item>Capetinga</item>
+        <item>Capim</item>
+        <item>Capim Branco</item>
+        <item>Capim Grosso</item>
+        <item>Capinzal</item>
+        <item>Capinzal do Norte</item>
+        <item>Capinópolis</item>
+        <item>Capistrano</item>
+        <item>Capitão</item>
+        <item>Capitão Andrade</item>
+        <item>Capitão Enéas</item>
+        <item>Capitão Gervásio Oliveira</item>
+        <item>Capitão Leônidas Marques</item>
+        <item>Capitão Poço</item>
+        <item>Capitão de Campos</item>
+        <item>Capitólio</item>
+        <item>Capivari</item>
+        <item>Capivari de Baixo</item>
+        <item>Capivari do Sul</item>
+        <item>Capixaba</item>
+        <item>Capoeiras</item>
+        <item>Caputira</item>
+        <item>Capão Alto</item>
+        <item>Capão Bonito</item>
+        <item>Capão Bonito do Sul</item>
+        <item>Capão da Canoa</item>
+        <item>Capão do Cipó</item>
+        <item>Capão do Leão</item>
+        <item>Caracaraí</item>
+        <item>Caracol</item>
+        <item>Caracol</item>
+        <item>Caraguatatuba</item>
+        <item>Carambeí</item>
+        <item>Caranaíba</item>
+        <item>Carandaí</item>
+        <item>Carangola</item>
+        <item>Carapebus</item>
+        <item>Carapicuíba</item>
+        <item>Caratinga</item>
+        <item>Carauari</item>
+        <item>Caravelas</item>
+        <item>Carazinho</item>
+        <item>Caraá</item>
+        <item>Caraí</item>
+        <item>Caraíbas</item>
+        <item>Caraúbas</item>
+        <item>Caraúbas</item>
+        <item>Caraúbas do Piauí</item>
+        <item>Carbonita</item>
+        <item>Cardeal da Silva</item>
+        <item>Cardoso</item>
+        <item>Cardoso Moreira</item>
+        <item>Careaçu</item>
+        <item>Careiro</item>
+        <item>Careiro da Várzea</item>
+        <item>Cariacica</item>
+        <item>Caridade</item>
+        <item>Caridade do Piauí</item>
+        <item>Carinhanha</item>
+        <item>Carira</item>
+        <item>Cariri do Tocantins</item>
+        <item>Caririaçu</item>
+        <item>Cariré</item>
+        <item>Cariús</item>
+        <item>Carlinda</item>
+        <item>Carlos Barbosa</item>
+        <item>Carlos Chagas</item>
+        <item>Carlos Gomes</item>
+        <item>Carlópolis</item>
+        <item>Carmo</item>
+        <item>Carmo da Cachoeira</item>
+        <item>Carmo da Mata</item>
+        <item>Carmo de Minas</item>
+        <item>Carmo do Cajuru</item>
+        <item>Carmo do Paranaíba</item>
+        <item>Carmo do Rio Claro</item>
+        <item>Carmo do Rio Verde</item>
+        <item>Carmolândia</item>
+        <item>Carmésia</item>
+        <item>Carmópolis</item>
+        <item>Carmópolis de Minas</item>
+        <item>Carnaubais</item>
+        <item>Carnaubal</item>
+        <item>Carnaubeira da Penha</item>
+        <item>Carnaíba</item>
+        <item>Carnaúba dos Dantas</item>
+        <item>Carneirinho</item>
+        <item>Carneiros</item>
+        <item>Caroebe</item>
+        <item>Carolina</item>
+        <item>Carpina</item>
+        <item>Carrancas</item>
+        <item>Carrapateira</item>
+        <item>Carrasco Bonito</item>
+        <item>Caruaru</item>
+        <item>Carutapera</item>
+        <item>Carvalhos</item>
+        <item>Carvalhópolis</item>
+        <item>Casa Branca</item>
+        <item>Casa Grande</item>
+        <item>Casa Nova</item>
+        <item>Casca</item>
+        <item>Cascalho Rico</item>
+        <item>Cascavel</item>
+        <item>Cascavel</item>
+        <item>Caseara</item>
+        <item>Caseiros</item>
+        <item>Casimiro de Abreu</item>
+        <item>Casinhas</item>
+        <item>Casserengue</item>
+        <item>Cassilândia</item>
+        <item>Castanhal</item>
+        <item>Castanheira</item>
+        <item>Castanheiras</item>
+        <item>Castelo</item>
+        <item>Castelo do Piauí</item>
+        <item>Castelândia</item>
+        <item>Castilho</item>
+        <item>Castro</item>
+        <item>Castro Alves</item>
+        <item>Cataguases</item>
+        <item>Catalão</item>
+        <item>Catanduva</item>
+        <item>Catanduvas</item>
+        <item>Catanduvas</item>
+        <item>Catarina</item>
+        <item>Catas Altas</item>
+        <item>Catas Altas da Noruega</item>
+        <item>Catende</item>
+        <item>Catiguá</item>
+        <item>Catingueira</item>
+        <item>Catolândia</item>
+        <item>Catolé do Rocha</item>
+        <item>Catu</item>
+        <item>Catuji</item>
+        <item>Catunda</item>
+        <item>Caturama</item>
+        <item>Caturaí</item>
+        <item>Caturité</item>
+        <item>Catuti</item>
+        <item>Catuípe</item>
+        <item>Caucaia</item>
+        <item>Cavalcante</item>
+        <item>Caxambu</item>
+        <item>Caxambu do Sul</item>
+        <item>Caxias</item>
+        <item>Caxias do Sul</item>
+        <item>Caxingó</item>
+        <item>Caçador</item>
+        <item>Caçapava</item>
+        <item>Caçapava do Sul</item>
+        <item>Caçu</item>
+        <item>Caém</item>
+        <item>Ceará-Mirim</item>
+        <item>Cedral</item>
+        <item>Cedral</item>
+        <item>Cedro</item>
+        <item>Cedro</item>
+        <item>Cedro de São João</item>
+        <item>Cedro do Abaeté</item>
+        <item>Celso Ramos</item>
+        <item>Centenário</item>
+        <item>Centenário</item>
+        <item>Centenário do Sul</item>
+        <item>Central</item>
+        <item>Central de Minas</item>
+        <item>Central do Maranhão</item>
+        <item>Centralina</item>
+        <item>Centro Novo do Maranhão</item>
+        <item>Centro do Guilherme</item>
+        <item>Cerejeiras</item>
+        <item>Ceres</item>
+        <item>Cerqueira César</item>
+        <item>Cerquilho</item>
+        <item>Cerrito</item>
+        <item>Cerro Azul</item>
+        <item>Cerro Branco</item>
+        <item>Cerro Corá</item>
+        <item>Cerro Grande</item>
+        <item>Cerro Grande do Sul</item>
+        <item>Cerro Largo</item>
+        <item>Cerro Negro</item>
+        <item>Cesário Lange</item>
+        <item>Cezarina</item>
+        <item>Chalé</item>
+        <item>Chapada</item>
+        <item>Chapada Gaúcha</item>
+        <item>Chapada da Natividade</item>
+        <item>Chapada de Areia</item>
+        <item>Chapada do Norte</item>
+        <item>Chapada dos Guimarães</item>
+        <item>Chapadinha</item>
+        <item>Chapadão do Céu</item>
+        <item>Chapadão do Lageado</item>
+        <item>Chapadão do Sul</item>
+        <item>Chapecó</item>
+        <item>Charqueada</item>
+        <item>Charqueadas</item>
+        <item>Charrua</item>
+        <item>Chaval</item>
+        <item>Chavantes</item>
+        <item>Chaves</item>
+        <item>Chiador</item>
+        <item>Chiapeta</item>
+        <item>Chopinzinho</item>
+        <item>Chorozinho</item>
+        <item>Chorrochó</item>
+        <item>Choró</item>
+        <item>Chupinguaia</item>
+        <item>Chuvisca</item>
+        <item>Chuí</item>
+        <item>Chácara</item>
+        <item>Chã Grande</item>
+        <item>Chã Preta</item>
+        <item>Chã de Alegria</item>
+        <item>Cianorte</item>
+        <item>Cidade Gaúcha</item>
+        <item>Cidade Ocidental</item>
+        <item>Cidelândia</item>
+        <item>Cidreira</item>
+        <item>Cipotânea</item>
+        <item>Cipó</item>
+        <item>Ciríaco</item>
+        <item>Claraval</item>
+        <item>Claro dos Poções</item>
+        <item>Clementina</item>
+        <item>Clevelândia</item>
+        <item>Cláudia</item>
+        <item>Cláudio</item>
+        <item>Coaraci</item>
+        <item>Coari</item>
+        <item>Cocal</item>
+        <item>Cocal de Telha</item>
+        <item>Cocal do Sul</item>
+        <item>Cocal dos Alves</item>
+        <item>Cocalinho</item>
+        <item>Cocalzinho de Goiás</item>
+        <item>Cocos</item>
+        <item>Codajás</item>
+        <item>Codó</item>
+        <item>Coelho Neto</item>
+        <item>Coimbra</item>
+        <item>Coité do Nóia</item>
+        <item>Coivaras</item>
+        <item>Colares</item>
+        <item>Colatina</item>
+        <item>Colina</item>
+        <item>Colinas</item>
+        <item>Colinas</item>
+        <item>Colinas do Sul</item>
+        <item>Colinas do Tocantins</item>
+        <item>Colméia</item>
+        <item>Colniza</item>
+        <item>Colombo</item>
+        <item>Colorado</item>
+        <item>Colorado</item>
+        <item>Colorado do Oeste</item>
+        <item>Coluna</item>
+        <item>Colíder</item>
+        <item>Colômbia</item>
+        <item>Colônia Leopoldina</item>
+        <item>Colônia do Gurguéia</item>
+        <item>Colônia do Piauí</item>
+        <item>Combinado</item>
+        <item>Comendador Gomes</item>
+        <item>Comendador Levy Gasparian</item>
+        <item>Comercinho</item>
+        <item>Comodoro</item>
+        <item>Conceição</item>
+        <item>Conceição da Aparecida</item>
+        <item>Conceição da Barra</item>
+        <item>Conceição da Barra de Minas</item>
+        <item>Conceição da Feira</item>
+        <item>Conceição das Alagoas</item>
+        <item>Conceição das Pedras</item>
+        <item>Conceição de Ipanema</item>
+        <item>Conceição de Macabu</item>
+        <item>Conceição do Almeida</item>
+        <item>Conceição do Araguaia</item>
+        <item>Conceição do Canindé</item>
+        <item>Conceição do Castelo</item>
+        <item>Conceição do Coité</item>
+        <item>Conceição do Jacuípe</item>
+        <item>Conceição do Lago-Açu</item>
+        <item>Conceição do Mato Dentro</item>
+        <item>Conceição do Pará</item>
+        <item>Conceição do Rio Verde</item>
+        <item>Conceição do Tocantins</item>
+        <item>Conceição dos Ouros</item>
+        <item>Conchal</item>
+        <item>Conchas</item>
+        <item>Concórdia</item>
+        <item>Concórdia do Pará</item>
+        <item>Condado</item>
+        <item>Condado</item>
+        <item>Conde</item>
+        <item>Conde</item>
+        <item>Condeúba</item>
+        <item>Condor</item>
+        <item>Confins</item>
+        <item>Confresa</item>
+        <item>Congo</item>
+        <item>Congonhal</item>
+        <item>Congonhas</item>
+        <item>Congonhas do Norte</item>
+        <item>Congonhinhas</item>
+        <item>Conquista</item>
+        <item>Conquista d\'Oeste</item>
+        <item>Conselheiro Lafaiete</item>
+        <item>Conselheiro Mairinck</item>
+        <item>Conselheiro Pena</item>
+        <item>Consolação</item>
+        <item>Constantina</item>
+        <item>Contagem</item>
+        <item>Contenda</item>
+        <item>Contendas do Sincorá</item>
+        <item>Coqueiral</item>
+        <item>Coqueiro Baixo</item>
+        <item>Coqueiro Seco</item>
+        <item>Coqueiros do Sul</item>
+        <item>Coração de Jesus</item>
+        <item>Coração de Maria</item>
+        <item>Corbélia</item>
+        <item>Cordeiro</item>
+        <item>Cordeiros</item>
+        <item>Cordeirópolis</item>
+        <item>Cordilheira Alta</item>
+        <item>Cordisburgo</item>
+        <item>Cordislândia</item>
+        <item>Coreaú</item>
+        <item>Coremas</item>
+        <item>Corguinho</item>
+        <item>Coribe</item>
+        <item>Corinto</item>
+        <item>Cornélio Procópio</item>
+        <item>Coroaci</item>
+        <item>Coroados</item>
+        <item>Coroatá</item>
+        <item>Coromandel</item>
+        <item>Coronel Barros</item>
+        <item>Coronel Bicaco</item>
+        <item>Coronel Domingos Soares</item>
+        <item>Coronel Ezequiel</item>
+        <item>Coronel Fabriciano</item>
+        <item>Coronel Freitas</item>
+        <item>Coronel José Dias</item>
+        <item>Coronel João Pessoa</item>
+        <item>Coronel João Sá</item>
+        <item>Coronel Macedo</item>
+        <item>Coronel Martins</item>
+        <item>Coronel Murta</item>
+        <item>Coronel Pacheco</item>
+        <item>Coronel Pilar</item>
+        <item>Coronel Sapucaia</item>
+        <item>Coronel Vivida</item>
+        <item>Coronel Xavier Chaves</item>
+        <item>Correia Pinto</item>
+        <item>Corrente</item>
+        <item>Correntes</item>
+        <item>Correntina</item>
+        <item>Cortês</item>
+        <item>Corumbataí</item>
+        <item>Corumbataí do Sul</item>
+        <item>Corumbaíba</item>
+        <item>Corumbiara</item>
+        <item>Corumbá</item>
+        <item>Corumbá de Goiás</item>
+        <item>Corupá</item>
+        <item>Coruripe</item>
+        <item>Cosmorama</item>
+        <item>Cosmópolis</item>
+        <item>Costa Marques</item>
+        <item>Costa Rica</item>
+        <item>Cotegipe</item>
+        <item>Cotia</item>
+        <item>Cotiporã</item>
+        <item>Cotriguaçu</item>
+        <item>Couto de Magalhães</item>
+        <item>Couto de Magalhães de Minas</item>
+        <item>Coxilha</item>
+        <item>Coxim</item>
+        <item>Coxixola</item>
+        <item>Crateús</item>
+        <item>Crato</item>
+        <item>Cravinhos</item>
+        <item>Cravolândia</item>
+        <item>Craíbas</item>
+        <item>Criciúma</item>
+        <item>Crissiumal</item>
+        <item>Cristais</item>
+        <item>Cristais Paulista</item>
+        <item>Cristal</item>
+        <item>Cristal do Sul</item>
+        <item>Cristalina</item>
+        <item>Cristalândia</item>
+        <item>Cristalândia do Piauí</item>
+        <item>Cristiano Otoni</item>
+        <item>Cristianópolis</item>
+        <item>Cristina</item>
+        <item>Cristino Castro</item>
+        <item>Cristinápolis</item>
+        <item>Cristália</item>
+        <item>Cristópolis</item>
+        <item>Crisólita</item>
+        <item>Crisópolis</item>
+        <item>Crixás</item>
+        <item>Crixás do Tocantins</item>
+        <item>Croatá</item>
+        <item>Cromínia</item>
+        <item>Crucilândia</item>
+        <item>Cruz</item>
+        <item>Cruz Alta</item>
+        <item>Cruz Machado</item>
+        <item>Cruz das Almas</item>
+        <item>Cruz do Espírito Santo</item>
+        <item>Cruzaltense</item>
+        <item>Cruzeiro</item>
+        <item>Cruzeiro da Fortaleza</item>
+        <item>Cruzeiro do Iguaçu</item>
+        <item>Cruzeiro do Oeste</item>
+        <item>Cruzeiro do Sul</item>
+        <item>Cruzeiro do Sul</item>
+        <item>Cruzeiro do Sul</item>
+        <item>Cruzeta</item>
+        <item>Cruzmaltina</item>
+        <item>Cruzália</item>
+        <item>Cruzília</item>
+        <item>Cubati</item>
+        <item>Cubatão</item>
+        <item>Cuiabá</item>
+        <item>Cuitegi</item>
+        <item>Cuité</item>
+        <item>Cuité de Mamanguape</item>
+        <item>Cujubim</item>
+        <item>Cumari</item>
+        <item>Cumaru</item>
+        <item>Cumaru do Norte</item>
+        <item>Cumbe</item>
+        <item>Cunha</item>
+        <item>Cunha Porã</item>
+        <item>Cunhataí</item>
+        <item>Cuparaque</item>
+        <item>Cupira</item>
+        <item>Curaçá</item>
+        <item>Curimatá</item>
+        <item>Curionópolis</item>
+        <item>Curitiba</item>
+        <item>Curitibanos</item>
+        <item>Curiúva</item>
+        <item>Currais</item>
+        <item>Currais Novos</item>
+        <item>Curral Novo do Piauí</item>
+        <item>Curral Velho</item>
+        <item>Curral de Cima</item>
+        <item>Curral de Dentro</item>
+        <item>Curralinho</item>
+        <item>Curralinhos</item>
+        <item>Cururupu</item>
+        <item>Curuá</item>
+        <item>Curuçá</item>
+        <item>Curvelo</item>
+        <item>Curvelândia</item>
+        <item>Custódia</item>
+        <item>Cutias</item>
+        <item>Cáceres</item>
+        <item>Cássia</item>
+        <item>Cássia dos Coqueiros</item>
+        <item>Cândido Godói</item>
+        <item>Cândido Mendes</item>
+        <item>Cândido Mota</item>
+        <item>Cândido Rodrigues</item>
+        <item>Cândido Sales</item>
+        <item>Cândido de Abreu</item>
+        <item>Céu Azul</item>
+        <item>Cícero Dantas</item>
+        <item>Córrego Danta</item>
+        <item>Córrego Fundo</item>
+        <item>Córrego Novo</item>
+        <item>Córrego do Bom Jesus</item>
+        <item>Córrego do Ouro</item>
+        <item>Cônego Marinho</item>
+        <item>Damianópolis</item>
+        <item>Damião</item>
+        <item>Damolândia</item>
+        <item>Darcinópolis</item>
+        <item>Datas</item>
+        <item>David Canabarro</item>
+        <item>Davinópolis</item>
+        <item>Davinópolis</item>
+        <item>Delfim Moreira</item>
+        <item>Delfinópolis</item>
+        <item>Delmiro Gouveia</item>
+        <item>Delta</item>
+        <item>Demerval Lobão</item>
+        <item>Denise</item>
+        <item>Deodápolis</item>
+        <item>Deputado Irapuan Pinheiro</item>
+        <item>Derrubadas</item>
+        <item>Descalvado</item>
+        <item>Descanso</item>
+        <item>Descoberto</item>
+        <item>Desterro</item>
+        <item>Desterro de Entre Rios</item>
+        <item>Desterro do Melo</item>
+        <item>Dezesseis de Novembro</item>
+        <item>Diadema</item>
+        <item>Diamante</item>
+        <item>Diamante d\'Oeste</item>
+        <item>Diamante do Norte</item>
+        <item>Diamante do Sul</item>
+        <item>Diamantina</item>
+        <item>Diamantino</item>
+        <item>Dianópolis</item>
+        <item>Dias d\'Ávila</item>
+        <item>Dilermando de Aguiar</item>
+        <item>Diogo de Vasconcelos</item>
+        <item>Dionísio</item>
+        <item>Dionísio Cerqueira</item>
+        <item>Diorama</item>
+        <item>Dirce Reis</item>
+        <item>Dirceu Arcoverde</item>
+        <item>Divina Pastora</item>
+        <item>Divino</item>
+        <item>Divino das Laranjeiras</item>
+        <item>Divino de São Lourenço</item>
+        <item>Divinolândia</item>
+        <item>Divinolândia de Minas</item>
+        <item>Divinésia</item>
+        <item>Divinópolis</item>
+        <item>Divinópolis de Goiás</item>
+        <item>Divinópolis do Tocantins</item>
+        <item>Divisa Alegre</item>
+        <item>Divisa Nova</item>
+        <item>Divisópolis</item>
+        <item>Dobrada</item>
+        <item>Dois Córregos</item>
+        <item>Dois Irmãos</item>
+        <item>Dois Irmãos das Missões</item>
+        <item>Dois Irmãos do Buriti</item>
+        <item>Dois Irmãos do Tocantins</item>
+        <item>Dois Lajeados</item>
+        <item>Dois Riachos</item>
+        <item>Dois Vizinhos</item>
+        <item>Dolcinópolis</item>
+        <item>Dom Aquino</item>
+        <item>Dom Basílio</item>
+        <item>Dom Bosco</item>
+        <item>Dom Cavati</item>
+        <item>Dom Eliseu</item>
+        <item>Dom Expedito Lopes</item>
+        <item>Dom Feliciano</item>
+        <item>Dom Inocêncio</item>
+        <item>Dom Joaquim</item>
+        <item>Dom Macedo Costa</item>
+        <item>Dom Pedrito</item>
+        <item>Dom Pedro</item>
+        <item>Dom Pedro de Alcântara</item>
+        <item>Dom Silvério</item>
+        <item>Dom Viçoso</item>
+        <item>Domingos Martins</item>
+        <item>Domingos Mourão</item>
+        <item>Dona Emma</item>
+        <item>Dona Euzébia</item>
+        <item>Dona Francisca</item>
+        <item>Dona Inês</item>
+        <item>Dores de Campos</item>
+        <item>Dores de Guanhães</item>
+        <item>Dores do Indaiá</item>
+        <item>Dores do Rio Preto</item>
+        <item>Dores do Turvo</item>
+        <item>Doresópolis</item>
+        <item>Dormentes</item>
+        <item>Douradina</item>
+        <item>Douradina</item>
+        <item>Dourado</item>
+        <item>Douradoquara</item>
+        <item>Dourados</item>
+        <item>Doutor Camargo</item>
+        <item>Doutor Maurício Cardoso</item>
+        <item>Doutor Pedrinho</item>
+        <item>Doutor Ricardo</item>
+        <item>Doutor Severiano</item>
+        <item>Doutor Ulysses</item>
+        <item>Doverlândia</item>
+        <item>Dracena</item>
+        <item>Duartina</item>
+        <item>Duas Barras</item>
+        <item>Duas Estradas</item>
+        <item>Dueré</item>
+        <item>Dumont</item>
+        <item>Duque Bacelar</item>
+        <item>Duque de Caxias</item>
+        <item>Durandé</item>
+        <item>Dário Meira</item>
+        <item>Echaporã</item>
+        <item>Ecoporanga</item>
+        <item>Edealina</item>
+        <item>Edéia</item>
+        <item>Eirunepé</item>
+        <item>Eldorado</item>
+        <item>Eldorado</item>
+        <item>Eldorado do Sul</item>
+        <item>Eldorado dos Carajás</item>
+        <item>Elesbão Veloso</item>
+        <item>Elias Fausto</item>
+        <item>Eliseu Martins</item>
+        <item>Elisiário</item>
+        <item>Elísio Medrado</item>
+        <item>Elói Mendes</item>
+        <item>Emas</item>
+        <item>Embaúba</item>
+        <item>Embu</item>
+        <item>Embu-Guaçu</item>
+        <item>Emilianópolis</item>
+        <item>Encantado</item>
+        <item>Encanto</item>
+        <item>Encruzilhada</item>
+        <item>Encruzilhada do Sul</item>
+        <item>Engenheiro Beltrão</item>
+        <item>Engenheiro Caldas</item>
+        <item>Engenheiro Coelho</item>
+        <item>Engenheiro Navarro</item>
+        <item>Engenheiro Paulo de Frontin</item>
+        <item>Engenho Velho</item>
+        <item>Entre Folhas</item>
+        <item>Entre Rios</item>
+        <item>Entre Rios</item>
+        <item>Entre Rios de Minas</item>
+        <item>Entre Rios do Oeste</item>
+        <item>Entre Rios do Sul</item>
+        <item>Entre-Ijuís</item>
+        <item>Envira</item>
+        <item>Enéas Marques</item>
+        <item>Epitaciolândia</item>
+        <item>Equador</item>
+        <item>Erebango</item>
+        <item>Erechim</item>
+        <item>Ererê</item>
+        <item>Érico Cardoso</item>
+        <item>Ermo</item>
+        <item>Ernestina</item>
+        <item>Erval Grande</item>
+        <item>Erval Seco</item>
+        <item>Erval Velho</item>
+        <item>Ervália</item>
+        <item>Escada</item>
+        <item>Esmeralda</item>
+        <item>Esmeraldas</item>
+        <item>Espera Feliz</item>
+        <item>Esperantina</item>
+        <item>Esperantina</item>
+        <item>Esperantinópolis</item>
+        <item>Esperança</item>
+        <item>Esperança Nova</item>
+        <item>Esperança do Sul</item>
+        <item>Espigão Alto do Iguaçu</item>
+        <item>Espigão d\'Oeste</item>
+        <item>Espinosa</item>
+        <item>Esplanada</item>
+        <item>Espumoso</item>
+        <item>Espírito Santo</item>
+        <item>Espírito Santo do Dourado</item>
+        <item>Espírito Santo do Pinhal</item>
+        <item>Espírito Santo do Turvo</item>
+        <item>Estação</item>
+        <item>Esteio</item>
+        <item>Estiva</item>
+        <item>Estiva Gerbi</item>
+        <item>Estreito</item>
+        <item>Estrela</item>
+        <item>Estrela Dalva</item>
+        <item>Estrela Velha</item>
+        <item>Estrela d\'Oeste</item>
+        <item>Estrela de Alagoas</item>
+        <item>Estrela do Indaiá</item>
+        <item>Estrela do Norte</item>
+        <item>Estrela do Norte</item>
+        <item>Estrela do Sul</item>
+        <item>Estância</item>
+        <item>Estância Velha</item>
+        <item>Euclides da Cunha</item>
+        <item>Euclides da Cunha Paulista</item>
+        <item>Eugenópolis</item>
+        <item>Eugênio de Castro</item>
+        <item>Eunápolis</item>
+        <item>Eusébio</item>
+        <item>Ewbank da Câmara</item>
+        <item>Extrema</item>
+        <item>Extremoz</item>
+        <item>Exu</item>
+        <item>Fagundes</item>
+        <item>Fagundes Varela</item>
+        <item>Faina</item>
+        <item>Fama</item>
+        <item>Faria Lemos</item>
+        <item>Farias Brito</item>
+        <item>Faro</item>
+        <item>Farol</item>
+        <item>Farroupilha</item>
+        <item>Fartura</item>
+        <item>Fartura do Piauí</item>
+        <item>Faxinal</item>
+        <item>Faxinal do Soturno</item>
+        <item>Faxinal dos Guedes</item>
+        <item>Faxinalzinho</item>
+        <item>Fazenda Nova</item>
+        <item>Fazenda Rio Grande</item>
+        <item>Fazenda Vilanova</item>
+        <item>Feijó</item>
+        <item>Feira Grande</item>
+        <item>Feira Nova</item>
+        <item>Feira Nova</item>
+        <item>Feira Nova do Maranhão</item>
+        <item>Feira da Mata</item>
+        <item>Feira de Santana</item>
+        <item>Felipe Guerra</item>
+        <item>Felisburgo</item>
+        <item>Felixlândia</item>
+        <item>Feliz</item>
+        <item>Feliz Deserto</item>
+        <item>Feliz Natal</item>
+        <item>Felício dos Santos</item>
+        <item>Fernandes Pinheiro</item>
+        <item>Fernandes Tourinho</item>
+        <item>Fernando Falcão</item>
+        <item>Fernando Pedroza</item>
+        <item>Fernando Prestes</item>
+        <item>Fernando de Noronha</item>
+        <item>Fernandópolis</item>
+        <item>Fernão</item>
+        <item>Ferraz de Vasconcelos</item>
+        <item>Ferreira Gomes</item>
+        <item>Ferreiros</item>
+        <item>Ferros</item>
+        <item>Fervedouro</item>
+        <item>Figueira</item>
+        <item>Figueirópolis</item>
+        <item>Figueirópolis d\'Oeste</item>
+        <item>Filadélfia</item>
+        <item>Filadélfia</item>
+        <item>Firmino Alves</item>
+        <item>Firminópolis</item>
+        <item>Flexeiras</item>
+        <item>Flor da Serra do Sul</item>
+        <item>Flor do Sertão</item>
+        <item>Flora Rica</item>
+        <item>Floraí</item>
+        <item>Floreal</item>
+        <item>Flores</item>
+        <item>Flores da Cunha</item>
+        <item>Flores de Goiás</item>
+        <item>Flores do Piauí</item>
+        <item>Floresta</item>
+        <item>Floresta</item>
+        <item>Floresta Azul</item>
+        <item>Floresta do Araguaia</item>
+        <item>Floresta do Piauí</item>
+        <item>Florestal</item>
+        <item>Florestópolis</item>
+        <item>Floriano</item>
+        <item>Floriano Peixoto</item>
+        <item>Florianópolis</item>
+        <item>Florânia</item>
+        <item>Florínia</item>
+        <item>Flórida</item>
+        <item>Flórida Paulista</item>
+        <item>Fonte Boa</item>
+        <item>Fontoura Xavier</item>
+        <item>Formiga</item>
+        <item>Formigueiro</item>
+        <item>Formosa</item>
+        <item>Formosa da Serra Negra</item>
+        <item>Formosa do Oeste</item>
+        <item>Formosa do Rio Preto</item>
+        <item>Formosa do Sul</item>
+        <item>Formoso</item>
+        <item>Formoso</item>
+        <item>Formoso do Araguaia</item>
+        <item>Forquetinha</item>
+        <item>Forquilha</item>
+        <item>Forquilhinha</item>
+        <item>Fortaleza</item>
+        <item>Fortaleza de Minas</item>
+        <item>Fortaleza do Tabocão</item>
+        <item>Fortaleza dos Nogueiras</item>
+        <item>Fortaleza dos Valos</item>
+        <item>Fortim</item>
+        <item>Fortuna</item>
+        <item>Fortuna de Minas</item>
+        <item>Foz do Iguaçu</item>
+        <item>Foz do Jordão</item>
+        <item>Fraiburgo</item>
+        <item>Franca</item>
+        <item>Francinópolis</item>
+        <item>Francisco Alves</item>
+        <item>Francisco Ayres</item>
+        <item>Francisco Badaró</item>
+        <item>Francisco Beltrão</item>
+        <item>Francisco Dantas</item>
+        <item>Francisco Dumont</item>
+        <item>Francisco Macedo</item>
+        <item>Francisco Morato</item>
+        <item>Francisco Santos</item>
+        <item>Francisco Sá</item>
+        <item>Franciscópolis</item>
+        <item>Franco da Rocha</item>
+        <item>Frecheirinha</item>
+        <item>Frederico Westphalen</item>
+        <item>Frei Gaspar</item>
+        <item>Frei Inocêncio</item>
+        <item>Frei Lagonegro</item>
+        <item>Frei Martinho</item>
+        <item>Frei Miguelinho</item>
+        <item>Frei Paulo</item>
+        <item>Frei Rogério</item>
+        <item>Fronteira</item>
+        <item>Fronteira dos Vales</item>
+        <item>Fronteiras</item>
+        <item>Fruta de Leite</item>
+        <item>Frutal</item>
+        <item>Frutuoso Gomes</item>
+        <item>Fundão</item>
+        <item>Funilândia</item>
+        <item>Fátima</item>
+        <item>Fátima</item>
+        <item>Fátima do Sul</item>
+        <item>Fênix</item>
+        <item>Gabriel Monteiro</item>
+        <item>Gado Bravo</item>
+        <item>Galiléia</item>
+        <item>Galinhos</item>
+        <item>Galvão</item>
+        <item>Gameleira</item>
+        <item>Gameleira de Goiás</item>
+        <item>Gameleiras</item>
+        <item>Gandu</item>
+        <item>Garanhuns</item>
+        <item>Gararu</item>
+        <item>Garibaldi</item>
+        <item>Garopaba</item>
+        <item>Garrafão do Norte</item>
+        <item>Garruchos</item>
+        <item>Garuva</item>
+        <item>Garça</item>
+        <item>Gaspar</item>
+        <item>Gastão Vidigal</item>
+        <item>Gaurama</item>
+        <item>Gavião</item>
+        <item>Gavião Peixoto</item>
+        <item>Gaúcha do Norte</item>
+        <item>Geminiano</item>
+        <item>General Carneiro</item>
+        <item>General Carneiro</item>
+        <item>General Câmara</item>
+        <item>General Maynard</item>
+        <item>General Salgado</item>
+        <item>General Sampaio</item>
+        <item>Gentil</item>
+        <item>Gentio do Ouro</item>
+        <item>Getulina</item>
+        <item>Getúlio Vargas</item>
+        <item>Gilbués</item>
+        <item>Girau do Ponciano</item>
+        <item>Giruá</item>
+        <item>Glaucilândia</item>
+        <item>Glicério</item>
+        <item>Glorinha</item>
+        <item>Glória</item>
+        <item>Glória d\'Oeste</item>
+        <item>Glória de Dourados</item>
+        <item>Glória do Goitá</item>
+        <item>Godofredo Viana</item>
+        <item>Godoy Moreira</item>
+        <item>Goiabeira</item>
+        <item>Goiana</item>
+        <item>Goiandira</item>
+        <item>Goianinha</item>
+        <item>Goianira</item>
+        <item>Goianorte</item>
+        <item>Goianá</item>
+        <item>Goianápolis</item>
+        <item>Goianésia</item>
+        <item>Goianésia do Pará</item>
+        <item>Goiatins</item>
+        <item>Goiatuba</item>
+        <item>Goioerê</item>
+        <item>Goioxim</item>
+        <item>Goiás</item>
+        <item>Goiânia</item>
+        <item>Gongogi</item>
+        <item>Gonzaga</item>
+        <item>Gonçalves</item>
+        <item>Gonçalves Dias</item>
+        <item>Gouveia</item>
+        <item>Gouvelândia</item>
+        <item>Governador Archer</item>
+        <item>Governador Celso Ramos</item>
+        <item>Governador Dix-Sept Rosado</item>
+        <item>Governador Edison Lobão</item>
+        <item>Governador Eugênio Barros</item>
+        <item>Governador Jorge Teixeira</item>
+        <item>Governador Lindenberg</item>
+        <item>Governador Luiz Rocha</item>
+        <item>Governador Mangabeira</item>
+        <item>Governador Newton Bello</item>
+        <item>Governador Nunes Freire</item>
+        <item>Governador Valadares</item>
+        <item>Gracho Cardoso</item>
+        <item>Grajaú</item>
+        <item>Gramado</item>
+        <item>Gramado Xavier</item>
+        <item>Gramado dos Loureiros</item>
+        <item>Grandes Rios</item>
+        <item>Granito</item>
+        <item>Granja</item>
+        <item>Granjeiro</item>
+        <item>Gravatal</item>
+        <item>Gravataí</item>
+        <item>Gravatá</item>
+        <item>Graça</item>
+        <item>Graça Aranha</item>
+        <item>Groaíras</item>
+        <item>Grossos</item>
+        <item>Grupiara</item>
+        <item>Grão Mogol</item>
+        <item>Grão Pará</item>
+        <item>Guabiju</item>
+        <item>Guabiruba</item>
+        <item>Guadalupe</item>
+        <item>Guaimbê</item>
+        <item>Guairaçá</item>
+        <item>Guaiçara</item>
+        <item>Guaiúba</item>
+        <item>Guajará</item>
+        <item>Guajará-Mirim</item>
+        <item>Guajeru</item>
+        <item>Guamaré</item>
+        <item>Guamiranga</item>
+        <item>Guanambi</item>
+        <item>Guanhães</item>
+        <item>Guapiara</item>
+        <item>Guapiaçu</item>
+        <item>Guapimirim</item>
+        <item>Guapirama</item>
+        <item>Guaporema</item>
+        <item>Guaporé</item>
+        <item>Guapé</item>
+        <item>Guapó</item>
+        <item>Guarabira</item>
+        <item>Guaraci</item>
+        <item>Guaraci</item>
+        <item>Guaraciaba</item>
+        <item>Guaraciaba</item>
+        <item>Guaraciaba do Norte</item>
+        <item>Guaraciama</item>
+        <item>Guaramiranga</item>
+        <item>Guaramirim</item>
+        <item>Guarani</item>
+        <item>Guarani d\'Oeste</item>
+        <item>Guarani das Missões</item>
+        <item>Guarani de Goiás</item>
+        <item>Guaraniaçu</item>
+        <item>Guarantã</item>
+        <item>Guarantã do Norte</item>
+        <item>Guaranésia</item>
+        <item>Guarapari</item>
+        <item>Guarapuava</item>
+        <item>Guaraqueçaba</item>
+        <item>Guararapes</item>
+        <item>Guararema</item>
+        <item>Guarará</item>
+        <item>Guaratinga</item>
+        <item>Guaratinguetá</item>
+        <item>Guaratuba</item>
+        <item>Guaraçaí</item>
+        <item>Guaraí</item>
+        <item>Guaraíta</item>
+        <item>Guarda-Mor</item>
+        <item>Guareí</item>
+        <item>Guariba</item>
+        <item>Guaribas</item>
+        <item>Guarinos</item>
+        <item>Guarujá</item>
+        <item>Guarujá do Sul</item>
+        <item>Guarulhos</item>
+        <item>Guará</item>
+        <item>Guatambú</item>
+        <item>Guatapará</item>
+        <item>Guaxupé</item>
+        <item>Guaçuí</item>
+        <item>Guaíba</item>
+        <item>Guaíra</item>
+        <item>Guaíra</item>
+        <item>Guia Lopes da Laguna</item>
+        <item>Guidoval</item>
+        <item>Guimarânia</item>
+        <item>Guimarães</item>
+        <item>Guiratinga</item>
+        <item>Guiricema</item>
+        <item>Gurinhatã</item>
+        <item>Gurinhém</item>
+        <item>Gurjão</item>
+        <item>Gurupi</item>
+        <item>Gurupá</item>
+        <item>Guzolândia</item>
+        <item>Gália</item>
+        <item>Harmonia</item>
+        <item>Heitoraí</item>
+        <item>Heliodora</item>
+        <item>Heliópolis</item>
+        <item>Herculândia</item>
+        <item>Herval</item>
+        <item>Herval d\'Oeste</item>
+        <item>Herveiras</item>
+        <item>Hidrolina</item>
+        <item>Hidrolândia</item>
+        <item>Hidrolândia</item>
+        <item>Holambra</item>
+        <item>Honório Serpa</item>
+        <item>Horizonte</item>
+        <item>Horizontina</item>
+        <item>Hortolândia</item>
+        <item>Hugo Napoleão</item>
+        <item>Hulha Negra</item>
+        <item>Humaitá</item>
+        <item>Humaitá</item>
+        <item>Humberto de Campos</item>
+        <item>Iacanga</item>
+        <item>Iaciara</item>
+        <item>Iacri</item>
+        <item>Iapu</item>
+        <item>Iaras</item>
+        <item>Iati</item>
+        <item>Iaçu</item>
+        <item>Ibaiti</item>
+        <item>Ibarama</item>
+        <item>Ibaretama</item>
+        <item>Ibateguara</item>
+        <item>Ibatiba</item>
+        <item>Ibaté</item>
+        <item>Ibema</item>
+        <item>Ibertioga</item>
+        <item>Ibiam</item>
+        <item>Ibiapina</item>
+        <item>Ibiara</item>
+        <item>Ibiassucê</item>
+        <item>Ibiaçá</item>
+        <item>Ibiaí</item>
+        <item>Ibicaraí</item>
+        <item>Ibicaré</item>
+        <item>Ibicoara</item>
+        <item>Ibicuitinga</item>
+        <item>Ibicuí</item>
+        <item>Ibimirim</item>
+        <item>Ibipeba</item>
+        <item>Ibipitanga</item>
+        <item>Ibiporã</item>
+        <item>Ibiquera</item>
+        <item>Ibiracatu</item>
+        <item>Ibiraci</item>
+        <item>Ibiraiaras</item>
+        <item>Ibirajuba</item>
+        <item>Ibirama</item>
+        <item>Ibirapitanga</item>
+        <item>Ibirapuitã</item>
+        <item>Ibirapuã</item>
+        <item>Ibirarema</item>
+        <item>Ibirataia</item>
+        <item>Ibiraçu</item>
+        <item>Ibirité</item>
+        <item>Ibirubá</item>
+        <item>Ibirá</item>
+        <item>Ibitiara</item>
+        <item>Ibitinga</item>
+        <item>Ibitirama</item>
+        <item>Ibititá</item>
+        <item>Ibitiúra de Minas</item>
+        <item>Ibituruna</item>
+        <item>Ibiá</item>
+        <item>Ibiúna</item>
+        <item>Ibotirama</item>
+        <item>Icapuí</item>
+        <item>Icaraí de Minas</item>
+        <item>Icaraíma</item>
+        <item>Icatu</item>
+        <item>Ichu</item>
+        <item>Iconha</item>
+        <item>Icém</item>
+        <item>Icó</item>
+        <item>Ielmo Marinho</item>
+        <item>Iepê</item>
+        <item>Igaci</item>
+        <item>Igaporã</item>
+        <item>Igaracy</item>
+        <item>Igarapava</item>
+        <item>Igarapé</item>
+        <item>Igarapé Grande</item>
+        <item>Igarapé do Meio</item>
+        <item>Igarapé-Açu</item>
+        <item>Igarapé-Miri</item>
+        <item>Igarassu</item>
+        <item>Igaratinga</item>
+        <item>Igaratá</item>
+        <item>Igaraçu do Tietê</item>
+        <item>Igrapiúna</item>
+        <item>Igreja Nova</item>
+        <item>Igrejinha</item>
+        <item>Iguaba Grande</item>
+        <item>Iguape</item>
+        <item>Iguaraci</item>
+        <item>Iguaraçu</item>
+        <item>Iguatama</item>
+        <item>Iguatemi</item>
+        <item>Iguatu</item>
+        <item>Iguatu</item>
+        <item>Iguaí</item>
+        <item>Ijaci</item>
+        <item>Ijuí</item>
+        <item>Ilha Comprida</item>
+        <item>Ilha Grande</item>
+        <item>Ilha Solteira</item>
+        <item>Ilha das Flores</item>
+        <item>Ilhabela</item>
+        <item>Ilhota</item>
+        <item>Ilhéus</item>
+        <item>Ilicínea</item>
+        <item>Ilópolis</item>
+        <item>Imaculada</item>
+        <item>Imaruí</item>
+        <item>Imbaú</item>
+        <item>Imbituba</item>
+        <item>Imbituva</item>
+        <item>Imbuia</item>
+        <item>Imbé</item>
+        <item>Imbé de Minas</item>
+        <item>Imigrante</item>
+        <item>Imperatriz</item>
+        <item>Inaciolândia</item>
+        <item>Inajá</item>
+        <item>Inajá</item>
+        <item>Inconfidentes</item>
+        <item>Indaiabira</item>
+        <item>Indaial</item>
+        <item>Indaiatuba</item>
+        <item>Independência</item>
+        <item>Independência</item>
+        <item>Indiana</item>
+        <item>Indianópolis</item>
+        <item>Indianópolis</item>
+        <item>Indiaporã</item>
+        <item>Indiara</item>
+        <item>Indiaroba</item>
+        <item>Indiavaí</item>
+        <item>Ingazeira</item>
+        <item>Ingaí</item>
+        <item>Ingá</item>
+        <item>Inhacorá</item>
+        <item>Inhambupe</item>
+        <item>Inhangapi</item>
+        <item>Inhapi</item>
+        <item>Inhapim</item>
+        <item>Inhaúma</item>
+        <item>Inhuma</item>
+        <item>Inhumas</item>
+        <item>Inimutaba</item>
+        <item>Inocência</item>
+        <item>Inácio Martins</item>
+        <item>Inúbia Paulista</item>
+        <item>Iomerê</item>
+        <item>Ipaba</item>
+        <item>Ipameri</item>
+        <item>Ipanema</item>
+        <item>Ipanguaçu</item>
+        <item>Ipaporanga</item>
+        <item>Ipatinga</item>
+        <item>Ipaumirim</item>
+        <item>Ipauçu</item>
+        <item>Ipecaetá</item>
+        <item>Iperó</item>
+        <item>Ipeúna</item>
+        <item>Ipiaçu</item>
+        <item>Ipiaú</item>
+        <item>Ipiguá</item>
+        <item>Ipira</item>
+        <item>Ipiranga</item>
+        <item>Ipiranga de Goiás</item>
+        <item>Ipiranga do Piauí</item>
+        <item>Ipiranga do Sul</item>
+        <item>Ipirá</item>
+        <item>Ipixuna</item>
+        <item>Ipixuna do Pará</item>
+        <item>Ipojuca</item>
+        <item>Iporanga</item>
+        <item>Iporá</item>
+        <item>Iporã</item>
+        <item>Iporã do Oeste</item>
+        <item>Ipu</item>
+        <item>Ipuaçu</item>
+        <item>Ipubi</item>
+        <item>Ipueira</item>
+        <item>Ipueiras</item>
+        <item>Ipueiras</item>
+        <item>Ipuiúna</item>
+        <item>Ipumirim</item>
+        <item>Ipupiara</item>
+        <item>Ipuã</item>
+        <item>Ipê</item>
+        <item>Iracema</item>
+        <item>Iracema</item>
+        <item>Iracema do Oeste</item>
+        <item>Iraceminha</item>
+        <item>Iracemápolis</item>
+        <item>Irajuba</item>
+        <item>Iramaia</item>
+        <item>Iranduba</item>
+        <item>Irani</item>
+        <item>Irapuru</item>
+        <item>Irapuã</item>
+        <item>Iraquara</item>
+        <item>Irará</item>
+        <item>Irati</item>
+        <item>Irati</item>
+        <item>Irauçuba</item>
+        <item>Iraí</item>
+        <item>Iraí de Minas</item>
+        <item>Irecê</item>
+        <item>Iretama</item>
+        <item>Irineópolis</item>
+        <item>Irituia</item>
+        <item>Irupi</item>
+        <item>Isaías Coelho</item>
+        <item>Israelândia</item>
+        <item>Itaara</item>
+        <item>Itabaiana</item>
+        <item>Itabaiana</item>
+        <item>Itabaianinha</item>
+        <item>Itabela</item>
+        <item>Itaberaba</item>
+        <item>Itaberaí</item>
+        <item>Itaberá</item>
+        <item>Itabi</item>
+        <item>Itabira</item>
+        <item>Itabirinha de Mantena</item>
+        <item>Itabirito</item>
+        <item>Itaboraí</item>
+        <item>Itabuna</item>
+        <item>Itacajá</item>
+        <item>Itacambira</item>
+        <item>Itacarambi</item>
+        <item>Itacaré</item>
+        <item>Itacoatiara</item>
+        <item>Itacuruba</item>
+        <item>Itacurubi</item>
+        <item>Itaeté</item>
+        <item>Itagi</item>
+        <item>Itagibá</item>
+        <item>Itagimirim</item>
+        <item>Itaguajé</item>
+        <item>Itaguara</item>
+        <item>Itaguari</item>
+        <item>Itaguaru</item>
+        <item>Itaguatins</item>
+        <item>Itaguaçu</item>
+        <item>Itaguaçu da Bahia</item>
+        <item>Itaguaí</item>
+        <item>Itainópolis</item>
+        <item>Itaipava do Grajaú</item>
+        <item>Itaipulândia</item>
+        <item>Itaipé</item>
+        <item>Itaitinga</item>
+        <item>Itaituba</item>
+        <item>Itaiçaba</item>
+        <item>Itaiópolis</item>
+        <item>Itajaí</item>
+        <item>Itajobi</item>
+        <item>Itaju</item>
+        <item>Itaju do Colônia</item>
+        <item>Itajubá</item>
+        <item>Itajuípe</item>
+        <item>Itajá</item>
+        <item>Itajá</item>
+        <item>Italva</item>
+        <item>Itamaracá</item>
+        <item>Itamaraju</item>
+        <item>Itamarandiba</item>
+        <item>Itamarati</item>
+        <item>Itamarati de Minas</item>
+        <item>Itamari</item>
+        <item>Itambacuri</item>
+        <item>Itambaracá</item>
+        <item>Itambé</item>
+        <item>Itambé</item>
+        <item>Itambé</item>
+        <item>Itambé do Mato Dentro</item>
+        <item>Itamogi</item>
+        <item>Itamonte</item>
+        <item>Itanagra</item>
+        <item>Itanhandu</item>
+        <item>Itanhaém</item>
+        <item>Itanhomi</item>
+        <item>Itanhém</item>
+        <item>Itaobim</item>
+        <item>Itaocara</item>
+        <item>Itapaci</item>
+        <item>Itapagipe</item>
+        <item>Itapagé</item>
+        <item>Itaparica</item>
+        <item>Itapebi</item>
+        <item>Itapecerica</item>
+        <item>Itapecerica da Serra</item>
+        <item>Itapecuru Mirim</item>
+        <item>Itapejara d\'Oeste</item>
+        <item>Itapema</item>
+        <item>Itapemirim</item>
+        <item>Itaperuna</item>
+        <item>Itaperuçu</item>
+        <item>Itapetim</item>
+        <item>Itapetinga</item>
+        <item>Itapetininga</item>
+        <item>Itapeva</item>
+        <item>Itapeva</item>
+        <item>Itapevi</item>
+        <item>Itapicuru</item>
+        <item>Itapipoca</item>
+        <item>Itapira</item>
+        <item>Itapiranga</item>
+        <item>Itapiranga</item>
+        <item>Itapirapuã</item>
+        <item>Itapirapuã Paulista</item>
+        <item>Itapiratins</item>
+        <item>Itapissuma</item>
+        <item>Itapitanga</item>
+        <item>Itapiúna</item>
+        <item>Itaporanga</item>
+        <item>Itaporanga</item>
+        <item>Itaporanga d\'Ajuda</item>
+        <item>Itapororoca</item>
+        <item>Itaporã</item>
+        <item>Itaporã do Tocantins</item>
+        <item>Itapoá</item>
+        <item>Itapuca</item>
+        <item>Itapura</item>
+        <item>Itapuranga</item>
+        <item>Itapuã do Oeste</item>
+        <item>Itapuí</item>
+        <item>Itapé</item>
+        <item>Itaquaquecetuba</item>
+        <item>Itaquara</item>
+        <item>Itaqui</item>
+        <item>Itaquiraí</item>
+        <item>Itaquitinga</item>
+        <item>Itarana</item>
+        <item>Itarantim</item>
+        <item>Itararé</item>
+        <item>Itarema</item>
+        <item>Itariri</item>
+        <item>Itarumã</item>
+        <item>Itati</item>
+        <item>Itatiaia</item>
+        <item>Itatiaiuçu</item>
+        <item>Itatiba</item>
+        <item>Itatiba do Sul</item>
+        <item>Itatim</item>
+        <item>Itatinga</item>
+        <item>Itatira</item>
+        <item>Itatuba</item>
+        <item>Itaubal</item>
+        <item>Itaueira</item>
+        <item>Itauçu</item>
+        <item>Itaverava</item>
+        <item>Itaí</item>
+        <item>Itaíba</item>
+        <item>Itaóca</item>
+        <item>Itaú</item>
+        <item>Itaú de Minas</item>
+        <item>Itaúba</item>
+        <item>Itaúna</item>
+        <item>Itaúna do Sul</item>
+        <item>Itinga</item>
+        <item>Itinga do Maranhão</item>
+        <item>Itiquira</item>
+        <item>Itirapina</item>
+        <item>Itirapuã</item>
+        <item>Itiruçu</item>
+        <item>Itiúba</item>
+        <item>Itobi</item>
+        <item>Itororó</item>
+        <item>Itu</item>
+        <item>Ituaçu</item>
+        <item>Ituberá</item>
+        <item>Itueta</item>
+        <item>Ituiutaba</item>
+        <item>Itumbiara</item>
+        <item>Itumirim</item>
+        <item>Itupeva</item>
+        <item>Itupiranga</item>
+        <item>Ituporanga</item>
+        <item>Iturama</item>
+        <item>Itutinga</item>
+        <item>Ituverava</item>
+        <item>Itá</item>
+        <item>Itápolis</item>
+        <item>Iuiú</item>
+        <item>Ivaiporã</item>
+        <item>Ivatuba</item>
+        <item>Ivaté</item>
+        <item>Ivaí</item>
+        <item>Ivinhema</item>
+        <item>Ivolândia</item>
+        <item>Ivorá</item>
+        <item>Ivoti</item>
+        <item>Içara</item>
+        <item>Iúna</item>
+        <item>Jaboatão dos Guararapes</item>
+        <item>Jaborandi</item>
+        <item>Jaborandi</item>
+        <item>Jaborá</item>
+        <item>Jaboti</item>
+        <item>Jaboticaba</item>
+        <item>Jaboticabal</item>
+        <item>Jaboticatubas</item>
+        <item>Jacaraci</item>
+        <item>Jacaraú</item>
+        <item>Jacareacanga</item>
+        <item>Jacarezinho</item>
+        <item>Jacareí</item>
+        <item>Jacaré dos Homens</item>
+        <item>Jaci</item>
+        <item>Jaciara</item>
+        <item>Jacinto</item>
+        <item>Jacinto Machado</item>
+        <item>Jacobina</item>
+        <item>Jacobina do Piauí</item>
+        <item>Jacuizinho</item>
+        <item>Jacundá</item>
+        <item>Jacupiranga</item>
+        <item>Jacutinga</item>
+        <item>Jacutinga</item>
+        <item>Jacuí</item>
+        <item>Jacuípe</item>
+        <item>Jaguapitã</item>
+        <item>Jaguaquara</item>
+        <item>Jaguarari</item>
+        <item>Jaguaraçu</item>
+        <item>Jaguaretama</item>
+        <item>Jaguari</item>
+        <item>Jaguariaíva</item>
+        <item>Jaguaribara</item>
+        <item>Jaguaribe</item>
+        <item>Jaguaripe</item>
+        <item>Jaguariúna</item>
+        <item>Jaguaruana</item>
+        <item>Jaguaruna</item>
+        <item>Jaguarão</item>
+        <item>Jaguaré</item>
+        <item>Jaicós</item>
+        <item>Jales</item>
+        <item>Jambeiro</item>
+        <item>Jampruca</item>
+        <item>Janaúba</item>
+        <item>Jandaia</item>
+        <item>Jandaia do Sul</item>
+        <item>Jandaíra</item>
+        <item>Jandaíra</item>
+        <item>Jandira</item>
+        <item>Janduís</item>
+        <item>Jangada</item>
+        <item>Janiópolis</item>
+        <item>Januária</item>
+        <item>Januário Cicco</item>
+        <item>Japaratinga</item>
+        <item>Japaratuba</item>
+        <item>Japaraíba</item>
+        <item>Japeri</item>
+        <item>Japi</item>
+        <item>Japira</item>
+        <item>Japoatã</item>
+        <item>Japonvar</item>
+        <item>Japorã</item>
+        <item>Japurá</item>
+        <item>Japurá</item>
+        <item>Jaqueira</item>
+        <item>Jaquirana</item>
+        <item>Jaraguari</item>
+        <item>Jaraguá</item>
+        <item>Jaraguá do Sul</item>
+        <item>Jaramataia</item>
+        <item>Jardim</item>
+        <item>Jardim</item>
+        <item>Jardim Alegre</item>
+        <item>Jardim Olinda</item>
+        <item>Jardim de Angicos</item>
+        <item>Jardim de Piranhas</item>
+        <item>Jardim do Mulato</item>
+        <item>Jardim do Seridó</item>
+        <item>Jardinópolis</item>
+        <item>Jardinópolis</item>
+        <item>Jari</item>
+        <item>Jarinu</item>
+        <item>Jaru</item>
+        <item>Jataizinho</item>
+        <item>Jataí</item>
+        <item>Jataúba</item>
+        <item>Jateí</item>
+        <item>Jati</item>
+        <item>Jatobá</item>
+        <item>Jatobá</item>
+        <item>Jatobá do Piauí</item>
+        <item>Jaupaci</item>
+        <item>Jauru</item>
+        <item>Jaçanã</item>
+        <item>Jaíba</item>
+        <item>Jaú</item>
+        <item>Jaú do Tocantins</item>
+        <item>Jeceaba</item>
+        <item>Jenipapo de Minas</item>
+        <item>Jenipapo dos Vieiras</item>
+        <item>Jequeri</item>
+        <item>Jequitaí</item>
+        <item>Jequitibá</item>
+        <item>Jequitinhonha</item>
+        <item>Jequiá da Praia</item>
+        <item>Jequié</item>
+        <item>Jeremoabo</item>
+        <item>Jericó</item>
+        <item>Jeriquara</item>
+        <item>Jerumenha</item>
+        <item>Jerônimo Monteiro</item>
+        <item>Jesuânia</item>
+        <item>Jesuítas</item>
+        <item>Jesúpolis</item>
+        <item>Ji-Paraná</item>
+        <item>Jijoca de Jericoaroara</item>
+        <item>Jiquiriçá</item>
+        <item>Jitaúna</item>
+        <item>Joanésia</item>
+        <item>Joanópolis</item>
+        <item>Joaquim Felício</item>
+        <item>Joaquim Gomes</item>
+        <item>Joaquim Nabuco</item>
+        <item>Joaquim Pires</item>
+        <item>Joaquim Távora</item>
+        <item>Joaçaba</item>
+        <item>Joaíma</item>
+        <item>Joca Marques</item>
+        <item>Joinville</item>
+        <item>Jordânia</item>
+        <item>Jordão</item>
+        <item>Joselândia</item>
+        <item>Josenópolis</item>
+        <item>José Boiteux</item>
+        <item>José Bonifácio</item>
+        <item>José Gonçalves de Minas</item>
+        <item>José Raydan</item>
+        <item>José da Penha</item>
+        <item>José de Freitas</item>
+        <item>Joviânia</item>
+        <item>João Alfredo</item>
+        <item>João Costa</item>
+        <item>João Câmara</item>
+        <item>João Dias</item>
+        <item>João Dourado</item>
+        <item>João Lisboa</item>
+        <item>João Monlevade</item>
+        <item>João Neiva</item>
+        <item>João Pessoa</item>
+        <item>João Pinheiro</item>
+        <item>João Ramalho</item>
+        <item>Juara</item>
+        <item>Juarez Távora</item>
+        <item>Juarina</item>
+        <item>Juatuba</item>
+        <item>Juazeirinho</item>
+        <item>Juazeiro</item>
+        <item>Juazeiro do Norte</item>
+        <item>Juazeiro do Piauí</item>
+        <item>Jucati</item>
+        <item>Jucurutu</item>
+        <item>Jucuruçu</item>
+        <item>Jucás</item>
+        <item>Juiz de Fora</item>
+        <item>Jumirim</item>
+        <item>Junco do Maranhão</item>
+        <item>Junco do Seridó</item>
+        <item>Jundiaí</item>
+        <item>Jundiaí do Sul</item>
+        <item>Jundiá</item>
+        <item>Jundiá</item>
+        <item>Junqueiro</item>
+        <item>Junqueirópolis</item>
+        <item>Jupi</item>
+        <item>Jupiá</item>
+        <item>Juquitiba</item>
+        <item>Juquiá</item>
+        <item>Juramento</item>
+        <item>Juranda</item>
+        <item>Jurema</item>
+        <item>Jurema</item>
+        <item>Juripiranga</item>
+        <item>Juru</item>
+        <item>Juruaia</item>
+        <item>Juruena</item>
+        <item>Juruti</item>
+        <item>Juruá</item>
+        <item>Juscimeira</item>
+        <item>Jussara</item>
+        <item>Jussara</item>
+        <item>Jussara</item>
+        <item>Jussari</item>
+        <item>Jussiape</item>
+        <item>Jutaí</item>
+        <item>Juti</item>
+        <item>Juvenília</item>
+        <item>Juína</item>
+        <item>Jóia</item>
+        <item>Júlio Borges</item>
+        <item>Júlio Mesquita</item>
+        <item>Júlio de Castilhos</item>
+        <item>Kaloré</item>
+        <item>Lacerdópolis</item>
+        <item>Ladainha</item>
+        <item>Ladário</item>
+        <item>Lafaiete Coutinho</item>
+        <item>Lagamar</item>
+        <item>Lagarto</item>
+        <item>Lages</item>
+        <item>Lago Verde</item>
+        <item>Lago da Pedra</item>
+        <item>Lago do Junco</item>
+        <item>Lago dos Rodrigues</item>
+        <item>Lagoa</item>
+        <item>Lagoa Alegre</item>
+        <item>Lagoa Bonita do Sul</item>
+        <item>Lagoa Dourada</item>
+        <item>Lagoa Formosa</item>
+        <item>Lagoa Grande</item>
+        <item>Lagoa Grande</item>
+        <item>Lagoa Grande do Maranhão</item>
+        <item>Lagoa Nova</item>
+        <item>Lagoa Real</item>
+        <item>Lagoa Salgada</item>
+        <item>Lagoa Santa</item>
+        <item>Lagoa Santa</item>
+        <item>Lagoa Seca</item>
+        <item>Lagoa Vermelha</item>
+        <item>Lagoa d\'Anta</item>
+        <item>Lagoa da Canoa</item>
+        <item>Lagoa da Confusão</item>
+        <item>Lagoa da Prata</item>
+        <item>Lagoa de Dentro</item>
+        <item>Lagoa de Pedras</item>
+        <item>Lagoa de São Francisco</item>
+        <item>Lagoa de Velhos</item>
+        <item>Lagoa do Barro do Piauí</item>
+        <item>Lagoa do Carro</item>
+        <item>Lagoa do Itaenga</item>
+        <item>Lagoa do Mato</item>
+        <item>Lagoa do Ouro</item>
+        <item>Lagoa do Piauí</item>
+        <item>Lagoa do Sítio</item>
+        <item>Lagoa do Tocantins</item>
+        <item>Lagoa dos Gatos</item>
+        <item>Lagoa dos Patos</item>
+        <item>Lagoa dos Três Cantos</item>
+        <item>Lagoinha</item>
+        <item>Lagoinha do Piauí</item>
+        <item>Lagoão</item>
+        <item>Laguna</item>
+        <item>Laguna Carapã</item>
+        <item>Laje</item>
+        <item>Laje do Muriaé</item>
+        <item>Lajeado</item>
+        <item>Lajeado</item>
+        <item>Lajeado Grande</item>
+        <item>Lajeado Novo</item>
+        <item>Lajeado do Bugre</item>
+        <item>Lajedinho</item>
+        <item>Lajedo</item>
+        <item>Lajedo do Tabocal</item>
+        <item>Lajedão</item>
+        <item>Lajes</item>
+        <item>Lajes Pintadas</item>
+        <item>Lajinha</item>
+        <item>Lamarão</item>
+        <item>Lambari</item>
+        <item>Lambari d\'Oeste</item>
+        <item>Lamim</item>
+        <item>Landri Sales</item>
+        <item>Lapa</item>
+        <item>Lapão</item>
+        <item>Laranja da Terra</item>
+        <item>Laranjal</item>
+        <item>Laranjal</item>
+        <item>Laranjal Paulista</item>
+        <item>Laranjal do Jari</item>
+        <item>Laranjeiras</item>
+        <item>Laranjeiras do Sul</item>
+        <item>Lassance</item>
+        <item>Lastro</item>
+        <item>Laurentino</item>
+        <item>Lauro Muller</item>
+        <item>Lauro de Freitas</item>
+        <item>Lavandeira</item>
+        <item>Lavras</item>
+        <item>Lavras da Mangabeira</item>
+        <item>Lavras do Sul</item>
+        <item>Lavrinhas</item>
+        <item>Lavínia</item>
+        <item>Leandro Ferreira</item>
+        <item>Lebon Régis</item>
+        <item>Leme</item>
+        <item>Leme do Prado</item>
+        <item>Lençóis</item>
+        <item>Lençóis Paulista</item>
+        <item>Leoberto Leal</item>
+        <item>Leopoldina</item>
+        <item>Leopoldo de Bulhões</item>
+        <item>Leópolis</item>
+        <item>Liberato Salzano</item>
+        <item>Liberdade</item>
+        <item>Licínio de Almeida</item>
+        <item>Lidianópolis</item>
+        <item>Lima Campos</item>
+        <item>Lima Duarte</item>
+        <item>Limeira</item>
+        <item>Limeira do Oeste</item>
+        <item>Limoeiro</item>
+        <item>Limoeiro de Anadia</item>
+        <item>Limoeiro do Ajuru</item>
+        <item>Limoeiro do Norte</item>
+        <item>Lindoeste</item>
+        <item>Lindolfo Collor</item>
+        <item>Lindóia</item>
+        <item>Lindóia do Sul</item>
+        <item>Linha Nova</item>
+        <item>Linhares</item>
+        <item>Lins</item>
+        <item>Livramento</item>
+        <item>Livramento de Nossa Senhora</item>
+        <item>Lizarda</item>
+        <item>Loanda</item>
+        <item>Lobato</item>
+        <item>Logradouro</item>
+        <item>Londrina</item>
+        <item>Lontra</item>
+        <item>Lontras</item>
+        <item>Lorena</item>
+        <item>Loreto</item>
+        <item>Lourdes</item>
+        <item>Louveira</item>
+        <item>Lucas do Rio Verde</item>
+        <item>Lucena</item>
+        <item>Lucianópolis</item>
+        <item>Luciára</item>
+        <item>Lucrécia</item>
+        <item>Lucélia</item>
+        <item>Luisburgo</item>
+        <item>Luislândia</item>
+        <item>Luiz Alves</item>
+        <item>Luiziana</item>
+        <item>Luiziânia</item>
+        <item>Luminárias</item>
+        <item>Lunardelli</item>
+        <item>Lupionópolis</item>
+        <item>Lupércio</item>
+        <item>Lutécia</item>
+        <item>Luz</item>
+        <item>Luzerna</item>
+        <item>Luzilândia</item>
+        <item>Luzinópolis</item>
+        <item>Luziânia</item>
+        <item>Luís Antônio</item>
+        <item>Luís Correia</item>
+        <item>Luís Domingues</item>
+        <item>Luís Eduardo Magalhães</item>
+        <item>Luís Gomes</item>
+        <item>Lábrea</item>
+        <item>Macajuba</item>
+        <item>Macambira</item>
+        <item>Macaparana</item>
+        <item>Macapá</item>
+        <item>Macarani</item>
+        <item>Macatuba</item>
+        <item>Macau</item>
+        <item>Macaubal</item>
+        <item>Macaé</item>
+        <item>Macaíba</item>
+        <item>Macaúbas</item>
+        <item>Macedônia</item>
+        <item>Maceió</item>
+        <item>Machacalis</item>
+        <item>Machadinho</item>
+        <item>Machadinho d\'Oeste</item>
+        <item>Machado</item>
+        <item>Machados</item>
+        <item>Macieira</item>
+        <item>Macuco</item>
+        <item>Macururé</item>
+        <item>Madalena</item>
+        <item>Madeiro</item>
+        <item>Madre de Deus</item>
+        <item>Madre de Deus de Minas</item>
+        <item>Maetinga</item>
+        <item>Mafra</item>
+        <item>Magalhães Barata</item>
+        <item>Magalhães de Almeida</item>
+        <item>Magda</item>
+        <item>Magé</item>
+        <item>Maiquinique</item>
+        <item>Mairi</item>
+        <item>Mairinque</item>
+        <item>Mairiporã</item>
+        <item>Mairipotaba</item>
+        <item>Major Gercino</item>
+        <item>Major Isidoro</item>
+        <item>Major Sales</item>
+        <item>Major Vieira</item>
+        <item>Malacacheta</item>
+        <item>Malhada</item>
+        <item>Malhada de Pedras</item>
+        <item>Malhada dos Bois</item>
+        <item>Malhador</item>
+        <item>Mallet</item>
+        <item>Malta</item>
+        <item>Mamanguape</item>
+        <item>Mambaí</item>
+        <item>Mamborê</item>
+        <item>Mamonas</item>
+        <item>Mampituba</item>
+        <item>Manacapuru</item>
+        <item>Manaquiri</item>
+        <item>Manari</item>
+        <item>Manaus</item>
+        <item>Manaíra</item>
+        <item>Mandaguari</item>
+        <item>Mandaguaçu</item>
+        <item>Mandirituba</item>
+        <item>Manduri</item>
+        <item>Manfrinópolis</item>
+        <item>Manga</item>
+        <item>Mangaratiba</item>
+        <item>Mangueirinha</item>
+        <item>Manhuaçu</item>
+        <item>Manhumirim</item>
+        <item>Manicoré</item>
+        <item>Manoel Emídio</item>
+        <item>Manoel Ribas</item>
+        <item>Manoel Urbano</item>
+        <item>Manoel Viana</item>
+        <item>Manoel Vitorino</item>
+        <item>Mansidão</item>
+        <item>Mantena</item>
+        <item>Mantenópolis</item>
+        <item>Maquiné</item>
+        <item>Mar Vermelho</item>
+        <item>Mar de Espanha</item>
+        <item>Mara Rosa</item>
+        <item>Marabá</item>
+        <item>Marabá Paulista</item>
+        <item>Maracaju</item>
+        <item>Maracajá</item>
+        <item>Maracanaú</item>
+        <item>Maracanã</item>
+        <item>Maracaçumé</item>
+        <item>Maracaí</item>
+        <item>Maracás</item>
+        <item>Maragogi</item>
+        <item>Maragogipe</item>
+        <item>Maraial</item>
+        <item>Marajá do Sena</item>
+        <item>Maranguape</item>
+        <item>Maranhãozinho</item>
+        <item>Marapanim</item>
+        <item>Marapoama</item>
+        <item>Marataizes</item>
+        <item>Maratá</item>
+        <item>Marau</item>
+        <item>Maravilha</item>
+        <item>Maravilha</item>
+        <item>Maravilhas</item>
+        <item>Maraã</item>
+        <item>Maraú</item>
+        <item>Marcação</item>
+        <item>Marcelino Ramos</item>
+        <item>Marcelino Vieira</item>
+        <item>Marcelândia</item>
+        <item>Marcionílio Souza</item>
+        <item>Marco</item>
+        <item>Marcolândia</item>
+        <item>Marcos Parente</item>
+        <item>Marechal Cândido Rondon</item>
+        <item>Marechal Deodoro</item>
+        <item>Marechal Floriano</item>
+        <item>Marechal Thaumaturgo</item>
+        <item>Marema</item>
+        <item>Mari</item>
+        <item>Maria Helena</item>
+        <item>Maria da Fé</item>
+        <item>Marialva</item>
+        <item>Mariana</item>
+        <item>Mariana Pimentel</item>
+        <item>Mariano Moro</item>
+        <item>Marianópolis do Tocantins</item>
+        <item>Maribondo</item>
+        <item>Maricá</item>
+        <item>Marilac</item>
+        <item>Marilena</item>
+        <item>Mariluz</item>
+        <item>Marilândia</item>
+        <item>Marilândia do Sul</item>
+        <item>Maringá</item>
+        <item>Marinópolis</item>
+        <item>Maripá</item>
+        <item>Maripá de Minas</item>
+        <item>Marituba</item>
+        <item>Marizópolis</item>
+        <item>Mariápolis</item>
+        <item>Mariópolis</item>
+        <item>Marliéria</item>
+        <item>Marmeleiro</item>
+        <item>Marmelópolis</item>
+        <item>Marques de Souza</item>
+        <item>Marquinho</item>
+        <item>Martinho Campos</item>
+        <item>Martins</item>
+        <item>Martins Soares</item>
+        <item>Martinópole</item>
+        <item>Martinópolis</item>
+        <item>Maruim</item>
+        <item>Marumbi</item>
+        <item>Marzagão</item>
+        <item>Marília</item>
+        <item>Mascote</item>
+        <item>Massapê</item>
+        <item>Massapê do Piauí</item>
+        <item>Massaranduba</item>
+        <item>Massaranduba</item>
+        <item>Mata</item>
+        <item>Mata Grande</item>
+        <item>Mata Roma</item>
+        <item>Mata Verde</item>
+        <item>Mata de São João</item>
+        <item>Mataraca</item>
+        <item>Mateiros</item>
+        <item>Matelândia</item>
+        <item>Materlândia</item>
+        <item>Mateus Leme</item>
+        <item>Mathias Lobato</item>
+        <item>Matias Barbosa</item>
+        <item>Matias Cardoso</item>
+        <item>Matias Olímpio</item>
+        <item>Matina</item>
+        <item>Matinha</item>
+        <item>Matinhas</item>
+        <item>Matinhos</item>
+        <item>Matipó</item>
+        <item>Mato Castelhano</item>
+        <item>Mato Grosso</item>
+        <item>Mato Leitão</item>
+        <item>Mato Queimado</item>
+        <item>Mato Rico</item>
+        <item>Mato Verde</item>
+        <item>Matos Costa</item>
+        <item>Matozinhos</item>
+        <item>Matrinchã</item>
+        <item>Matriz de Camaragibe</item>
+        <item>Matupá</item>
+        <item>Maturéia</item>
+        <item>Matutina</item>
+        <item>Matão</item>
+        <item>Matões</item>
+        <item>Matões do Norte</item>
+        <item>Maurilândia</item>
+        <item>Maurilândia do Tocantins</item>
+        <item>Mauriti</item>
+        <item>Mauá</item>
+        <item>Mauá da Serra</item>
+        <item>Maués</item>
+        <item>Maxaranguape</item>
+        <item>Maximiliano de Almeida</item>
+        <item>Mazagão</item>
+        <item>Maçambara</item>
+        <item>Medeiros</item>
+        <item>Medeiros Neto</item>
+        <item>Medianeira</item>
+        <item>Medicilândia</item>
+        <item>Medina</item>
+        <item>Meleiro</item>
+        <item>Melgaço</item>
+        <item>Mendes</item>
+        <item>Mendes Pimentel</item>
+        <item>Mendonça</item>
+        <item>Mercedes</item>
+        <item>Mercês</item>
+        <item>Meridiano</item>
+        <item>Meruoca</item>
+        <item>Mesquita</item>
+        <item>Mesquita</item>
+        <item>Messias</item>
+        <item>Messias Targino</item>
+        <item>Mesópolis</item>
+        <item>Miguel Alves</item>
+        <item>Miguel Calmon</item>
+        <item>Miguel Leão</item>
+        <item>Miguel Pereira</item>
+        <item>Miguelópolis</item>
+        <item>Milagres</item>
+        <item>Milagres</item>
+        <item>Milagres do Maranhão</item>
+        <item>Milhã</item>
+        <item>Milton Brandão</item>
+        <item>Mimoso de Goiás</item>
+        <item>Mimoso do Sul</item>
+        <item>Minador do Negrão</item>
+        <item>Minas Novas</item>
+        <item>Minas do Leão</item>
+        <item>Minaçu</item>
+        <item>Minduri</item>
+        <item>Mineiros</item>
+        <item>Mineiros do Tietê</item>
+        <item>Ministro Andreazza</item>
+        <item>Mira Estrela</item>
+        <item>Mirabela</item>
+        <item>Miracatu</item>
+        <item>Miracema</item>
+        <item>Miracema do Tocantins</item>
+        <item>Mirador</item>
+        <item>Mirador</item>
+        <item>Miradouro</item>
+        <item>Miraguaí</item>
+        <item>Miranda</item>
+        <item>Miranda do Norte</item>
+        <item>Mirandiba</item>
+        <item>Mirandópolis</item>
+        <item>Mirangaba</item>
+        <item>Miranorte</item>
+        <item>Mirante</item>
+        <item>Mirante da Serra</item>
+        <item>Mirante do Paranapanema</item>
+        <item>Miraselva</item>
+        <item>Mirassol</item>
+        <item>Mirassol d\'Oeste</item>
+        <item>Mirassolândia</item>
+        <item>Miravânia</item>
+        <item>Miraí</item>
+        <item>Miraíma</item>
+        <item>Mirim Doce</item>
+        <item>Mirinzal</item>
+        <item>Missal</item>
+        <item>Missão Velha</item>
+        <item>Mocajuba</item>
+        <item>Mococa</item>
+        <item>Modelo</item>
+        <item>Moeda</item>
+        <item>Moema</item>
+        <item>Mogeiro</item>
+        <item>Mogi das Cruzes</item>
+        <item>Mogi-Guaçu</item>
+        <item>Mogi-Mirim</item>
+        <item>Moiporá</item>
+        <item>Moita Bonita</item>
+        <item>Moju</item>
+        <item>Mombaça</item>
+        <item>Mombuca</item>
+        <item>Mondaí</item>
+        <item>Mongaguá</item>
+        <item>Monjolos</item>
+        <item>Monsenhor Gil</item>
+        <item>Monsenhor Hipólito</item>
+        <item>Monsenhor Paulo</item>
+        <item>Monsenhor Tabosa</item>
+        <item>Montadas</item>
+        <item>Montalvânia</item>
+        <item>Montanha</item>
+        <item>Montanhas</item>
+        <item>Montauri</item>
+        <item>Monte Alegre</item>
+        <item>Monte Alegre</item>
+        <item>Monte Alegre de Goiás</item>
+        <item>Monte Alegre de Minas</item>
+        <item>Monte Alegre de Sergipe</item>
+        <item>Monte Alegre do Piauí</item>
+        <item>Monte Alegre do Sul</item>
+        <item>Monte Alegre dos Campos</item>
+        <item>Monte Alto</item>
+        <item>Monte Aprazível</item>
+        <item>Monte Azul</item>
+        <item>Monte Azul Paulista</item>
+        <item>Monte Belo</item>
+        <item>Monte Belo do Sul</item>
+        <item>Monte Carlo</item>
+        <item>Monte Carmelo</item>
+        <item>Monte Castelo</item>
+        <item>Monte Castelo</item>
+        <item>Monte Formoso</item>
+        <item>Monte Horebe</item>
+        <item>Monte Mor</item>
+        <item>Monte Negro</item>
+        <item>Monte Santo</item>
+        <item>Monte Santo de Minas</item>
+        <item>Monte Santo do Tocantins</item>
+        <item>Monte Sião</item>
+        <item>Monte das Gameleiras</item>
+        <item>Monte do Carmo</item>
+        <item>Monteiro</item>
+        <item>Monteiro Lobato</item>
+        <item>Monteirópolis</item>
+        <item>Montenegro</item>
+        <item>Montes Altos</item>
+        <item>Montes Claros</item>
+        <item>Montes Claros de Goiás</item>
+        <item>Montezuma</item>
+        <item>Montividiu</item>
+        <item>Montividiu do Norte</item>
+        <item>Monção</item>
+        <item>Monções</item>
+        <item>Morada Nova</item>
+        <item>Morada Nova de Minas</item>
+        <item>Moraújo</item>
+        <item>Moreilândia</item>
+        <item>Moreira Sales</item>
+        <item>Moreno</item>
+        <item>Mormaço</item>
+        <item>Morpará</item>
+        <item>Morretes</item>
+        <item>Morrinhos</item>
+        <item>Morrinhos</item>
+        <item>Morrinhos do Sul</item>
+        <item>Morro Agudo</item>
+        <item>Morro Agudo de Goiás</item>
+        <item>Morro Cabeça no Tempo</item>
+        <item>Morro Grande</item>
+        <item>Morro Redondo</item>
+        <item>Morro Reuter</item>
+        <item>Morro da Fumaça</item>
+        <item>Morro da Garça</item>
+        <item>Morro do Chapéu</item>
+        <item>Morro do Chapéu do Piauí</item>
+        <item>Morro do Pilar</item>
+        <item>Morros</item>
+        <item>Mortugaba</item>
+        <item>Morungaba</item>
+        <item>Mossoró</item>
+        <item>Mossâmedes</item>
+        <item>Mostardas</item>
+        <item>Motuca</item>
+        <item>Mozarlândia</item>
+        <item>Muaná</item>
+        <item>Mucajaí</item>
+        <item>Mucambo</item>
+        <item>Mucugê</item>
+        <item>Mucuri</item>
+        <item>Mucurici</item>
+        <item>Muitos Capões</item>
+        <item>Muliterno</item>
+        <item>Mulungu</item>
+        <item>Mulungu</item>
+        <item>Mulungu do Morro</item>
+        <item>Mundo Novo</item>
+        <item>Mundo Novo</item>
+        <item>Mundo Novo</item>
+        <item>Munhoz</item>
+        <item>Munhoz de Melo</item>
+        <item>Muniz Ferreira</item>
+        <item>Muniz Freire</item>
+        <item>Muqui</item>
+        <item>Muquém de São Francisco</item>
+        <item>Muriaé</item>
+        <item>Muribeca</item>
+        <item>Murici</item>
+        <item>Murici dos Portelas</item>
+        <item>Muricilândia</item>
+        <item>Muritiba</item>
+        <item>Murutinga do Sul</item>
+        <item>Mutum</item>
+        <item>Mutunópolis</item>
+        <item>Mutuípe</item>
+        <item>Muzambinho</item>
+        <item>Muçum</item>
+        <item>Mário Campos</item>
+        <item>Mâncio Lima</item>
+        <item>Mãe d\'Água</item>
+        <item>Mãe do Rio</item>
+        <item>Nacip Raydan</item>
+        <item>Nantes</item>
+        <item>Nanuque</item>
+        <item>Naque</item>
+        <item>Narandiba</item>
+        <item>Natal</item>
+        <item>Natalândia</item>
+        <item>Natividade</item>
+        <item>Natividade</item>
+        <item>Natividade da Serra</item>
+        <item>Natuba</item>
+        <item>Natércia</item>
+        <item>Navegantes</item>
+        <item>Naviraí</item>
+        <item>Nazareno</item>
+        <item>Nazarezinho</item>
+        <item>Nazaré</item>
+        <item>Nazaré</item>
+        <item>Nazaré Paulista</item>
+        <item>Nazaré da Mata</item>
+        <item>Nazaré do Piauí</item>
+        <item>Nazário</item>
+        <item>Nepomuceno</item>
+        <item>Nerópolis</item>
+        <item>Neves Paulista</item>
+        <item>Neópolis</item>
+        <item>Nhamundá</item>
+        <item>Nhandeara</item>
+        <item>Nicolau Vergueiro</item>
+        <item>Nilo Peçanha</item>
+        <item>Nilópolis</item>
+        <item>Nina Rodrigues</item>
+        <item>Ninheira</item>
+        <item>Nioaque</item>
+        <item>Nipoã</item>
+        <item>Niquelândia</item>
+        <item>Niterói</item>
+        <item>Nobres</item>
+        <item>Nonoai</item>
+        <item>Nordestina</item>
+        <item>Normandia</item>
+        <item>Nortelândia</item>
+        <item>Nossa Senhora Aparecida</item>
+        <item>Nossa Senhora da Glória</item>
+        <item>Nossa Senhora das Dores</item>
+        <item>Nossa Senhora das Graças</item>
+        <item>Nossa Senhora de Lourdes</item>
+        <item>Nossa Senhora de Nazaré</item>
+        <item>Nossa Senhora do Livramento</item>
+        <item>Nossa Senhora do Socorro</item>
+        <item>Nossa Senhora dos Remédios</item>
+        <item>Nova Aliança</item>
+        <item>Nova Aliança do Ivaí</item>
+        <item>Nova Alvorada</item>
+        <item>Nova Alvorada do Sul</item>
+        <item>Nova América</item>
+        <item>Nova América da Colina</item>
+        <item>Nova Andradina</item>
+        <item>Nova Araçá</item>
+        <item>Nova Aurora</item>
+        <item>Nova Aurora</item>
+        <item>Nova Bandeirantes</item>
+        <item>Nova Bassano</item>
+        <item>Nova Belém</item>
+        <item>Nova Boa Vista</item>
+        <item>Nova Brasilândia</item>
+        <item>Nova Brasilândia d\'Oeste</item>
+        <item>Nova Bréscia</item>
+        <item>Nova Campina</item>
+        <item>Nova Canaã</item>
+        <item>Nova Canaã Paulista</item>
+        <item>Nova Candelária</item>
+        <item>Nova Cantu</item>
+        <item>Nova Canãa do Norte</item>
+        <item>Nova Castilho</item>
+        <item>Nova Colinas</item>
+        <item>Nova Crixás</item>
+        <item>Nova Cruz</item>
+        <item>Nova Era</item>
+        <item>Nova Erechim</item>
+        <item>Nova Esperança</item>
+        <item>Nova Esperança do Piriá</item>
+        <item>Nova Esperança do Sudoeste</item>
+        <item>Nova Esperança do Sul</item>
+        <item>Nova Europa</item>
+        <item>Nova Floresta</item>
+        <item>Nova Friburgo</item>
+        <item>Nova Fátima</item>
+        <item>Nova Fátima</item>
+        <item>Nova Glória</item>
+        <item>Nova Granada</item>
+        <item>Nova Guarita</item>
+        <item>Nova Guataporanga</item>
+        <item>Nova Hartz</item>
+        <item>Nova Ibiá</item>
+        <item>Nova Iguaçu</item>
+        <item>Nova Iguaçu de Goiás</item>
+        <item>Nova Independência</item>
+        <item>Nova Iorque</item>
+        <item>Nova Ipixuna</item>
+        <item>Nova Itaberaba</item>
+        <item>Nova Itarana</item>
+        <item>Nova Lacerda</item>
+        <item>Nova Laranjeiras</item>
+        <item>Nova Lima</item>
+        <item>Nova Londrina</item>
+        <item>Nova Luzitânia</item>
+        <item>Nova Mamoré</item>
+        <item>Nova Marilândia</item>
+        <item>Nova Maringá</item>
+        <item>Nova Monte Verde</item>
+        <item>Nova Mutum</item>
+        <item>Nova Módica</item>
+        <item>Nova Nazaré</item>
+        <item>Nova Odessa</item>
+        <item>Nova Olinda</item>
+        <item>Nova Olinda</item>
+        <item>Nova Olinda</item>
+        <item>Nova Olinda do Maranhão</item>
+        <item>Nova Olinda do Norte</item>
+        <item>Nova Olímpia</item>
+        <item>Nova Olímpia</item>
+        <item>Nova Palma</item>
+        <item>Nova Palmeira</item>
+        <item>Nova Petrópolis</item>
+        <item>Nova Ponte</item>
+        <item>Nova Porteirinha</item>
+        <item>Nova Prata</item>
+        <item>Nova Prata do Iguaçu</item>
+        <item>Nova Pádua</item>
+        <item>Nova Ramada</item>
+        <item>Nova Redenção</item>
+        <item>Nova Resende</item>
+        <item>Nova Roma</item>
+        <item>Nova Roma do Sul</item>
+        <item>Nova Rosalândia</item>
+        <item>Nova Russas</item>
+        <item>Nova Santa Bárbara</item>
+        <item>Nova Santa Helena</item>
+        <item>Nova Santa Rita</item>
+        <item>Nova Santa Rita</item>
+        <item>Nova Santa Rosa</item>
+        <item>Nova Serrana</item>
+        <item>Nova Soure</item>
+        <item>Nova Tebas</item>
+        <item>Nova Timboteua</item>
+        <item>Nova Trento</item>
+        <item>Nova Ubiratã</item>
+        <item>Nova União</item>
+        <item>Nova União</item>
+        <item>Nova Veneza</item>
+        <item>Nova Veneza</item>
+        <item>Nova Venécia</item>
+        <item>Nova Viçosa</item>
+        <item>Nova Xavantina</item>
+        <item>Novais</item>
+        <item>Novo Acordo</item>
+        <item>Novo Airão</item>
+        <item>Novo Alegre</item>
+        <item>Novo Aripuanã</item>
+        <item>Novo Barreiro</item>
+        <item>Novo Brasil</item>
+        <item>Novo Cabrais</item>
+        <item>Novo Cruzeiro</item>
+        <item>Novo Gama</item>
+        <item>Novo Hamburgo</item>
+        <item>Novo Horizonte</item>
+        <item>Novo Horizonte</item>
+        <item>Novo Horizonte</item>
+        <item>Novo Horizonte do Norte</item>
+        <item>Novo Horizonte do Oeste</item>
+        <item>Novo Horizonte do Sul</item>
+        <item>Novo Itacolomi</item>
+        <item>Novo Jardim</item>
+        <item>Novo Lino</item>
+        <item>Novo Machado</item>
+        <item>Novo Mundo</item>
+        <item>Novo Oriente</item>
+        <item>Novo Oriente de Minas</item>
+        <item>Novo Oriente do Piauí</item>
+        <item>Novo Planalto</item>
+        <item>Novo Progresso</item>
+        <item>Novo Repartimento</item>
+        <item>Novo Santo Antônio</item>
+        <item>Novo Santo Antônio</item>
+        <item>Novo São Joaquim</item>
+        <item>Novo Tiradentes</item>
+        <item>Novo Triunfo</item>
+        <item>Novo Xingu</item>
+        <item>Novorizonte</item>
+        <item>Nuporanga</item>
+        <item>Não-Me-Toque</item>
+        <item>Nísia Floresta</item>
+        <item>Óbidos</item>
+        <item>Ocara</item>
+        <item>Ocauçu</item>
+        <item>Oeiras</item>
+        <item>Oeiras do Pará</item>
+        <item>Oiapoque</item>
+        <item>Olaria</item>
+        <item>Óleo</item>
+        <item>Olho d\'Água</item>
+        <item>Olho d\'Água Grande</item>
+        <item>Olho d\'Água das Cunhãs</item>
+        <item>Olho d\'Água das Flores</item>
+        <item>Olho d\'Água do Casado</item>
+        <item>Olho d\'Água do Piauí</item>
+        <item>Olho-d\'Água do Borges</item>
+        <item>Olhos-d\'Água</item>
+        <item>Olinda</item>
+        <item>Olinda Nova do Maranhão</item>
+        <item>Olindina</item>
+        <item>Olivedos</item>
+        <item>Oliveira</item>
+        <item>Oliveira Fortes</item>
+        <item>Oliveira de Fátima</item>
+        <item>Oliveira dos Brejinhos</item>
+        <item>Olivença</item>
+        <item>Olímpia</item>
+        <item>Olímpio Noronha</item>
+        <item>Onda Verde</item>
+        <item>Onça de Pitangui</item>
+        <item>Oratórios</item>
+        <item>Oriente</item>
+        <item>Orindiúva</item>
+        <item>Oriximiná</item>
+        <item>Orizona</item>
+        <item>Orizânia</item>
+        <item>Orleans</item>
+        <item>Orlândia</item>
+        <item>Orobó</item>
+        <item>Orocó</item>
+        <item>Ortigueira</item>
+        <item>Orós</item>
+        <item>Osasco</item>
+        <item>Oscar Bressane</item>
+        <item>Osvaldo Cruz</item>
+        <item>Osório</item>
+        <item>Otacílio Costa</item>
+        <item>Ouricuri</item>
+        <item>Ourilândia do Norte</item>
+        <item>Ourinhos</item>
+        <item>Ourizona</item>
+        <item>Ouriçangas</item>
+        <item>Ouro</item>
+        <item>Ouro Branco</item>
+        <item>Ouro Branco</item>
+        <item>Ouro Branco</item>
+        <item>Ouro Fino</item>
+        <item>Ouro Preto</item>
+        <item>Ouro Preto do Oeste</item>
+        <item>Ouro Velho</item>
+        <item>Ouro Verde</item>
+        <item>Ouro Verde</item>
+        <item>Ouro Verde de Goiás</item>
+        <item>Ouro Verde de Minas</item>
+        <item>Ouro Verde do Oeste</item>
+        <item>Ouroeste</item>
+        <item>Ourolândia</item>
+        <item>Ourém</item>
+        <item>Ouvidor</item>
+        <item>Pacaembu</item>
+        <item>Pacajus</item>
+        <item>Pacajá</item>
+        <item>Pacaraima</item>
+        <item>Pacatuba</item>
+        <item>Pacatuba</item>
+        <item>Pacoti</item>
+        <item>Pacujá</item>
+        <item>Padre Bernardo</item>
+        <item>Padre Carvalho</item>
+        <item>Padre Marcos</item>
+        <item>Padre Paraíso</item>
+        <item>Paes Landim</item>
+        <item>Pai Pedro</item>
+        <item>Paial</item>
+        <item>Paim Filho</item>
+        <item>Paineiras</item>
+        <item>Painel</item>
+        <item>Pains</item>
+        <item>Paiva</item>
+        <item>Paiçandu</item>
+        <item>Pajeú do Piauí</item>
+        <item>Palestina</item>
+        <item>Palestina</item>
+        <item>Palestina de Goiás</item>
+        <item>Palestina do Pará</item>
+        <item>Palhano</item>
+        <item>Palhoça</item>
+        <item>Palma</item>
+        <item>Palma Sola</item>
+        <item>Palmares</item>
+        <item>Palmares Paulista</item>
+        <item>Palmares do Sul</item>
+        <item>Palmas</item>
+        <item>Palmas</item>
+        <item>Palmas de Monte Alto</item>
+        <item>Palmeira</item>
+        <item>Palmeira</item>
+        <item>Palmeira d\'Oeste</item>
+        <item>Palmeira das Missões</item>
+        <item>Palmeira do Piauí</item>
+        <item>Palmeira dos Índios</item>
+        <item>Palmeirais</item>
+        <item>Palmeirante</item>
+        <item>Palmeiras</item>
+        <item>Palmeiras de Goiás</item>
+        <item>Palmeiras do Tocantins</item>
+        <item>Palmeirina</item>
+        <item>Palmeirândia</item>
+        <item>Palmeirópolis</item>
+        <item>Palmelo</item>
+        <item>Palminópolis</item>
+        <item>Palmital</item>
+        <item>Palmital</item>
+        <item>Palmitinho</item>
+        <item>Palmitos</item>
+        <item>Palmácia</item>
+        <item>Palmópolis</item>
+        <item>Palotina</item>
+        <item>Panambi</item>
+        <item>Panamá</item>
+        <item>Pancas</item>
+        <item>Panelas</item>
+        <item>Panorama</item>
+        <item>Papagaios</item>
+        <item>Papanduva</item>
+        <item>Paquetá</item>
+        <item>Paracambi</item>
+        <item>Paracatu</item>
+        <item>Paracuru</item>
+        <item>Paragominas</item>
+        <item>Paraguaçu</item>
+        <item>Paraguaçu Paulista</item>
+        <item>Paraibano</item>
+        <item>Paraibuna</item>
+        <item>Paraipaba</item>
+        <item>Paraisópolis</item>
+        <item>Parambu</item>
+        <item>Paramirim</item>
+        <item>Paramoti</item>
+        <item>Paranacity</item>
+        <item>Paranaguá</item>
+        <item>Paranaiguara</item>
+        <item>Paranapanema</item>
+        <item>Paranapoema</item>
+        <item>Paranapuã</item>
+        <item>Paranatama</item>
+        <item>Paranatinga</item>
+        <item>Paranavaí</item>
+        <item>Paranaíba</item>
+        <item>Paranaíta</item>
+        <item>Paranhos</item>
+        <item>Paraná</item>
+        <item>Paranã</item>
+        <item>Paraopeba</item>
+        <item>Parapuã</item>
+        <item>Parari</item>
+        <item>Parati</item>
+        <item>Paratinga</item>
+        <item>Parauapebas</item>
+        <item>Parazinho</item>
+        <item>Paraí</item>
+        <item>Paraíba do Sul</item>
+        <item>Paraíso</item>
+        <item>Paraíso</item>
+        <item>Paraíso do Norte</item>
+        <item>Paraíso do Sul</item>
+        <item>Paraíso do Tocantins</item>
+        <item>Paraú</item>
+        <item>Paraúna</item>
+        <item>Pardinho</item>
+        <item>Pareci Novo</item>
+        <item>Parecis</item>
+        <item>Parelhas</item>
+        <item>Pariconha</item>
+        <item>Parintins</item>
+        <item>Paripiranga</item>
+        <item>Paripueira</item>
+        <item>Pariquera-Açu</item>
+        <item>Parisi</item>
+        <item>Parnaguá</item>
+        <item>Parnamirim</item>
+        <item>Parnamirim</item>
+        <item>Parnarama</item>
+        <item>Parnaíba</item>
+        <item>Parobé</item>
+        <item>Pará de Minas</item>
+        <item>Passa Quatro</item>
+        <item>Passa Sete</item>
+        <item>Passa Tempo</item>
+        <item>Passa e Fica</item>
+        <item>Passa-Vinte</item>
+        <item>Passabém</item>
+        <item>Passagem</item>
+        <item>Passagem</item>
+        <item>Passagem Franca</item>
+        <item>Passagem Franca do Piauí</item>
+        <item>Passira</item>
+        <item>Passo Fundo</item>
+        <item>Passo de Camaragibe</item>
+        <item>Passo de Torres</item>
+        <item>Passo do Sobrado</item>
+        <item>Passos</item>
+        <item>Passos Maia</item>
+        <item>Pastos Bons</item>
+        <item>Patis</item>
+        <item>Pato Bragado</item>
+        <item>Pato Branco</item>
+        <item>Patos</item>
+        <item>Patos de Minas</item>
+        <item>Patos do Piauí</item>
+        <item>Patrocínio</item>
+        <item>Patrocínio Paulista</item>
+        <item>Patrocínio do Muriaé</item>
+        <item>Patu</item>
+        <item>Paty do Alferes</item>
+        <item>Pau Brasil</item>
+        <item>Pau d\'Arco</item>
+        <item>Pau d\'Arco</item>
+        <item>Pau d\'Arco do Piauí</item>
+        <item>Pau dos Ferros</item>
+        <item>Paudalho</item>
+        <item>Pauini</item>
+        <item>Paula Cândido</item>
+        <item>Paula Freitas</item>
+        <item>Paulicéia</item>
+        <item>Paulino Neves</item>
+        <item>Paulista</item>
+        <item>Paulista</item>
+        <item>Paulistana</item>
+        <item>Paulistas</item>
+        <item>Paulistânia</item>
+        <item>Paulo Afonso</item>
+        <item>Paulo Bento</item>
+        <item>Paulo Frontin</item>
+        <item>Paulo Jacinto</item>
+        <item>Paulo Lopes</item>
+        <item>Paulo Ramos</item>
+        <item>Paulo de Faria</item>
+        <item>Paulínia</item>
+        <item>Paverama</item>
+        <item>Pavussu</item>
+        <item>Pavão</item>
+        <item>Paço do Lumiar</item>
+        <item>Peabiru</item>
+        <item>Pederneiras</item>
+        <item>Pedra</item>
+        <item>Pedra Azul</item>
+        <item>Pedra Bela</item>
+        <item>Pedra Bonita</item>
+        <item>Pedra Branca</item>
+        <item>Pedra Branca</item>
+        <item>Pedra Branca do Amapari</item>
+        <item>Pedra Dourada</item>
+        <item>Pedra Grande</item>
+        <item>Pedra Lavrada</item>
+        <item>Pedra Mole</item>
+        <item>Pedra Preta</item>
+        <item>Pedra Preta</item>
+        <item>Pedra do Anta</item>
+        <item>Pedra do Indaiá</item>
+        <item>Pedralva</item>
+        <item>Pedranópolis</item>
+        <item>Pedras Altas</item>
+        <item>Pedras Grandes</item>
+        <item>Pedras de Fogo</item>
+        <item>Pedras de Maria da Cruz</item>
+        <item>Pedregulho</item>
+        <item>Pedreira</item>
+        <item>Pedreiras</item>
+        <item>Pedrinhas</item>
+        <item>Pedrinhas Paulista</item>
+        <item>Pedrinópolis</item>
+        <item>Pedro Afonso</item>
+        <item>Pedro Alexandre</item>
+        <item>Pedro Avelino</item>
+        <item>Pedro Canário</item>
+        <item>Pedro Gomes</item>
+        <item>Pedro II</item>
+        <item>Pedro Laurentino</item>
+        <item>Pedro Leopoldo</item>
+        <item>Pedro Osório</item>
+        <item>Pedro Régis</item>
+        <item>Pedro Teixeira</item>
+        <item>Pedro Velho</item>
+        <item>Pedro de Toledo</item>
+        <item>Pedro do Rosário</item>
+        <item>Pedrão</item>
+        <item>Peixe</item>
+        <item>Peixe-Boi</item>
+        <item>Peixoto de Azevedo</item>
+        <item>Pejuçara</item>
+        <item>Pelotas</item>
+        <item>Penaforte</item>
+        <item>Penalva</item>
+        <item>Pendências</item>
+        <item>Penedo</item>
+        <item>Penha</item>
+        <item>Pentecoste</item>
+        <item>Penápolis</item>
+        <item>Pequeri</item>
+        <item>Pequi</item>
+        <item>Pequizeiro</item>
+        <item>Perdigão</item>
+        <item>Perdizes</item>
+        <item>Perdões</item>
+        <item>Pereira Barreto</item>
+        <item>Pereiras</item>
+        <item>Pereiro</item>
+        <item>Peri Mirim</item>
+        <item>Periquito</item>
+        <item>Peritiba</item>
+        <item>Peritoró</item>
+        <item>Perobal</item>
+        <item>Perolândia</item>
+        <item>Peruíbe</item>
+        <item>Pescador</item>
+        <item>Pesqueira</item>
+        <item>Petrolina</item>
+        <item>Petrolina de Goiás</item>
+        <item>Petrolândia</item>
+        <item>Petrolândia</item>
+        <item>Petrópolis</item>
+        <item>Peçanha</item>
+        <item>Piacatu</item>
+        <item>Piancó</item>
+        <item>Piatã</item>
+        <item>Piau</item>
+        <item>Piaçabuçu</item>
+        <item>Picada Café</item>
+        <item>Picos</item>
+        <item>Picuí</item>
+        <item>Piedade</item>
+        <item>Piedade de Caratinga</item>
+        <item>Piedade de Ponte Nova</item>
+        <item>Piedade do Rio Grande</item>
+        <item>Piedade dos Gerais</item>
+        <item>Pilar</item>
+        <item>Pilar</item>
+        <item>Pilar de Goiás</item>
+        <item>Pilar do Sul</item>
+        <item>Pilão Arcado</item>
+        <item>Pilões</item>
+        <item>Pilões</item>
+        <item>Pilõezinhos</item>
+        <item>Pimenta</item>
+        <item>Pimenta Bueno</item>
+        <item>Pimenteiras</item>
+        <item>Pimenteiras do Oeste</item>
+        <item>Pindamonhangaba</item>
+        <item>Pindaré Mirim</item>
+        <item>Pindaí</item>
+        <item>Pindoba</item>
+        <item>Pindobaçu</item>
+        <item>Pindorama</item>
+        <item>Pindorama do Tocantins</item>
+        <item>Pindoretama</item>
+        <item>Pingo-d\'Água</item>
+        <item>Pinhais</item>
+        <item>Pinhal</item>
+        <item>Pinhal Grande</item>
+        <item>Pinhal da Serra</item>
+        <item>Pinhal de São Bento</item>
+        <item>Pinhalzinho</item>
+        <item>Pinhalzinho</item>
+        <item>Pinhalão</item>
+        <item>Pinheiral</item>
+        <item>Pinheirinho do Vale</item>
+        <item>Pinheiro</item>
+        <item>Pinheiro Machado</item>
+        <item>Pinheiro Preto</item>
+        <item>Pinheiros</item>
+        <item>Pinhão</item>
+        <item>Pinhão</item>
+        <item>Pintadas</item>
+        <item>Pintópolis</item>
+        <item>Pio IX</item>
+        <item>Pio XII</item>
+        <item>Piquerobi</item>
+        <item>Piquet Carneiro</item>
+        <item>Piquete</item>
+        <item>Piracaia</item>
+        <item>Piracanjuba</item>
+        <item>Piracema</item>
+        <item>Piracicaba</item>
+        <item>Piracuruca</item>
+        <item>Piraju</item>
+        <item>Pirajuba</item>
+        <item>Pirajuí</item>
+        <item>Pirambu</item>
+        <item>Piranga</item>
+        <item>Pirangi</item>
+        <item>Piranguinho</item>
+        <item>Piranguçu</item>
+        <item>Piranhas</item>
+        <item>Piranhas</item>
+        <item>Pirapemas</item>
+        <item>Pirapetinga</item>
+        <item>Pirapora</item>
+        <item>Pirapora do Bom Jesus</item>
+        <item>Pirapozinho</item>
+        <item>Pirapó</item>
+        <item>Piraquara</item>
+        <item>Piraquê</item>
+        <item>Pirassununga</item>
+        <item>Piratini</item>
+        <item>Piratininga</item>
+        <item>Piratuba</item>
+        <item>Piraí</item>
+        <item>Piraí do Norte</item>
+        <item>Piraí do Sul</item>
+        <item>Piraúba</item>
+        <item>Pirenópolis</item>
+        <item>Pires Ferreira</item>
+        <item>Pires do Rio</item>
+        <item>Piripiri</item>
+        <item>Piripá</item>
+        <item>Piritiba</item>
+        <item>Pirpirituba</item>
+        <item>Pitanga</item>
+        <item>Pitangueiras</item>
+        <item>Pitangueiras</item>
+        <item>Pitangui</item>
+        <item>Pitimbu</item>
+        <item>Pium</item>
+        <item>Piumhi</item>
+        <item>Piçarra</item>
+        <item>Piçarras</item>
+        <item>Piên</item>
+        <item>Piúma</item>
+        <item>Placas</item>
+        <item>Planaltina</item>
+        <item>Planaltina do Paraná</item>
+        <item>Planaltino</item>
+        <item>Planalto</item>
+        <item>Planalto</item>
+        <item>Planalto</item>
+        <item>Planalto</item>
+        <item>Planalto Alegre</item>
+        <item>Planalto da Serra</item>
+        <item>Planura</item>
+        <item>Platina</item>
+        <item>Plácido de Castro</item>
+        <item>Pocinhos</item>
+        <item>Poconé</item>
+        <item>Pocrane</item>
+        <item>Pojuca</item>
+        <item>Poloni</item>
+        <item>Pombal</item>
+        <item>Pombos</item>
+        <item>Pomerode</item>
+        <item>Pompéia</item>
+        <item>Pompéu</item>
+        <item>Pongaí</item>
+        <item>Ponta Grossa</item>
+        <item>Ponta Porã</item>
+        <item>Ponta de Pedras</item>
+        <item>Pontal</item>
+        <item>Pontal do Araguaia</item>
+        <item>Pontal do Paraná</item>
+        <item>Pontalina</item>
+        <item>Pontalinda</item>
+        <item>Ponte Alta</item>
+        <item>Ponte Alta do Bom Jesus</item>
+        <item>Ponte Alta do Norte</item>
+        <item>Ponte Alta do Tocantins</item>
+        <item>Ponte Branca</item>
+        <item>Ponte Nova</item>
+        <item>Ponte Preta</item>
+        <item>Ponte Serrada</item>
+        <item>Pontes Gestal</item>
+        <item>Pontes e Lacerda</item>
+        <item>Ponto Belo</item>
+        <item>Ponto Chique</item>
+        <item>Ponto Novo</item>
+        <item>Ponto dos Volantes</item>
+        <item>Pontão</item>
+        <item>Populina</item>
+        <item>Poranga</item>
+        <item>Porangaba</item>
+        <item>Porangatu</item>
+        <item>Porciúncula</item>
+        <item>Porecatu</item>
+        <item>Portalegre</item>
+        <item>Porteiras</item>
+        <item>Porteirinha</item>
+        <item>Porteirão</item>
+        <item>Portel</item>
+        <item>Portelândia</item>
+        <item>Porto</item>
+        <item>Porto Acre</item>
+        <item>Porto Alegre</item>
+        <item>Porto Alegre do Norte</item>
+        <item>Porto Alegre do Piauí</item>
+        <item>Porto Alegre do Tocantins</item>
+        <item>Porto Amazonas</item>
+        <item>Porto Barreiro</item>
+        <item>Porto Belo</item>
+        <item>Porto Calvo</item>
+        <item>Porto Esperidião</item>
+        <item>Porto Estrela</item>
+        <item>Porto Feliz</item>
+        <item>Porto Ferreira</item>
+        <item>Porto Firme</item>
+        <item>Porto Franco</item>
+        <item>Porto Grande</item>
+        <item>Porto Lucena</item>
+        <item>Porto Mauá</item>
+        <item>Porto Murtinho</item>
+        <item>Porto Nacional</item>
+        <item>Porto Real</item>
+        <item>Porto Real do Colégio</item>
+        <item>Porto Rico</item>
+        <item>Porto Rico do Maranhão</item>
+        <item>Porto Seguro</item>
+        <item>Porto União</item>
+        <item>Porto Velho</item>
+        <item>Porto Vera Cruz</item>
+        <item>Porto Vitória</item>
+        <item>Porto Walter</item>
+        <item>Porto Xavier</item>
+        <item>Porto da Folha</item>
+        <item>Porto de Moz</item>
+        <item>Porto de Pedras</item>
+        <item>Porto do Mangue</item>
+        <item>Porto dos Gaúchos</item>
+        <item>Portão</item>
+        <item>Posse</item>
+        <item>Potengi</item>
+        <item>Potim</item>
+        <item>Potiraguá</item>
+        <item>Potirendaba</item>
+        <item>Potiretama</item>
+        <item>Poté</item>
+        <item>Pouso Alegre</item>
+        <item>Pouso Alto</item>
+        <item>Pouso Novo</item>
+        <item>Pouso Redondo</item>
+        <item>Poxoréo</item>
+        <item>Poá</item>
+        <item>Poço Branco</item>
+        <item>Poço Dantas</item>
+        <item>Poço Fundo</item>
+        <item>Poço Redondo</item>
+        <item>Poço Verde</item>
+        <item>Poço das Antas</item>
+        <item>Poço das Trincheiras</item>
+        <item>Poço de José de Moura</item>
+        <item>Poços de Caldas</item>
+        <item>Poção</item>
+        <item>Poção de Pedras</item>
+        <item>Poções</item>
+        <item>Pracinha</item>
+        <item>Pracuúba</item>
+        <item>Prado</item>
+        <item>Prado Ferreira</item>
+        <item>Prados</item>
+        <item>Pradópolis</item>
+        <item>Praia Grande</item>
+        <item>Praia Grande</item>
+        <item>Praia Norte</item>
+        <item>Prainha</item>
+        <item>Pranchita</item>
+        <item>Prata</item>
+        <item>Prata</item>
+        <item>Prata do Piauí</item>
+        <item>Pratinha</item>
+        <item>Pratápolis</item>
+        <item>Pratânia</item>
+        <item>Presidente Alves</item>
+        <item>Presidente Bernardes</item>
+        <item>Presidente Bernardes</item>
+        <item>Presidente Castelo Branco</item>
+        <item>Presidente Castelo Branco</item>
+        <item>Presidente Dutra</item>
+        <item>Presidente Dutra</item>
+        <item>Presidente Epitácio</item>
+        <item>Presidente Figueiredo</item>
+        <item>Presidente Getúlio</item>
+        <item>Presidente Juscelino</item>
+        <item>Presidente Juscelino</item>
+        <item>Presidente Juscelino</item>
+        <item>Presidente Jânio Quadros</item>
+        <item>Presidente Kennedy</item>
+        <item>Presidente Kennedy</item>
+        <item>Presidente Kubitschek</item>
+        <item>Presidente Lucena</item>
+        <item>Presidente Médici</item>
+        <item>Presidente Médici</item>
+        <item>Presidente Nereu</item>
+        <item>Presidente Olegário</item>
+        <item>Presidente Prudente</item>
+        <item>Presidente Sarney</item>
+        <item>Presidente Tancredo Neves</item>
+        <item>Presidente Vargas</item>
+        <item>Presidente Venceslau</item>
+        <item>Primavera</item>
+        <item>Primavera</item>
+        <item>Primavera de Rondônia</item>
+        <item>Primavera do Leste</item>
+        <item>Primeira Cruz</item>
+        <item>Primeiro de Maio</item>
+        <item>Princesa</item>
+        <item>Princesa Isabel</item>
+        <item>Professor Jamil</item>
+        <item>Progresso</item>
+        <item>Promissão</item>
+        <item>Propriá</item>
+        <item>Protásio Alves</item>
+        <item>Prudente de Morais</item>
+        <item>Prudentópolis</item>
+        <item>Pugmil</item>
+        <item>Pureza</item>
+        <item>Putinga</item>
+        <item>Puxinanã</item>
+        <item>Pântano Grande</item>
+        <item>Pão de Açúcar</item>
+        <item>Pé de Serra</item>
+        <item>Pérola</item>
+        <item>Pérola d\'Oeste</item>
+        <item>Quadra</item>
+        <item>Quaraí</item>
+        <item>Quartel Geral</item>
+        <item>Quarto Centenário</item>
+        <item>Quatiguá</item>
+        <item>Quatipuru</item>
+        <item>Quatis</item>
+        <item>Quatro Barras</item>
+        <item>Quatro Irmãos</item>
+        <item>Quatro Pontes</item>
+        <item>Quatá</item>
+        <item>Quebrangulo</item>
+        <item>Quedas do Iguaçu</item>
+        <item>Queimada Nova</item>
+        <item>Queimadas</item>
+        <item>Queimadas</item>
+        <item>Queimados</item>
+        <item>Queiroz</item>
+        <item>Queluz</item>
+        <item>Queluzito</item>
+        <item>Querência</item>
+        <item>Querência do Norte</item>
+        <item>Quevedos</item>
+        <item>Quijingue</item>
+        <item>Quilombo</item>
+        <item>Quinta do Sol</item>
+        <item>Quintana</item>
+        <item>Quinze de Novembro</item>
+        <item>Quipapá</item>
+        <item>Quirinópolis</item>
+        <item>Quissamã</item>
+        <item>Quitandinha</item>
+        <item>Quiterianópolis</item>
+        <item>Quixaba</item>
+        <item>Quixabeira</item>
+        <item>Quixabá</item>
+        <item>Quixadá</item>
+        <item>Quixelô</item>
+        <item>Quixeramobim</item>
+        <item>Quixeré</item>
+        <item>Rafael Fernandes</item>
+        <item>Rafael Godeiro</item>
+        <item>Rafael Jambeiro</item>
+        <item>Rafard</item>
+        <item>Ramilândia</item>
+        <item>Rancharia</item>
+        <item>Rancho Alegre</item>
+        <item>Rancho Alegre d\'Oeste</item>
+        <item>Rancho Queimado</item>
+        <item>Raposa</item>
+        <item>Raposos</item>
+        <item>Raul Soares</item>
+        <item>Realeza</item>
+        <item>Rebouças</item>
+        <item>Recife</item>
+        <item>Recreio</item>
+        <item>Recursolândia</item>
+        <item>Redentora</item>
+        <item>Redenção</item>
+        <item>Redenção</item>
+        <item>Redenção da Serra</item>
+        <item>Redenção do Gurguéia</item>
+        <item>Reduto</item>
+        <item>Regeneração</item>
+        <item>Regente Feijó</item>
+        <item>Reginópolis</item>
+        <item>Registro</item>
+        <item>Relvado</item>
+        <item>Remanso</item>
+        <item>Remígio</item>
+        <item>Renascença</item>
+        <item>Reriutaba</item>
+        <item>Resende</item>
+        <item>Resende Costa</item>
+        <item>Reserva</item>
+        <item>Reserva do Cabaçal</item>
+        <item>Reserva do Iguaçu</item>
+        <item>Resplendor</item>
+        <item>Ressaquinha</item>
+        <item>Restinga</item>
+        <item>Restinga Seca</item>
+        <item>Retirolândia</item>
+        <item>Riachinho</item>
+        <item>Riachinho</item>
+        <item>Riacho Frio</item>
+        <item>Riacho da Cruz</item>
+        <item>Riacho das Almas</item>
+        <item>Riacho de Santana</item>
+        <item>Riacho de Santana</item>
+        <item>Riacho de Santo Antônio</item>
+        <item>Riacho dos Cavalos</item>
+        <item>Riacho dos Machados</item>
+        <item>Riachuelo</item>
+        <item>Riachuelo</item>
+        <item>Riachão</item>
+        <item>Riachão</item>
+        <item>Riachão das Neves</item>
+        <item>Riachão do Bacamarte</item>
+        <item>Riachão do Dantas</item>
+        <item>Riachão do Jacuípe</item>
+        <item>Riachão do Poço</item>
+        <item>Rialma</item>
+        <item>Rianápolis</item>
+        <item>Ribamar Fiquene</item>
+        <item>Ribas do Rio Pardo</item>
+        <item>Ribeira</item>
+        <item>Ribeira do Amparo</item>
+        <item>Ribeira do Piauí</item>
+        <item>Ribeira do Pombal</item>
+        <item>Ribeiro Gonçalves</item>
+        <item>Ribeirão</item>
+        <item>Ribeirão Bonito</item>
+        <item>Ribeirão Branco</item>
+        <item>Ribeirão Cascalheira</item>
+        <item>Ribeirão Claro</item>
+        <item>Ribeirão Corrente</item>
+        <item>Ribeirão Grande</item>
+        <item>Ribeirão Pires</item>
+        <item>Ribeirão Preto</item>
+        <item>Ribeirão Vermelho</item>
+        <item>Ribeirão das Neves</item>
+        <item>Ribeirão do Largo</item>
+        <item>Ribeirão do Pinhal</item>
+        <item>Ribeirão do Sul</item>
+        <item>Ribeirão dos Índios</item>
+        <item>Ribeirãozinho</item>
+        <item>Ribeirópolis</item>
+        <item>Rifaina</item>
+        <item>Rincão</item>
+        <item>Rinópolis</item>
+        <item>Rio Acima</item>
+        <item>Rio Azul</item>
+        <item>Rio Bananal</item>
+        <item>Rio Bom</item>
+        <item>Rio Bonito</item>
+        <item>Rio Bonito do Iguaçu</item>
+        <item>Rio Branco</item>
+        <item>Rio Branco</item>
+        <item>Rio Branco do Ivaí</item>
+        <item>Rio Branco do Sul</item>
+        <item>Rio Brilhante</item>
+        <item>Rio Casca</item>
+        <item>Rio Claro</item>
+        <item>Rio Claro</item>
+        <item>Rio Crespo</item>
+        <item>Rio Doce</item>
+        <item>Rio Espera</item>
+        <item>Rio Formoso</item>
+        <item>Rio Fortuna</item>
+        <item>Rio Grande</item>
+        <item>Rio Grande da Serra</item>
+        <item>Rio Grande do Piauí</item>
+        <item>Rio Largo</item>
+        <item>Rio Manso</item>
+        <item>Rio Maria</item>
+        <item>Rio Negrinho</item>
+        <item>Rio Negro</item>
+        <item>Rio Negro</item>
+        <item>Rio Novo</item>
+        <item>Rio Novo do Sul</item>
+        <item>Rio Paranaíba</item>
+        <item>Rio Pardo</item>
+        <item>Rio Pardo de Minas</item>
+        <item>Rio Piracicaba</item>
+        <item>Rio Pomba</item>
+        <item>Rio Preto</item>
+        <item>Rio Preto da Eva</item>
+        <item>Rio Quente</item>
+        <item>Rio Real</item>
+        <item>Rio Rufino</item>
+        <item>Rio Sono</item>
+        <item>Rio Tinto</item>
+        <item>Rio Verde</item>
+        <item>Rio Verde de Mato Grosso</item>
+        <item>Rio Vermelho</item>
+        <item>Rio da Conceição</item>
+        <item>Rio das Antas</item>
+        <item>Rio das Flores</item>
+        <item>Rio das Ostras</item>
+        <item>Rio das Pedras</item>
+        <item>Rio de Contas</item>
+        <item>Rio de Janeiro</item>
+        <item>Rio do Antônio</item>
+        <item>Rio do Campo</item>
+        <item>Rio do Fogo</item>
+        <item>Rio do Oeste</item>
+        <item>Rio do Pires</item>
+        <item>Rio do Prado</item>
+        <item>Rio do Sul</item>
+        <item>Rio dos Bois</item>
+        <item>Rio dos Cedros</item>
+        <item>Rio dos Índios</item>
+        <item>Riolândia</item>
+        <item>Riozinho</item>
+        <item>Riqueza</item>
+        <item>Ritápolis</item>
+        <item>Riversul</item>
+        <item>Roca Sales</item>
+        <item>Rochedo</item>
+        <item>Rochedo de Minas</item>
+        <item>Rodeio</item>
+        <item>Rodeio Bonito</item>
+        <item>Rodeiro</item>
+        <item>Rodelas</item>
+        <item>Rodolfo Fernandes</item>
+        <item>Rodrigues Alves</item>
+        <item>Rolador</item>
+        <item>Rolante</item>
+        <item>Rolim de Moura</item>
+        <item>Rolândia</item>
+        <item>Romaria</item>
+        <item>Romelândia</item>
+        <item>Roncador</item>
+        <item>Ronda Alta</item>
+        <item>Rondinha</item>
+        <item>Rondolândia</item>
+        <item>Rondon</item>
+        <item>Rondon do Pará</item>
+        <item>Rondonópolis</item>
+        <item>Roque Gonzales</item>
+        <item>Rorainópolis</item>
+        <item>Rosana</item>
+        <item>Roseira</item>
+        <item>Rosário</item>
+        <item>Rosário Oeste</item>
+        <item>Rosário da Limeira</item>
+        <item>Rosário do Catete</item>
+        <item>Rosário do Ivaí</item>
+        <item>Rosário do Sul</item>
+        <item>Roteiro</item>
+        <item>Rubelita</item>
+        <item>Rubiataba</item>
+        <item>Rubim</item>
+        <item>Rubinéia</item>
+        <item>Rubiácea</item>
+        <item>Rurópolis</item>
+        <item>Russas</item>
+        <item>Ruy Barbosa</item>
+        <item>Ruy Barbosa</item>
+        <item>Sabará</item>
+        <item>Sabino</item>
+        <item>Sabinópolis</item>
+        <item>Saboeiro</item>
+        <item>Sabáudia</item>
+        <item>Sacramento</item>
+        <item>Sagrada Família</item>
+        <item>Sagres</item>
+        <item>Sairé</item>
+        <item>Saldanha Marinho</item>
+        <item>Sales</item>
+        <item>Sales Oliveira</item>
+        <item>Salesópolis</item>
+        <item>Salete</item>
+        <item>Salgadinho</item>
+        <item>Salgadinho</item>
+        <item>Salgado</item>
+        <item>Salgado Filho</item>
+        <item>Salgado de São Félix</item>
+        <item>Salgueiro</item>
+        <item>Salinas</item>
+        <item>Salinas da Margarida</item>
+        <item>Salinópolis</item>
+        <item>Salitre</item>
+        <item>Salmourão</item>
+        <item>Saloá</item>
+        <item>Saltinho</item>
+        <item>Saltinho</item>
+        <item>Salto</item>
+        <item>Salto Grande</item>
+        <item>Salto Veloso</item>
+        <item>Salto da Divisa</item>
+        <item>Salto de Pirapora</item>
+        <item>Salto do Céu</item>
+        <item>Salto do Itararé</item>
+        <item>Salto do Jacuí</item>
+        <item>Salto do Lontra</item>
+        <item>Salvador</item>
+        <item>Salvador das Missões</item>
+        <item>Salvador do Sul</item>
+        <item>Salvaterra</item>
+        <item>Sambaíba</item>
+        <item>Sampaio</item>
+        <item>Sananduva</item>
+        <item>Sanclerlândia</item>
+        <item>Sandolândia</item>
+        <item>Sandovalina</item>
+        <item>Sangão</item>
+        <item>Sanharó</item>
+        <item>Santa Adélia</item>
+        <item>Santa Albertina</item>
+        <item>Santa Amélia</item>
+        <item>Santa Branca</item>
+        <item>Santa Brígida</item>
+        <item>Santa Bárbara</item>
+        <item>Santa Bárbara</item>
+        <item>Santa Bárbara d\'Oeste</item>
+        <item>Santa Bárbara de Goiás</item>
+        <item>Santa Bárbara do Leste</item>
+        <item>Santa Bárbara do Monte Verde</item>
+        <item>Santa Bárbara do Pará</item>
+        <item>Santa Bárbara do Sul</item>
+        <item>Santa Bárbara do Tugúrio</item>
+        <item>Santa Carmem</item>
+        <item>Santa Cecília</item>
+        <item>Santa Cecília</item>
+        <item>Santa Cecília do Pavão</item>
+        <item>Santa Cecília do Sul</item>
+        <item>Santa Clara d\'Oeste</item>
+        <item>Santa Clara do Sul</item>
+        <item>Santa Cruz</item>
+        <item>Santa Cruz</item>
+        <item>Santa Cruz</item>
+        <item>Santa Cruz Cabrália</item>
+        <item>Santa Cruz Monte Castelo</item>
+        <item>Santa Cruz da Baixa Verde</item>
+        <item>Santa Cruz da Conceição</item>
+        <item>Santa Cruz da Esperança</item>
+        <item>Santa Cruz da Vitória</item>
+        <item>Santa Cruz das Palmeiras</item>
+        <item>Santa Cruz de Goiás</item>
+        <item>Santa Cruz de Minas</item>
+        <item>Santa Cruz de Salinas</item>
+        <item>Santa Cruz do Arari</item>
+        <item>Santa Cruz do Capibaribe</item>
+        <item>Santa Cruz do Escalvado</item>
+        <item>Santa Cruz do Piauí</item>
+        <item>Santa Cruz do Rio Pardo</item>
+        <item>Santa Cruz do Sul</item>
+        <item>Santa Cruz do Xingu</item>
+        <item>Santa Cruz dos Milagres</item>
+        <item>Santa Efigênia de Minas</item>
+        <item>Santa Ernestina</item>
+        <item>Santa Filomena</item>
+        <item>Santa Filomena</item>
+        <item>Santa Filomena do Maranhão</item>
+        <item>Santa Fé</item>
+        <item>Santa Fé de Goiás</item>
+        <item>Santa Fé de Minas</item>
+        <item>Santa Fé do Araguaia</item>
+        <item>Santa Fé do Sul</item>
+        <item>Santa Gertrudes</item>
+        <item>Santa Helena</item>
+        <item>Santa Helena</item>
+        <item>Santa Helena</item>
+        <item>Santa Helena</item>
+        <item>Santa Helena de Goiás</item>
+        <item>Santa Helena de Minas</item>
+        <item>Santa Inês</item>
+        <item>Santa Inês</item>
+        <item>Santa Inês</item>
+        <item>Santa Inês</item>
+        <item>Santa Isabel</item>
+        <item>Santa Isabel</item>
+        <item>Santa Isabel do Ivaí</item>
+        <item>Santa Isabel do Pará</item>
+        <item>Santa Isabel do Rio Negro</item>
+        <item>Santa Izabel do Oeste</item>
+        <item>Santa Juliana</item>
+        <item>Santa Leopoldina</item>
+        <item>Santa Luz</item>
+        <item>Santa Luzia</item>
+        <item>Santa Luzia</item>
+        <item>Santa Luzia</item>
+        <item>Santa Luzia</item>
+        <item>Santa Luzia d\'Oeste</item>
+        <item>Santa Luzia do Itanhy</item>
+        <item>Santa Luzia do Norte</item>
+        <item>Santa Luzia do Paruá</item>
+        <item>Santa Luzia do Pará</item>
+        <item>Santa Lúcia</item>
+        <item>Santa Lúcia</item>
+        <item>Santa Margarida</item>
+        <item>Santa Margarida do Sul</item>
+        <item>Santa Maria</item>
+        <item>Santa Maria</item>
+        <item>Santa Maria Madalena</item>
+        <item>Santa Maria da Boa Vista</item>
+        <item>Santa Maria da Serra</item>
+        <item>Santa Maria da Vitória</item>
+        <item>Santa Maria das Barreiras</item>
+        <item>Santa Maria de Itabira</item>
+        <item>Santa Maria de Jetibá</item>
+        <item>Santa Maria do Cambucá</item>
+        <item>Santa Maria do Herval</item>
+        <item>Santa Maria do Oeste</item>
+        <item>Santa Maria do Pará</item>
+        <item>Santa Maria do Salto</item>
+        <item>Santa Maria do Suaçuí</item>
+        <item>Santa Maria do Tocantins</item>
+        <item>Santa Mariana</item>
+        <item>Santa Mercedes</item>
+        <item>Santa Mônica</item>
+        <item>Santa Quitéria</item>
+        <item>Santa Quitéria do Maranhão</item>
+        <item>Santa Rita</item>
+        <item>Santa Rita</item>
+        <item>Santa Rita d\'Oeste</item>
+        <item>Santa Rita de Caldas</item>
+        <item>Santa Rita de Cássia</item>
+        <item>Santa Rita de Ibitipoca</item>
+        <item>Santa Rita de Jacutinga</item>
+        <item>Santa Rita de Minas</item>
+        <item>Santa Rita do Araguaia</item>
+        <item>Santa Rita do Itueto</item>
+        <item>Santa Rita do Novo Destino</item>
+        <item>Santa Rita do Pardo</item>
+        <item>Santa Rita do Passa Quatro</item>
+        <item>Santa Rita do Sapucaí</item>
+        <item>Santa Rita do Tocantins</item>
+        <item>Santa Rita do Trivelato</item>
+        <item>Santa Rosa</item>
+        <item>Santa Rosa da Serra</item>
+        <item>Santa Rosa de Goiás</item>
+        <item>Santa Rosa de Lima</item>
+        <item>Santa Rosa de Lima</item>
+        <item>Santa Rosa de Viterbo</item>
+        <item>Santa Rosa do Piauí</item>
+        <item>Santa Rosa do Purus</item>
+        <item>Santa Rosa do Sul</item>
+        <item>Santa Rosa do Tocantins</item>
+        <item>Santa Salete</item>
+        <item>Santa Teresa</item>
+        <item>Santa Teresinha</item>
+        <item>Santa Teresinha</item>
+        <item>Santa Tereza</item>
+        <item>Santa Tereza de Goiás</item>
+        <item>Santa Tereza do Oeste</item>
+        <item>Santa Tereza do Tocantins</item>
+        <item>Santa Terezinha</item>
+        <item>Santa Terezinha</item>
+        <item>Santa Terezinha</item>
+        <item>Santa Terezinha Tocantins</item>
+        <item>Santa Terezinha de Goiás</item>
+        <item>Santa Terezinha de Itaipu</item>
+        <item>Santa Terezinha do Progresso</item>
+        <item>Santa Vitória</item>
+        <item>Santa Vitória do Palmar</item>
+        <item>Santaluz</item>
+        <item>Santana</item>
+        <item>Santana</item>
+        <item>Santana da Boa Vista</item>
+        <item>Santana da Ponte Pensa</item>
+        <item>Santana da Vargem</item>
+        <item>Santana de Cataguases</item>
+        <item>Santana de Mangueira</item>
+        <item>Santana de Parnaíba</item>
+        <item>Santana de Pirapama</item>
+        <item>Santana do Acaraú</item>
+        <item>Santana do Araguaia</item>
+        <item>Santana do Cariri</item>
+        <item>Santana do Deserto</item>
+        <item>Santana do Garambéu</item>
+        <item>Santana do Ipanema</item>
+        <item>Santana do Itararé</item>
+        <item>Santana do Jacaré</item>
+        <item>Santana do Livramento</item>
+        <item>Santana do Manhuaçu</item>
+        <item>Santana do Maranhão</item>
+        <item>Santana do Matos</item>
+        <item>Santana do Mundaú</item>
+        <item>Santana do Paraíso</item>
+        <item>Santana do Piauí</item>
+        <item>Santana do Riacho</item>
+        <item>Santana do Seridó</item>
+        <item>Santana do São Francisco</item>
+        <item>Santana dos Garrotes</item>
+        <item>Santana dos Montes</item>
+        <item>Santanópolis</item>
+        <item>Santarém</item>
+        <item>Santarém</item>
+        <item>Santarém Novo</item>
+        <item>Santiago</item>
+        <item>Santiago do Sul</item>
+        <item>Santo Afonso</item>
+        <item>Santo Amaro</item>
+        <item>Santo Amaro da Imperatriz</item>
+        <item>Santo Amaro das Brotas</item>
+        <item>Santo Amaro do Maranhão</item>
+        <item>Santo Anastácio</item>
+        <item>Santo André</item>
+        <item>Santo André</item>
+        <item>Santo Antônio</item>
+        <item>Santo Antônio da Alegria</item>
+        <item>Santo Antônio da Barra</item>
+        <item>Santo Antônio da Patrulha</item>
+        <item>Santo Antônio da Platina</item>
+        <item>Santo Antônio das Missões</item>
+        <item>Santo Antônio de Goiás</item>
+        <item>Santo Antônio de Jesus</item>
+        <item>Santo Antônio de Lisboa</item>
+        <item>Santo Antônio de Posse</item>
+        <item>Santo Antônio de Pádua</item>
+        <item>Santo Antônio do Amparo</item>
+        <item>Santo Antônio do Aracanguá</item>
+        <item>Santo Antônio do Aventureiro</item>
+        <item>Santo Antônio do Caiuá</item>
+        <item>Santo Antônio do Descoberto</item>
+        <item>Santo Antônio do Grama</item>
+        <item>Santo Antônio do Itambé</item>
+        <item>Santo Antônio do Içá</item>
+        <item>Santo Antônio do Jacinto</item>
+        <item>Santo Antônio do Jardim</item>
+        <item>Santo Antônio do Leste</item>
+        <item>Santo Antônio do Leverger</item>
+        <item>Santo Antônio do Monte</item>
+        <item>Santo Antônio do Palma</item>
+        <item>Santo Antônio do Paraíso</item>
+        <item>Santo Antônio do Pinhal</item>
+        <item>Santo Antônio do Planalto</item>
+        <item>Santo Antônio do Retiro</item>
+        <item>Santo Antônio do Rio Abaixo</item>
+        <item>Santo Antônio do Sudoeste</item>
+        <item>Santo Antônio do Tauá</item>
+        <item>Santo Antônio dos Lopes</item>
+        <item>Santo Antônio dos Milagres</item>
+        <item>Santo Augusto</item>
+        <item>Santo Cristo</item>
+        <item>Santo Estêvão</item>
+        <item>Santo Expedito</item>
+        <item>Santo Expedito do Sul</item>
+        <item>Santo Hipólito</item>
+        <item>Santo Inácio</item>
+        <item>Santo Inácio do Piauí</item>
+        <item>Santo Ângelo</item>
+        <item>Santos</item>
+        <item>Santos Dumont</item>
+        <item>Santópolis do Aguapeí</item>
+        <item>Sapeaçu</item>
+        <item>Sapezal</item>
+        <item>Sapiranga</item>
+        <item>Sapopema</item>
+        <item>Sapucaia</item>
+        <item>Sapucaia</item>
+        <item>Sapucaia do Sul</item>
+        <item>Sapucaí-Mirim</item>
+        <item>Sapé</item>
+        <item>Saquarema</item>
+        <item>Sarandi</item>
+        <item>Sarandi</item>
+        <item>Sarapuí</item>
+        <item>Sardoá</item>
+        <item>Sarutaiá</item>
+        <item>Sarzedo</item>
+        <item>Satuba</item>
+        <item>Satubinha</item>
+        <item>Saubara</item>
+        <item>Saudade do Iguaçu</item>
+        <item>Saudades</item>
+        <item>Saúde</item>
+        <item>Schroeder</item>
+        <item>Seabra</item>
+        <item>Seara</item>
+        <item>Sebastianópolis do Sul</item>
+        <item>Sebastião Barros</item>
+        <item>Sebastião Laranjeiras</item>
+        <item>Sebastião Leal</item>
+        <item>Seberi</item>
+        <item>Sede Nova</item>
+        <item>Segredo</item>
+        <item>Selbach</item>
+        <item>Selvíria</item>
+        <item>Sem-Peixe</item>
+        <item>Sena Madureira</item>
+        <item>Senador Alexandre Costa</item>
+        <item>Senador Amaral</item>
+        <item>Senador Canedo</item>
+        <item>Senador Cortes</item>
+        <item>Senador Elói de Souza</item>
+        <item>Senador Firmino</item>
+        <item>Senador Georgino Avelino</item>
+        <item>Senador Guiomard</item>
+        <item>Senador José Bento</item>
+        <item>Senador José Porfírio</item>
+        <item>Senador La Rocque</item>
+        <item>Senador Modestino Gonçalves</item>
+        <item>Senador Pompeu</item>
+        <item>Senador Rui Palmeira</item>
+        <item>Senador Salgado Filho</item>
+        <item>Senador Sá</item>
+        <item>Sengés</item>
+        <item>Senhor do Bonfim</item>
+        <item>Senhora de Oliveira</item>
+        <item>Senhora do Porto</item>
+        <item>Senhora dos Remédios</item>
+        <item>Sentinela do Sul</item>
+        <item>Sento Sé</item>
+        <item>Serafina Corrêa</item>
+        <item>Sericita</item>
+        <item>Seridó</item>
+        <item>Seringueiras</item>
+        <item>Seritinga</item>
+        <item>Seropédica</item>
+        <item>Serra</item>
+        <item>Serra Alta</item>
+        <item>Serra Azul</item>
+        <item>Serra Azul de Minas</item>
+        <item>Serra Branca</item>
+        <item>Serra Dourada</item>
+        <item>Serra Grande</item>
+        <item>Serra Negra</item>
+        <item>Serra Negra do Norte</item>
+        <item>Serra Nova Dourada</item>
+        <item>Serra Preta</item>
+        <item>Serra Redonda</item>
+        <item>Serra Talhada</item>
+        <item>Serra da Raiz</item>
+        <item>Serra da Saudade</item>
+        <item>Serra de São Bento</item>
+        <item>Serra do Mel</item>
+        <item>Serra do Navio</item>
+        <item>Serra do Ramalho</item>
+        <item>Serra do Salitre</item>
+        <item>Serra dos Aimorés</item>
+        <item>Serrana</item>
+        <item>Serrania</item>
+        <item>Serrano do Maranhão</item>
+        <item>Serranos</item>
+        <item>Serranópolis</item>
+        <item>Serranópolis de Minas</item>
+        <item>Serranópolis do Iguaçu</item>
+        <item>Serraria</item>
+        <item>Serrinha</item>
+        <item>Serrinha</item>
+        <item>Serrinha dos Pintos</item>
+        <item>Serrita</item>
+        <item>Serro</item>
+        <item>Serrolândia</item>
+        <item>Sertaneja</item>
+        <item>Sertanópolis</item>
+        <item>Sertânia</item>
+        <item>Sertão</item>
+        <item>Sertão Santana</item>
+        <item>Sertãozinho</item>
+        <item>Sertãozinho</item>
+        <item>Sete Barras</item>
+        <item>Sete Lagoas</item>
+        <item>Sete Quedas</item>
+        <item>Sete de Setembro</item>
+        <item>Setubinha</item>
+        <item>Severiano Melo</item>
+        <item>Severiano de Almeida</item>
+        <item>Severínia</item>
+        <item>Siderópolis</item>
+        <item>Sidrolândia</item>
+        <item>Sigefredo Pacheco</item>
+        <item>Silva Jardim</item>
+        <item>Silvanópolis</item>
+        <item>Silveira Martins</item>
+        <item>Silveiras</item>
+        <item>Silveirânia</item>
+        <item>Silves</item>
+        <item>Silvianópolis</item>
+        <item>Silvânia</item>
+        <item>Simolândia</item>
+        <item>Simonésia</item>
+        <item>Simplício Mendes</item>
+        <item>Simão Dias</item>
+        <item>Simão Pereira</item>
+        <item>Simões</item>
+        <item>Simões Filho</item>
+        <item>Sinimbu</item>
+        <item>Sinop</item>
+        <item>Siqueira Campos</item>
+        <item>Sirinhaém</item>
+        <item>Siriri</item>
+        <item>Sobradinho</item>
+        <item>Sobradinho</item>
+        <item>Sobrado</item>
+        <item>Sobral</item>
+        <item>Sobrália</item>
+        <item>Socorro</item>
+        <item>Socorro do Piauí</item>
+        <item>Soledade</item>
+        <item>Soledade</item>
+        <item>Soledade de Minas</item>
+        <item>Solidão</item>
+        <item>Solonópole</item>
+        <item>Solânea</item>
+        <item>Sombrio</item>
+        <item>Sonora</item>
+        <item>Sooretama</item>
+        <item>Sorocaba</item>
+        <item>Sorriso</item>
+        <item>Sossêgo</item>
+        <item>Soure</item>
+        <item>Sousa</item>
+        <item>Souto Soares</item>
+        <item>Sucupira</item>
+        <item>Sucupira do Norte</item>
+        <item>Sucupira do Riachão</item>
+        <item>Sud Mennucci</item>
+        <item>Sul Brasil</item>
+        <item>Sulina</item>
+        <item>Sumaré</item>
+        <item>Sumidouro</item>
+        <item>Sumé</item>
+        <item>Surubim</item>
+        <item>Sussuapara</item>
+        <item>Suzano</item>
+        <item>Suzanápolis</item>
+        <item>Sátiro Dias</item>
+        <item>São Benedito</item>
+        <item>São Benedito do Rio Preto</item>
+        <item>São Benedito do Sul</item>
+        <item>São Bentinho</item>
+        <item>São Bento</item>
+        <item>São Bento</item>
+        <item>São Bento Abade</item>
+        <item>São Bento do Norte</item>
+        <item>São Bento do Sapucaí</item>
+        <item>São Bento do Sul</item>
+        <item>São Bento do Tocantins</item>
+        <item>São Bento do Trairí</item>
+        <item>São Bento do Una</item>
+        <item>São Bernardino</item>
+        <item>São Bernardo</item>
+        <item>São Bernardo do Campo</item>
+        <item>São Bonifácio</item>
+        <item>São Borja</item>
+        <item>São Braz do Piauí</item>
+        <item>São Brás</item>
+        <item>São Brás do Suaçuí</item>
+        <item>São Caetano de Odivela</item>
+        <item>São Caetano do Sul</item>
+        <item>São Caitano</item>
+        <item>São Carlos</item>
+        <item>São Carlos</item>
+        <item>São Carlos do Ivaí</item>
+        <item>São Cristovão do Sul</item>
+        <item>São Cristóvão</item>
+        <item>São Desidério</item>
+        <item>São Domingos</item>
+        <item>São Domingos</item>
+        <item>São Domingos</item>
+        <item>São Domingos</item>
+        <item>São Domingos das Dores</item>
+        <item>São Domingos de Pombal</item>
+        <item>São Domingos do Araguaia</item>
+        <item>São Domingos do Azeitão</item>
+        <item>São Domingos do Capim</item>
+        <item>São Domingos do Cariri</item>
+        <item>São Domingos do Maranhão</item>
+        <item>São Domingos do Norte</item>
+        <item>São Domingos do Prata</item>
+        <item>São Domingos do Sul</item>
+        <item>São Felipe</item>
+        <item>São Felipe d\'Oeste</item>
+        <item>São Fernando</item>
+        <item>São Fidélis</item>
+        <item>São Francisco</item>
+        <item>São Francisco</item>
+        <item>São Francisco</item>
+        <item>São Francisco</item>
+        <item>São Francisco de Assis</item>
+        <item>São Francisco de Assis do Piauí</item>
+        <item>São Francisco de Goiás</item>
+        <item>São Francisco de Itabapoana</item>
+        <item>São Francisco de Paula</item>
+        <item>São Francisco de Paula</item>
+        <item>São Francisco de Sales</item>
+        <item>São Francisco do Brejão</item>
+        <item>São Francisco do Conde</item>
+        <item>São Francisco do Glória</item>
+        <item>São Francisco do Guaporé</item>
+        <item>São Francisco do Maranhão</item>
+        <item>São Francisco do Oeste</item>
+        <item>São Francisco do Pará</item>
+        <item>São Francisco do Piauí</item>
+        <item>São Francisco do Sul</item>
+        <item>São Félix</item>
+        <item>São Félix de Balsas</item>
+        <item>São Félix de Minas</item>
+        <item>São Félix do Araguaia</item>
+        <item>São Félix do Coribe</item>
+        <item>São Félix do Piauí</item>
+        <item>São Félix do Tocantins</item>
+        <item>São Félix do Xingu</item>
+        <item>São Gabriel</item>
+        <item>São Gabriel</item>
+        <item>São Gabriel da Cachoeira</item>
+        <item>São Gabriel da Palha</item>
+        <item>São Gabriel do Oeste</item>
+        <item>São Geraldo</item>
+        <item>São Geraldo da Piedade</item>
+        <item>São Geraldo do Araguaia</item>
+        <item>São Geraldo do Baixio</item>
+        <item>São Gonçalo</item>
+        <item>São Gonçalo do Abaeté</item>
+        <item>São Gonçalo do Amarante</item>
+        <item>São Gonçalo do Amarante</item>
+        <item>São Gonçalo do Gurguéia</item>
+        <item>São Gonçalo do Pará</item>
+        <item>São Gonçalo do Piauí</item>
+        <item>São Gonçalo do Rio Abaixo</item>
+        <item>São Gonçalo do Rio Preto</item>
+        <item>São Gonçalo do Sapucaí</item>
+        <item>São Gonçalo dos Campos</item>
+        <item>São Gotardo</item>
+        <item>São Jerônimo</item>
+        <item>São Jerônimo da Serra</item>
+        <item>São Joaquim</item>
+        <item>São Joaquim da Barra</item>
+        <item>São Joaquim de Bicas</item>
+        <item>São Joaquim do Monte</item>
+        <item>São Jorge</item>
+        <item>São Jorge d\'Oeste</item>
+        <item>São Jorge do Ivaí</item>
+        <item>São Jorge do Patrocínio</item>
+        <item>São José</item>
+        <item>São José da Barra</item>
+        <item>São José da Bela Vista</item>
+        <item>São José da Boa Vista</item>
+        <item>São José da Coroa Grande</item>
+        <item>São José da Lagoa Tapada</item>
+        <item>São José da Laje</item>
+        <item>São José da Lapa</item>
+        <item>São José da Safira</item>
+        <item>São José da Tapera</item>
+        <item>São José da Varginha</item>
+        <item>São José da Vitória</item>
+        <item>São José das Missões</item>
+        <item>São José das Palmeiras</item>
+        <item>São José de Caiana</item>
+        <item>São José de Espinharas</item>
+        <item>São José de Mipibu</item>
+        <item>São José de Piranhas</item>
+        <item>São José de Princesa</item>
+        <item>São José de Ribamar</item>
+        <item>São José de Ubá</item>
+        <item>São José do Alegre</item>
+        <item>São José do Barreiro</item>
+        <item>São José do Belmonte</item>
+        <item>São José do Bonfim</item>
+        <item>São José do Brejo do Cruz</item>
+        <item>São José do Calçado</item>
+        <item>São José do Campestre</item>
+        <item>São José do Cedro</item>
+        <item>São José do Cerrito</item>
+        <item>São José do Divino</item>
+        <item>São José do Divino</item>
+        <item>São José do Egito</item>
+        <item>São José do Goiabal</item>
+        <item>São José do Herval</item>
+        <item>São José do Hortêncio</item>
+        <item>São José do Inhacorá</item>
+        <item>São José do Jacuri</item>
+        <item>São José do Jacuípe</item>
+        <item>São José do Mantimento</item>
+        <item>São José do Norte</item>
+        <item>São José do Ouro</item>
+        <item>São José do Peixe</item>
+        <item>São José do Piauí</item>
+        <item>São José do Povo</item>
+        <item>São José do Rio Claro</item>
+        <item>São José do Rio Pardo</item>
+        <item>São José do Rio Preto</item>
+        <item>São José do Sabugi</item>
+        <item>São José do Seridó</item>
+        <item>São José do Sul</item>
+        <item>São José do Vale do Rio Preto</item>
+        <item>São José do Xingu</item>
+        <item>São José dos Ausentes</item>
+        <item>São José dos Basílios</item>
+        <item>São José dos Campos</item>
+        <item>São José dos Cordeiros</item>
+        <item>São José dos Pinhais</item>
+        <item>São José dos Quatro Marcos</item>
+        <item>São José dos Ramos</item>
+        <item>São João</item>
+        <item>São João</item>
+        <item>São João Batista</item>
+        <item>São João Batista</item>
+        <item>São João Batista do Glória</item>
+        <item>São João Evangelista</item>
+        <item>São João Nepomuceno</item>
+        <item>São João d\'Aliança</item>
+        <item>São João da Baliza</item>
+        <item>São João da Barra</item>
+        <item>São João da Boa Vista</item>
+        <item>São João da Canabrava</item>
+        <item>São João da Fronteira</item>
+        <item>São João da Lagoa</item>
+        <item>São João da Mata</item>
+        <item>São João da Paraúna</item>
+        <item>São João da Ponta</item>
+        <item>São João da Ponte</item>
+        <item>São João da Serra</item>
+        <item>São João da Urtiga</item>
+        <item>São João da Varjota</item>
+        <item>São João das Duas Pontes</item>
+        <item>São João das Missões</item>
+        <item>São João de Iracema</item>
+        <item>São João de Meriti</item>
+        <item>São João de Pirabas</item>
+        <item>São João del Rei</item>
+        <item>São João do Araguaia</item>
+        <item>São João do Arraial</item>
+        <item>São João do Caiuá</item>
+        <item>São João do Cariri</item>
+        <item>São João do Carú</item>
+        <item>São João do Itaperiú</item>
+        <item>São João do Ivaí</item>
+        <item>São João do Jaguaribe</item>
+        <item>São João do Manhuaçu</item>
+        <item>São João do Manteninha</item>
+        <item>São João do Oeste</item>
+        <item>São João do Oriente</item>
+        <item>São João do Pacuí</item>
+        <item>São João do Paraíso</item>
+        <item>São João do Paraíso</item>
+        <item>São João do Pau d\'Alho</item>
+        <item>São João do Piauí</item>
+        <item>São João do Polêsine</item>
+        <item>São João do Rio do Peixe</item>
+        <item>São João do Sabugi</item>
+        <item>São João do Soter</item>
+        <item>São João do Sul</item>
+        <item>São João do Tigre</item>
+        <item>São João do Triunfo</item>
+        <item>São João dos Patos</item>
+        <item>São Julião</item>
+        <item>São Leopoldo</item>
+        <item>São Lourenço</item>
+        <item>São Lourenço da Mata</item>
+        <item>São Lourenço da Serra</item>
+        <item>São Lourenço do Oeste</item>
+        <item>São Lourenço do Piauí</item>
+        <item>São Lourenço do Sul</item>
+        <item>São Ludgero</item>
+        <item>São Luis do Piauí</item>
+        <item>São Luiz</item>
+        <item>São Luiz Gonzaga</item>
+        <item>São Luís</item>
+        <item>São Luís Gonzaga do Maranhão</item>
+        <item>São Luís de Montes Belos</item>
+        <item>São Luís do Curu</item>
+        <item>São Luís do Paraitinga</item>
+        <item>São Luís do Quitunde</item>
+        <item>São Luíz do Norte</item>
+        <item>São Mamede</item>
+        <item>São Manoel do Paraná</item>
+        <item>São Manuel</item>
+        <item>São Marcos</item>
+        <item>São Martinho</item>
+        <item>São Martinho</item>
+        <item>São Martinho da Serra</item>
+        <item>São Mateus</item>
+        <item>São Mateus do Maranhão</item>
+        <item>São Mateus do Sul</item>
+        <item>São Miguel</item>
+        <item>São Miguel Arcanjo</item>
+        <item>São Miguel da Baixa Grande</item>
+        <item>São Miguel da Boa Vista</item>
+        <item>São Miguel das Matas</item>
+        <item>São Miguel das Missões</item>
+        <item>São Miguel de Taipu</item>
+        <item>São Miguel de Touros</item>
+        <item>São Miguel do Aleixo</item>
+        <item>São Miguel do Anta</item>
+        <item>São Miguel do Araguaia</item>
+        <item>São Miguel do Fidalgo</item>
+        <item>São Miguel do Guamá</item>
+        <item>São Miguel do Guaporé</item>
+        <item>São Miguel do Iguaçu</item>
+        <item>São Miguel do Oeste</item>
+        <item>São Miguel do Passa Quatro</item>
+        <item>São Miguel do Tapuio</item>
+        <item>São Miguel do Tocantins</item>
+        <item>São Miguel dos Campos</item>
+        <item>São Miguel dos Milagres</item>
+        <item>São Nicolau</item>
+        <item>São Patrício</item>
+        <item>São Paulo</item>
+        <item>São Paulo das Missões</item>
+        <item>São Paulo de Olivença</item>
+        <item>São Paulo do Potengi</item>
+        <item>São Pedro</item>
+        <item>São Pedro</item>
+        <item>São Pedro da Aldeia</item>
+        <item>São Pedro da Cipa</item>
+        <item>São Pedro da Serra</item>
+        <item>São Pedro da União</item>
+        <item>São Pedro da Água Branca</item>
+        <item>São Pedro das Missões</item>
+        <item>São Pedro de Alcântara</item>
+        <item>São Pedro do Butiá</item>
+        <item>São Pedro do Iguaçu</item>
+        <item>São Pedro do Ivaí</item>
+        <item>São Pedro do Paraná</item>
+        <item>São Pedro do Piauí</item>
+        <item>São Pedro do Suaçuí</item>
+        <item>São Pedro do Sul</item>
+        <item>São Pedro do Turvo</item>
+        <item>São Pedro dos Crentes</item>
+        <item>São Pedro dos Ferros</item>
+        <item>São Rafael</item>
+        <item>São Raimundo Nonato</item>
+        <item>São Raimundo das Mangabeiras</item>
+        <item>São Raimundo do Doca Bezerra</item>
+        <item>São Roberto</item>
+        <item>São Romão</item>
+        <item>São Roque</item>
+        <item>São Roque de Minas</item>
+        <item>São Roque do Canaã</item>
+        <item>São Salvador do Tocantins</item>
+        <item>São Sebastião</item>
+        <item>São Sebastião</item>
+        <item>São Sebastião da Amoreira</item>
+        <item>São Sebastião da Bela Vista</item>
+        <item>São Sebastião da Boa Vista</item>
+        <item>São Sebastião da Grama</item>
+        <item>São Sebastião da Vargem Alegre</item>
+        <item>São Sebastião de Lagoa de Roça</item>
+        <item>São Sebastião do Alto</item>
+        <item>São Sebastião do Anta</item>
+        <item>São Sebastião do Caí</item>
+        <item>São Sebastião do Maranhão</item>
+        <item>São Sebastião do Oeste</item>
+        <item>São Sebastião do Paraíso</item>
+        <item>São Sebastião do Passé</item>
+        <item>São Sebastião do Rio Preto</item>
+        <item>São Sebastião do Rio Verde</item>
+        <item>São Sebastião do Tocantins</item>
+        <item>São Sebastião do Uatumã</item>
+        <item>São Sebastião do Umbuzeiro</item>
+        <item>São Sepé</item>
+        <item>São Simão</item>
+        <item>São Simão</item>
+        <item>São Thomé das Letras</item>
+        <item>São Tiago</item>
+        <item>São Tomás de Aquino</item>
+        <item>São Tomé</item>
+        <item>São Tomé</item>
+        <item>São Valentim</item>
+        <item>São Valentim do Sul</item>
+        <item>São Valério da Natividade</item>
+        <item>São Valério do Sul</item>
+        <item>São Vendelino</item>
+        <item>São Vicente</item>
+        <item>São Vicente</item>
+        <item>São Vicente Ferrer</item>
+        <item>São Vicente Ferrer</item>
+        <item>São Vicente de Minas</item>
+        <item>São Vicente do Sul</item>
+        <item>Sério</item>
+        <item>Sítio Novo</item>
+        <item>Sítio Novo</item>
+        <item>Sítio Novo do Tocantins</item>
+        <item>Sítio d\'Abadia</item>
+        <item>Sítio do Mato</item>
+        <item>Sítio do Quinto</item>
+        <item>Tabaporã</item>
+        <item>Tabapuã</item>
+        <item>Tabatinga</item>
+        <item>Tabatinga</item>
+        <item>Tabaí</item>
+        <item>Tabira</item>
+        <item>Tabocas do Brejo Velho</item>
+        <item>Taboleiro Grande</item>
+        <item>Taboão da Serra</item>
+        <item>Tabuleiro</item>
+        <item>Tabuleiro do Norte</item>
+        <item>Tacaimbó</item>
+        <item>Tacaratu</item>
+        <item>Taciba</item>
+        <item>Tacuru</item>
+        <item>Taguatinga</item>
+        <item>Taguaí</item>
+        <item>Taiaçu</item>
+        <item>Tailândia</item>
+        <item>Taiobeiras</item>
+        <item>Taipas do Tocantins</item>
+        <item>Taipu</item>
+        <item>Taió</item>
+        <item>Taiúva</item>
+        <item>Talismã</item>
+        <item>Tamandaré</item>
+        <item>Tamarana</item>
+        <item>Tambaú</item>
+        <item>Tamboara</item>
+        <item>Tamboril</item>
+        <item>Tamboril do Piauí</item>
+        <item>Tanabi</item>
+        <item>Tangará</item>
+        <item>Tangará</item>
+        <item>Tangará da Serra</item>
+        <item>Tanguá</item>
+        <item>Tanhaçu</item>
+        <item>Tanque Novo</item>
+        <item>Tanque d\'Arca</item>
+        <item>Tanque do Piauí</item>
+        <item>Tanquinho</item>
+        <item>Taparuba</item>
+        <item>Tapauá</item>
+        <item>Tapejara</item>
+        <item>Tapejara</item>
+        <item>Tapera</item>
+        <item>Taperoá</item>
+        <item>Taperoá</item>
+        <item>Tapes</item>
+        <item>Tapira</item>
+        <item>Tapira</item>
+        <item>Tapiramutá</item>
+        <item>Tapiratiba</item>
+        <item>Tapiraí</item>
+        <item>Tapiraí</item>
+        <item>Tapurah</item>
+        <item>Taquara</item>
+        <item>Taquaral</item>
+        <item>Taquaral de Goiás</item>
+        <item>Taquarana</item>
+        <item>Taquaraçu de Minas</item>
+        <item>Taquari</item>
+        <item>Taquaritinga</item>
+        <item>Taquaritinga do Norte</item>
+        <item>Taquarituba</item>
+        <item>Taquarivaí</item>
+        <item>Taquarussu</item>
+        <item>Taquaruçu do Sul</item>
+        <item>Tarabai</item>
+        <item>Tarauacá</item>
+        <item>Tarrafas</item>
+        <item>Tartarugalzinho</item>
+        <item>Tarumirim</item>
+        <item>Tarumã</item>
+        <item>Tasso Fragoso</item>
+        <item>Tatuí</item>
+        <item>Taubaté</item>
+        <item>Tauá</item>
+        <item>Tavares</item>
+        <item>Tavares</item>
+        <item>Tefé</item>
+        <item>Teixeira</item>
+        <item>Teixeira Soares</item>
+        <item>Teixeira de Freitas</item>
+        <item>Teixeiras</item>
+        <item>Teixeirópolis</item>
+        <item>Tejupá</item>
+        <item>Tejuçuoca</item>
+        <item>Telha</item>
+        <item>Telêmaco Borba</item>
+        <item>Tenente Ananias</item>
+        <item>Tenente Laurentino Cruz</item>
+        <item>Tenente Portela</item>
+        <item>Tenório</item>
+        <item>Teodoro Sampaio</item>
+        <item>Teodoro Sampaio</item>
+        <item>Teofilândia</item>
+        <item>Teolândia</item>
+        <item>Teotônio Vilela</item>
+        <item>Terenos</item>
+        <item>Teresina</item>
+        <item>Teresina de Goiás</item>
+        <item>Teresópolis</item>
+        <item>Terezinha</item>
+        <item>Terezópolis de Goiás</item>
+        <item>Terra Alta</item>
+        <item>Terra Boa</item>
+        <item>Terra Nova</item>
+        <item>Terra Nova</item>
+        <item>Terra Nova do Norte</item>
+        <item>Terra Rica</item>
+        <item>Terra Roxa</item>
+        <item>Terra Roxa</item>
+        <item>Terra Santa</item>
+        <item>Terra de Areia</item>
+        <item>Tesouro</item>
+        <item>Teutônia</item>
+        <item>Teófilo Otoni</item>
+        <item>Theobroma</item>
+        <item>Tianguá</item>
+        <item>Tibagi</item>
+        <item>Tibau</item>
+        <item>Tibau do Sul</item>
+        <item>Tietê</item>
+        <item>Tigrinhos</item>
+        <item>Tijucas</item>
+        <item>Tijucas do Sul</item>
+        <item>Timbaúba</item>
+        <item>Timbaúba dos Batistas</item>
+        <item>Timbiras</item>
+        <item>Timburi</item>
+        <item>Timbé do Sul</item>
+        <item>Timbó</item>
+        <item>Timbó Grande</item>
+        <item>Timon</item>
+        <item>Timóteo</item>
+        <item>Tio Hugo</item>
+        <item>Tiradentes</item>
+        <item>Tiradentes do Sul</item>
+        <item>Tiros</item>
+        <item>Tobias Barreto</item>
+        <item>Tocantins</item>
+        <item>Tocantinópolis</item>
+        <item>Tocantínia</item>
+        <item>Tocos do Moji</item>
+        <item>Toledo</item>
+        <item>Toledo</item>
+        <item>Tomar do Geru</item>
+        <item>Tomazina</item>
+        <item>Tombos</item>
+        <item>Tomé-Açu</item>
+        <item>Tonantins</item>
+        <item>Toritama</item>
+        <item>Torixoréu</item>
+        <item>Toropi</item>
+        <item>Torre de Pedra</item>
+        <item>Torres</item>
+        <item>Torrinha</item>
+        <item>Touros</item>
+        <item>Trabiju</item>
+        <item>Tracuateua</item>
+        <item>Tracunhaém</item>
+        <item>Traipu</item>
+        <item>Trairi</item>
+        <item>Trairão</item>
+        <item>Trajano de Morais</item>
+        <item>Tramandaí</item>
+        <item>Travesseiro</item>
+        <item>Tremedal</item>
+        <item>Tremembé</item>
+        <item>Treviso</item>
+        <item>Treze Tílias</item>
+        <item>Treze de Maio</item>
+        <item>Trindade</item>
+        <item>Trindade</item>
+        <item>Trindade do Sul</item>
+        <item>Triunfo</item>
+        <item>Triunfo</item>
+        <item>Triunfo</item>
+        <item>Triunfo Potiguar</item>
+        <item>Trizidela do Vale</item>
+        <item>Trombas</item>
+        <item>Trombudo Central</item>
+        <item>Três Arroios</item>
+        <item>Três Barras</item>
+        <item>Três Barras do Paraná</item>
+        <item>Três Cachoeiras</item>
+        <item>Três Corações</item>
+        <item>Três Coroas</item>
+        <item>Três Forquilhas</item>
+        <item>Três Fronteiras</item>
+        <item>Três Lagoas</item>
+        <item>Três Marias</item>
+        <item>Três Palmeiras</item>
+        <item>Três Passos</item>
+        <item>Três Pontas</item>
+        <item>Três Ranchos</item>
+        <item>Três Rios</item>
+        <item>Três de Maio</item>
+        <item>Tubarão</item>
+        <item>Tucano</item>
+        <item>Tucumã</item>
+        <item>Tucunduva</item>
+        <item>Tucuruí</item>
+        <item>Tufilândia</item>
+        <item>Tuiuti</item>
+        <item>Tumiritinga</item>
+        <item>Tunas</item>
+        <item>Tunas do Paraná</item>
+        <item>Tuneiras do Oeste</item>
+        <item>Tuntum</item>
+        <item>Tunápolis</item>
+        <item>Tupaciguara</item>
+        <item>Tupanatinga</item>
+        <item>Tupanci do Sul</item>
+        <item>Tupanciretã</item>
+        <item>Tupandi</item>
+        <item>Tuparendi</item>
+        <item>Tuparetama</item>
+        <item>Tupi Paulista</item>
+        <item>Tupirama</item>
+        <item>Tupiratins</item>
+        <item>Tupã</item>
+        <item>Tupãssi</item>
+        <item>Turiaçu</item>
+        <item>Turilândia</item>
+        <item>Turiúba</item>
+        <item>Turmalina</item>
+        <item>Turmalina</item>
+        <item>Tururu</item>
+        <item>Turuçu</item>
+        <item>Turvelândia</item>
+        <item>Turvo</item>
+        <item>Turvo</item>
+        <item>Turvolândia</item>
+        <item>Turvânia</item>
+        <item>Tutóia</item>
+        <item>Uarini</item>
+        <item>Uauá</item>
+        <item>Ubaitaba</item>
+        <item>Ubajara</item>
+        <item>Ubaporanga</item>
+        <item>Ubarana</item>
+        <item>Ubatuba</item>
+        <item>Ubatã</item>
+        <item>Ubaí</item>
+        <item>Ubaíra</item>
+        <item>Uberaba</item>
+        <item>Uberlândia</item>
+        <item>Ubirajara</item>
+        <item>Ubiratã</item>
+        <item>Ubiretama</item>
+        <item>Ubá</item>
+        <item>Uchoa</item>
+        <item>Uibaí</item>
+        <item>Uiramutã</item>
+        <item>Uirapuru</item>
+        <item>Uiraúna</item>
+        <item>Ulianópolis</item>
+        <item>Umari</item>
+        <item>Umarizal</item>
+        <item>Umbaúba</item>
+        <item>Umburanas</item>
+        <item>Umburatiba</item>
+        <item>Umbuzeiro</item>
+        <item>Umirim</item>
+        <item>Umuarama</item>
+        <item>Una</item>
+        <item>Unaí</item>
+        <item>Uniflor</item>
+        <item>Unistalda</item>
+        <item>União</item>
+        <item>União Paulista</item>
+        <item>União da Serra</item>
+        <item>União da Vitória</item>
+        <item>União de Minas</item>
+        <item>União do Oeste</item>
+        <item>União do Sul</item>
+        <item>União dos Palmares</item>
+        <item>Upanema</item>
+        <item>Urandi</item>
+        <item>Uraí</item>
+        <item>Urbano Santos</item>
+        <item>Uru</item>
+        <item>Uruana</item>
+        <item>Uruana de Minas</item>
+        <item>Uruará</item>
+        <item>Uruaçu</item>
+        <item>Urubici</item>
+        <item>Uruburetama</item>
+        <item>Urucará</item>
+        <item>Urucuia</item>
+        <item>Urucurituba</item>
+        <item>Urucânia</item>
+        <item>Uruguaiana</item>
+        <item>Uruoca</item>
+        <item>Urupema</item>
+        <item>Urupá</item>
+        <item>Urupês</item>
+        <item>Urussanga</item>
+        <item>Urutaí</item>
+        <item>Uruçuca</item>
+        <item>Uruçuí</item>
+        <item>Urânia</item>
+        <item>Utinga</item>
+        <item>Vacaria</item>
+        <item>Vale Real</item>
+        <item>Vale Verde</item>
+        <item>Vale de São Domingos</item>
+        <item>Vale do Anari</item>
+        <item>Vale do Paraíso</item>
+        <item>Vale do Sol</item>
+        <item>Valente</item>
+        <item>Valentim Gentil</item>
+        <item>Valença</item>
+        <item>Valença</item>
+        <item>Valença do Piauí</item>
+        <item>Valinhos</item>
+        <item>Valparaíso</item>
+        <item>Valparaíso de Goiás</item>
+        <item>Vanini</item>
+        <item>Vargem</item>
+        <item>Vargem</item>
+        <item>Vargem Alegre</item>
+        <item>Vargem Alta</item>
+        <item>Vargem Bonita</item>
+        <item>Vargem Bonita</item>
+        <item>Vargem Grande</item>
+        <item>Vargem Grande Paulista</item>
+        <item>Vargem Grande do Rio Pardo</item>
+        <item>Vargem Grande do Sul</item>
+        <item>Vargeão</item>
+        <item>Varginha</item>
+        <item>Varjota</item>
+        <item>Varjão</item>
+        <item>Varjão de Minas</item>
+        <item>Varre-Sai</item>
+        <item>Varzedo</item>
+        <item>Varzelândia</item>
+        <item>Vassouras</item>
+        <item>Vazante</item>
+        <item>Venda Nova do Imigrante</item>
+        <item>Venha-Ver</item>
+        <item>Ventania</item>
+        <item>Venturosa</item>
+        <item>Venâncio Aires</item>
+        <item>Vera</item>
+        <item>Vera Cruz</item>
+        <item>Vera Cruz</item>
+        <item>Vera Cruz</item>
+        <item>Vera Cruz</item>
+        <item>Vera Cruz do Oeste</item>
+        <item>Vera Mendes</item>
+        <item>Veranópolis</item>
+        <item>Verdejante</item>
+        <item>Verdelândia</item>
+        <item>Vereda</item>
+        <item>Veredinha</item>
+        <item>Vermelho Novo</item>
+        <item>Vertente do Lério</item>
+        <item>Vertentes</item>
+        <item>Verê</item>
+        <item>Veríssimo</item>
+        <item>Vespasiano</item>
+        <item>Vespasiano Correa</item>
+        <item>Viadutos</item>
+        <item>Viamão</item>
+        <item>Viana</item>
+        <item>Viana</item>
+        <item>Vianópolis</item>
+        <item>Vicente Dutra</item>
+        <item>Vicentina</item>
+        <item>Vicentinópolis</item>
+        <item>Victor Graeff</item>
+        <item>Vicência</item>
+        <item>Vidal Ramos</item>
+        <item>Videira</item>
+        <item>Vieiras</item>
+        <item>Vieirópolis</item>
+        <item>Vigia</item>
+        <item>Vila Alta</item>
+        <item>Vila Bela da Santíssima Trindade</item>
+        <item>Vila Boa</item>
+        <item>Vila Flor</item>
+        <item>Vila Flores</item>
+        <item>Vila Lângaro</item>
+        <item>Vila Maria</item>
+        <item>Vila Nova do Piauí</item>
+        <item>Vila Nova do Sul</item>
+        <item>Vila Nova dos Martírios</item>
+        <item>Vila Pavão</item>
+        <item>Vila Propício</item>
+        <item>Vila Rica</item>
+        <item>Vila Valério</item>
+        <item>Vila Velha</item>
+        <item>Vilhena</item>
+        <item>Vinhedo</item>
+        <item>Viradouro</item>
+        <item>Virgem da Lapa</item>
+        <item>Virginópolis</item>
+        <item>Virgolândia</item>
+        <item>Virgínia</item>
+        <item>Virmond</item>
+        <item>Visconde do Rio Branco</item>
+        <item>Viseu</item>
+        <item>Vista Alegre</item>
+        <item>Vista Alegre do Alto</item>
+        <item>Vista Alegre do Prata</item>
+        <item>Vista Gaúcha</item>
+        <item>Vista Serrana</item>
+        <item>Vitor Meireles</item>
+        <item>Vitorino</item>
+        <item>Vitorino Freire</item>
+        <item>Vitória</item>
+        <item>Vitória Brasil</item>
+        <item>Vitória da Conquista</item>
+        <item>Vitória das Missões</item>
+        <item>Vitória de Santo Antão</item>
+        <item>Vitória do Jari</item>
+        <item>Vitória do Mearim</item>
+        <item>Vitória do Xingu</item>
+        <item>Viçosa</item>
+        <item>Viçosa</item>
+        <item>Viçosa</item>
+        <item>Viçosa do Ceará</item>
+        <item>Volta Grande</item>
+        <item>Volta Redonda</item>
+        <item>Votorantim</item>
+        <item>Votuporanga</item>
+        <item>Várzea</item>
+        <item>Várzea</item>
+        <item>Várzea Alegre</item>
+        <item>Várzea Branca</item>
+        <item>Várzea Grande</item>
+        <item>Várzea Grande</item>
+        <item>Várzea Nova</item>
+        <item>Várzea Paulista</item>
+        <item>Várzea da Palma</item>
+        <item>Várzea da Roça</item>
+        <item>Várzea do Poço</item>
+        <item>Wagner</item>
+        <item>Wall Ferraz</item>
+        <item>Wanderley</item>
+        <item>Wanderlândia</item>
+        <item>Wenceslau Braz</item>
+        <item>Wenceslau Braz</item>
+        <item>Wenceslau Guimarães</item>
+        <item>Westfália</item>
+        <item>Witmarsum</item>
+        <item>Xambioá</item>
+        <item>Xambrê</item>
+        <item>Xangri-lá</item>
+        <item>Xanxerê</item>
+        <item>Xapuri</item>
+        <item>Xavantina</item>
+        <item>Xaxim</item>
+        <item>Xexéu</item>
+        <item>Xinguara</item>
+        <item>Xique-Xique</item>
+        <item>Zabelê</item>
+        <item>Zacarias</item>
+        <item>Zortéa</item>
+        <item>Zé Doca</item>
+    </string-array>
 </resources>

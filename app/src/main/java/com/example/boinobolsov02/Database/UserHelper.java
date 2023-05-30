@@ -1,6 +1,6 @@
 package com.example.boinobolsov02.Database;
 
-public class UserHelperClass {
+public class UserHelper {
 
     String fullname;
     String username;
@@ -10,9 +10,9 @@ public class UserHelperClass {
     String date;
     String gender;
 
-    public UserHelperClass(){}
+    public UserHelper(){}
 
-    public UserHelperClass(String fullname, String username, String email, String phoneNo, String password, String date, String gender) {
+    public UserHelper(String fullname, String username, String email, String phoneNo, String password, String date, String gender) {
         this.fullname = fullname;
         this.username = username;
         this.email = email;

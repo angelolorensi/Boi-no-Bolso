@@ -68,7 +68,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         });
 
         animateNavigationDrawer();
-
+        callAddListingScreen();
     }
 
     private void listingsRecycler(){
@@ -117,5 +117,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }
 
         return true;
+    }
+
+    void callAddListingScreen(){
+        addIcon.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), AddNewListing.class)));
     }
 }

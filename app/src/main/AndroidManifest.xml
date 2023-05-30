@@ -12,6 +12,9 @@
         android:theme="@style/Theme.BoiNoBolsoV02"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.AddNewListing"
+            android:exported="false" />
+        <activity
             android:name=".Activities.Home"
             android:exported="false" />
         <activity
@@ -51,6 +54,7 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
     </application>
 
 </manifest>

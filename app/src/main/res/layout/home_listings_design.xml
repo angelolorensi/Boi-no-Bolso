@@ -17,8 +17,8 @@
             android:id="@+id/listing_image"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/bois_angus"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/bois_angus" />
 
         <TextView
             android:id="@+id/listing_title"

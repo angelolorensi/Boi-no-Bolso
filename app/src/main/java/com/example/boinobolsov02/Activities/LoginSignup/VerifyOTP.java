@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.chaos.view.PinView;
-import com.example.boinobolsov02.Database.UserHelperClass;
+import com.example.boinobolsov02.Database.UserHelper;
 import com.example.boinobolsov02.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -144,7 +144,7 @@ public class VerifyOTP extends AppCompatActivity {
 
     private void storeNewUserData() {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
-        UserHelperClass addNewUser = new UserHelperClass(fullname, username, email, phoneNo, password, date, gender);
+        UserHelper addNewUser = new UserHelper(fullname, username, email, phoneNo, password, date, gender);
         reference.child(phoneNo).setValue(addNewUser);
         startActivity(new Intent(getApplicationContext(), Login.class));
     }
