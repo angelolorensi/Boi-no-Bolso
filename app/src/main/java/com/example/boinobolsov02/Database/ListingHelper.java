@@ -5,7 +5,9 @@ public class ListingHelper {
     String title;
     String livestockCategory;
     String animalAge;
-    Integer quantity;
+    String breed;
+    String price;
+    String quantity;
     String address;
     String neighborhood;
     String city;
@@ -13,12 +15,15 @@ public class ListingHelper {
     String state;
     Boolean allowSeparatedSell;
 
-    public ListingHelper(){}
+    public ListingHelper() {
+    }
 
-    public ListingHelper(String title, String livestockCategory, String animalAge, Integer quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell) {
+    public ListingHelper(String title, String livestockCategory, String animalAge, String breed, String price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell) {
         this.title = title;
         this.livestockCategory = livestockCategory;
         this.animalAge = animalAge;
+        this.breed = breed;
+        this.price = price;
         this.quantity = quantity;
         this.address = address;
         this.neighborhood = neighborhood;
@@ -52,11 +57,27 @@ public class ListingHelper {
         this.animalAge = animalAge;
     }
 
-    public Integer getQuantity() {
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 

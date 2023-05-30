@@ -20,6 +20,7 @@
         <item>Informações</item>
         <item>Localização</item>
         <item>Pagamento</item>
+        <item>Visualização</item>
     </array>
 
     <string name="app_name">Boi no Bolso V0.2</string>
@@ -107,6 +108,10 @@
     <string name="estado">Estado</string>
     <string name="permitir_venda_de_unidades_separadas">Permitir venda de unidades separadas</string>
     <string name="opcoes_de_venda">Opções de venda</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="digite_a_raca_dos_animais">Digite a raça dos animais :</string>
+    <string name="digite_a_raca_aqui">Digite a raça aqui</string>
+    <string name="preco_total">Preço total:</string>
 
     <string-array name="ufs">
         <item>Selecione um Estado</item>

@@ -181,11 +181,11 @@ public class Login extends AppCompatActivity {
         String _password = Objects.requireNonNull(password.getEditText()).getText().toString().trim();
 
         if (_phoneNumber.isEmpty()) {
-            phoneNo.setError("Phone number cannot be empty");
+            phoneNo.setError("Campo numero de telefone é obrigatório");
             phoneNo.requestFocus();
             return false;
         } else if (_password.isEmpty()) {
-            password.setError("Password cannot be empty");
+            password.setError("Campo senha é obrigatório");
             password.requestFocus();
             return false;
         } else {
