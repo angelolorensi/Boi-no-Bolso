@@ -1,8 +1,12 @@
 package com.example.boinobolsov02.Activities;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,17 +16,25 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.boinobolsov02.Database.ListingHelper;
 import com.example.boinobolsov02.R;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.shuhart.stepview.StepView;
 
+import java.io.File;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -30,15 +42,18 @@ public class AddNewListing extends AppCompatActivity {
 
     private int position = 0;
 
-    ImageView goBackBtn;
+    ImageView goBackBtn, listingImage, preVisImage;
+    Uri imageUri;
     StepView stepView;
     Spinner livestockTypeSpinner, maturitySpinner, stateSpinner;
     TextInputLayout title, breed, quantity, address, neighborhood, city, cep, price;
     Button nextBtn, finalizeBtn;
     SwitchMaterial allowSeparatedSell;
-    AutoCompleteTextView cityAutocomplete;
+    AutoCompleteTextView cityAutocomplete, breedAutocomplete;
     TextView preVisTitle, preVisBreed, preVisAge, preVisQuantity, preVisPrice;
     RelativeLayout newListingPageOne, newListingPageTwo, newListingPageThree, newListingPageFour;
+    FirebaseStorage storage;
+    StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,39 +61,16 @@ public class AddNewListing extends AppCompatActivity {
         setContentView(R.layout.activity_add_new_listing);
 
         //Hooks
-        goBackBtn = findViewById(R.id.new_listing_back_btn);
-        livestockTypeSpinner = findViewById(R.id.new_listing_livestockType_spinner);
-        maturitySpinner = findViewById(R.id.new_listing_maturity_spinner);
-        stepView = findViewById(R.id.step_view);
-        nextBtn = findViewById(R.id.new_listing_next_btn);
-        finalizeBtn = findViewById(R.id.new_listing_finalize_btn);
-        cityAutocomplete = findViewById(R.id.new_listing_city_autocomplete);
-        stateSpinner = findViewById(R.id.new_listing_state_spinner);
-        newListingPageOne = findViewById(R.id.new_listing_first_page);
-        newListingPageTwo = findViewById(R.id.new_listing_second_page);
-        newListingPageThree = findViewById(R.id.new_listing_third_page);
-        newListingPageFour = findViewById(R.id.new_listing_fourth_page);
-        title = findViewById(R.id.new_listing_title_input_layout);
-        breed = findViewById(R.id.new_listing_breed_input_layout);
-        quantity = findViewById(R.id.new_listing_quantity_input_layout);
-        address = findViewById(R.id.new_listing_adress_input_layout);
-        neighborhood = findViewById(R.id.new_listing_neighborhood_input_layout);
-        city = findViewById(R.id.new_listing_city_input_layout);
-        cep = findViewById(R.id.new_listing_city_cep_input_layout);
-        price = findViewById(R.id.new_listing_price_input_layout);
-        allowSeparatedSell = findViewById(R.id.new_listing_allow_separated_sell_switch);
-        preVisTitle = findViewById(R.id.new_listing_listing_title);
-        preVisBreed = findViewById(R.id.new_listing_listing_breed_txt);
-        preVisAge = findViewById(R.id.new_listing_listing_maturity_txt);
-        preVisQuantity = findViewById(R.id.new_listing_listing_quantity_txt);
-        preVisPrice = findViewById(R.id.new_listing_listing_price_txt);
+        hookElements();
 
         //Methods
+        choosePicture();
         spinners();
         goBackBtn();
         stepView();
         saveListing();
         setCityAutocomplete();
+        setBreedAutocomplete();
     }
 
     private void saveListing() {
@@ -101,11 +93,66 @@ public class AddNewListing extends AppCompatActivity {
 
             //Create listing object
             ListingHelper listingInfo = new ListingHelper(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell);
+            uploadPicture();
 
             //Save listing object in database
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(userPhone).child("listings");
             reference.child(listingId).setValue(listingInfo);
+
+            //redirect
+            startActivity(new Intent(getApplicationContext(), Home.class));
         });
+    }
+
+    private void choosePicture() {
+        listingImage.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setType("image/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            startActivityForResult(intent, 1);
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null){
+            imageUri = data.getData();
+            listingImage.setImageURI(imageUri);
+            preVisImage.setImageURI(imageUri);
+        }
+    }
+
+    private void uploadPicture() {
+
+        final ProgressDialog pd = new ProgressDialog(this);
+        pd.setTitle("Enviando imagem");
+
+        final String randomKey = UUID.randomUUID().toString();
+        StorageReference imageRef = storageReference.child("images/" + randomKey);
+
+        imageRef.putFile(imageUri)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        pd.dismiss();
+                        Toast.makeText(AddNewListing.this, "Anuncio salvo com sucesso", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        pd.dismiss();
+                        Toast.makeText(AddNewListing.this, "Falha ao enviar imagem", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+                        double progressPercent = (100.00 * snapshot.getBytesTransferred() / snapshot.getTotalByteCount());
+                        pd.setMessage("Progress: " + (int) progressPercent + "%");
+                    }
+                });
     }
 
     private void stepView() {
@@ -114,9 +161,9 @@ public class AddNewListing extends AppCompatActivity {
         nextBtn.setOnClickListener(view -> {
             switch (position) {
                 case 0: {
-//                    if (!validateTitle() | !validateLivestock() | !validateAnimalAge() | !validateQuantity() | !validateBreed() ) {
-//                        return;
-//                    }
+                    if (!validateTitle() | !validateLivestock() | !validateAnimalAge() | !validateQuantity() | !validateBreed() ) {
+                        return;
+                    }
 
                     newListingPageOne.setVisibility(View.GONE);
                     newListingPageTwo.setVisibility(View.VISIBLE);
@@ -126,9 +173,9 @@ public class AddNewListing extends AppCompatActivity {
                     break;
                 }
                 case 1: {
-//                    if (!validateAddress() | !validateNeighborhood() | !validateCity() | !validateCep() | !validateState()) {
-//                        return;
-//                    }
+                    if (!validateAddress() | !validateNeighborhood() | !validateCity() | !validateCep() | !validateState()) {
+                        return;
+                    }
 
                     newListingPageTwo.setVisibility(View.GONE);
                     newListingPageThree.setVisibility(View.VISIBLE);
@@ -138,9 +185,9 @@ public class AddNewListing extends AppCompatActivity {
                     break;
                 }
                 case 2: {
-//                    if (!validatePrice()) {
-//                        return;
-//                    }
+                    if (!validatePrice()) {
+                        return;
+                    }
 
                     newListingPageThree.setVisibility(View.GONE);
                     newListingPageFour.setVisibility(View.VISIBLE);
@@ -211,6 +258,13 @@ public class AddNewListing extends AppCompatActivity {
         String[] cities = getResources().getStringArray(R.array.cities_array);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, cities);
         cityAutocomplete.setAdapter(arrayAdapter);
+
+    }
+
+    private void setBreedAutocomplete() {
+        String[] breeds = getResources().getStringArray(R.array.breeds);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, breeds);
+        breedAutocomplete.setAdapter(arrayAdapter);
 
     }
 
@@ -363,6 +417,40 @@ public class AddNewListing extends AppCompatActivity {
             return false;
         } else return true;
 
+    }
+
+    private void hookElements(){
+        preVisImage = findViewById(R.id.new_listing_listing_image);
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
+        listingImage = findViewById(R.id.new_listing_image_select);
+        goBackBtn = findViewById(R.id.new_listing_back_btn);
+        livestockTypeSpinner = findViewById(R.id.new_listing_livestockType_spinner);
+        maturitySpinner = findViewById(R.id.new_listing_maturity_spinner);
+        stepView = findViewById(R.id.step_view);
+        nextBtn = findViewById(R.id.new_listing_next_btn);
+        finalizeBtn = findViewById(R.id.new_listing_finalize_btn);
+        cityAutocomplete = findViewById(R.id.new_listing_city_autocomplete);
+        breedAutocomplete = findViewById(R.id.new_listing_breed_autocomplete);
+        stateSpinner = findViewById(R.id.new_listing_state_spinner);
+        newListingPageOne = findViewById(R.id.new_listing_first_page);
+        newListingPageTwo = findViewById(R.id.new_listing_second_page);
+        newListingPageThree = findViewById(R.id.new_listing_third_page);
+        newListingPageFour = findViewById(R.id.new_listing_fourth_page);
+        title = findViewById(R.id.new_listing_title_input_layout);
+        breed = findViewById(R.id.new_listing_breed_input_layout);
+        quantity = findViewById(R.id.new_listing_quantity_input_layout);
+        address = findViewById(R.id.new_listing_adress_input_layout);
+        neighborhood = findViewById(R.id.new_listing_neighborhood_input_layout);
+        city = findViewById(R.id.new_listing_city_input_layout);
+        cep = findViewById(R.id.new_listing_city_cep_input_layout);
+        price = findViewById(R.id.new_listing_price_input_layout);
+        allowSeparatedSell = findViewById(R.id.new_listing_allow_separated_sell_switch);
+        preVisTitle = findViewById(R.id.new_listing_listing_title);
+        preVisBreed = findViewById(R.id.new_listing_listing_breed_txt);
+        preVisAge = findViewById(R.id.new_listing_listing_maturity_txt);
+        preVisQuantity = findViewById(R.id.new_listing_listing_quantity_txt);
+        preVisPrice = findViewById(R.id.new_listing_listing_price_txt);
     }
 
 }

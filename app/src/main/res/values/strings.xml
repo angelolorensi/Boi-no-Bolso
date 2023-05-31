@@ -113,6 +113,60 @@
     <string name="digite_a_raca_aqui">Digite a raça aqui</string>
     <string name="preco_total">Preço total:</string>
 
+    <string-array name="breeds">
+        <item>Angus</item>
+        <item>Nelore</item>
+        <item>Brahman</item>
+        <item>Brangus</item>
+        <item>Senepol</item>
+        <item>Hereford</item>
+        <item>Caracu</item>
+        <item>Charolês</item>
+        <item>Guzerá</item>
+        <item>Tabapuã</item>
+        <item>Simental</item>
+        <item>Limousin</item>
+        <item>Chianina</item>
+        <item>Devon</item>
+        <item>Belgian Blue</item>
+        <item>Wagyu</item>
+        <item>Corriedale</item>
+        <item>Romney Marsh</item>
+        <item>Border Leicester</item>
+        <item>Suffolk</item>
+        <item>Hampshire Down</item>
+        <item>Ile de France</item>
+        <item>Texel</item>
+        <item>Poll Dorset</item>
+        <item>Santa Inês</item>
+        <item>Morada Nova</item>
+        <item>Bergamácia</item>
+        <item>DUROC</item>
+        <item>PIETRAIN</item>
+        <item>HAMPSIRE</item>
+        <item>LANDRACE</item>
+        <item>LARGE WHITE</item>
+        <item>WESSEX</item>
+        <item>Piau</item>
+        <item>Mouro </item>
+        <item>Estrela</item>
+        <item>Nilo</item>
+        <item>Piratininga</item>
+        <item>Canastra</item>
+        <item>Appaloosa</item>
+        <item>Campolina</item>
+        <item>Bretão</item>
+        <item>Lusitano</item>
+        <item>Mangalarga</item>
+        <item>Mangalarga Machador</item>
+        <item>Nordestino</item>
+        <item>Pampa</item>
+        <item>Lusitano</item>
+        <item>Quarto de Milha</item>
+        <item>Akhal-Teke</item>
+        <item>Lusitano</item>
+    </string-array>
+
     <string-array name="ufs">
         <item>Selecione um Estado</item>
         <item>AC</item>

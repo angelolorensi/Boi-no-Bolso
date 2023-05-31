@@ -96,9 +96,9 @@
 
                 <ImageView
                     android:id="@+id/new_listing_image_select"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="140dp"
-                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
@@ -198,11 +198,13 @@
                     app:boxStrokeColor="@color/green"
                     app:boxStrokeWidth="2dp">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/new_listing_breed_input_edit_txt"
+                    <AutoCompleteTextView
+                        android:id="@+id/new_listing_breed_autocomplete"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text" />
+                        android:layout_height="55dp"
+                        android:completionThreshold="1"
+                        android:maxLines="1"
+                        android:padding="13dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -550,7 +552,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bois_angus" />
+                    android:src="@drawable/select_image_icon" />
 
                 <TextView
                     android:id="@+id/new_listing_listing_title"
