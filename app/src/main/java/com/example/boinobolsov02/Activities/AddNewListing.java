@@ -18,7 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.boinobolsov02.Database.ListingHelper;
+import com.example.boinobolsov02.Database.Listing;
 import com.example.boinobolsov02.R;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -34,7 +34,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.shuhart.stepview.StepView;
 
-import java.io.File;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -51,6 +50,7 @@ public class AddNewListing extends AppCompatActivity {
     SwitchMaterial allowSeparatedSell;
     AutoCompleteTextView cityAutocomplete, breedAutocomplete;
     TextView preVisTitle, preVisBreed, preVisAge, preVisQuantity, preVisPrice;
+    String imageName;
     RelativeLayout newListingPageOne, newListingPageTwo, newListingPageThree, newListingPageFour;
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -89,14 +89,15 @@ public class AddNewListing extends AppCompatActivity {
             String _cep = Objects.requireNonNull(cep.getEditText()).getText().toString();
             String _price = Objects.requireNonNull(price.getEditText()).getText().toString();
             Boolean _allowSeparatedSell = allowSeparatedSell.isChecked();
-            String listingId = UUID.randomUUID().toString();
+            String _imageName = imageName;
 
             //Create listing object
-            ListingHelper listingInfo = new ListingHelper(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell);
+            Listing listingInfo = new Listing(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell, _imageName);
             uploadPicture();
+            String listingId = imageName;
 
             //Save listing object in database
-            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(userPhone).child("listings");
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Listings");
             reference.child(listingId).setValue(listingInfo);
 
             //redirect
@@ -128,9 +129,12 @@ public class AddNewListing extends AppCompatActivity {
         final ProgressDialog pd = new ProgressDialog(this);
         pd.setTitle("Enviando imagem");
 
+        //set image name
         final String randomKey = UUID.randomUUID().toString();
+        imageName = randomKey;
         StorageReference imageRef = storageReference.child("images/" + randomKey);
 
+        //save image at firebase storage
         imageRef.putFile(imageUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -271,21 +275,15 @@ public class AddNewListing extends AppCompatActivity {
     private void spinners() {
 
         ArrayAdapter<CharSequence> breedSpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.breedSpinner, android.R.layout.simple_spinner_item);
-
         breedSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         livestockTypeSpinner.setAdapter(breedSpinnerAdapter);
 
         ArrayAdapter<CharSequence> maturitySpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.maturitySpinner, android.R.layout.simple_spinner_item);
-
         maturitySpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         maturitySpinner.setAdapter(maturitySpinnerAdapter);
 
         ArrayAdapter<CharSequence> stateSpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.ufs, android.R.layout.simple_spinner_item);
-
         stateSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         stateSpinner.setAdapter(stateSpinnerAdapter);
 
     }

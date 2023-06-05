@@ -18,6 +18,11 @@ import com.example.boinobolsov02.HelperClasses.Home.ListingsAdapter;
 import com.example.boinobolsov02.HelperClasses.Home.ListingsHelper;
 import com.example.boinobolsov02.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -31,6 +36,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     LinearLayout contentView;
     RecyclerView listingsRecycler;
     RecyclerView.Adapter adapter;
+    DatabaseReference database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,14 +83,36 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         listingsRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         ArrayList<ListingsHelper> listings = new ArrayList<>();
-
-        listings.add(new ListingsHelper(R.drawable.bois_angus, "Bois Angus", "Angus", "Pronto para Abate", "18 cabeças", "R$2000/cabeça"));
-        listings.add(new ListingsHelper(R.drawable.cavalo_quarto_de_milha, "Cavalo Quarto de Milha", "Quarto de Milha", "5 anos", "1 cabeça", "R$10000"));
-        listings.add(new ListingsHelper(R.drawable.ovelha_suffolk, "Ovelhas", "Suffolk", "Pronto para Abate", "6 cabeças", "R$600/cabeça"));
-        listings.add(new ListingsHelper(R.drawable.porco_landrace, "Porco", "Landrace", "Pronto para Abate", "5 cabeças", "R$300/cabeça"));
+        database = FirebaseDatabase.getInstance().getReference("Listings");
 
         adapter = new ListingsAdapter(listings);
         listingsRecycler.setAdapter(adapter);
+
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                    String _title = dataSnapshot.child("title").getValue(String.class);
+                    String _breed = dataSnapshot.child("breed").getValue(String.class);
+                    String _animalAge = dataSnapshot.child("animalAge").getValue(String.class);
+                    String _quantity = dataSnapshot.child("quantity").getValue(String.class);
+                    String _price = dataSnapshot.child("price").getValue(String.class);
+
+                    ListingsHelper listingsHelper = new ListingsHelper(_title, _breed, _animalAge, _quantity, _price);
+
+                    listings.add(listingsHelper);
+
+                }
+            adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
     private void animateNavigationDrawer() {

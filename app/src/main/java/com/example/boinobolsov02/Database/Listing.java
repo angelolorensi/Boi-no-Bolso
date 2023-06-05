@@ -1,6 +1,6 @@
 package com.example.boinobolsov02.Database;
 
-public class ListingHelper {
+public class Listing {
 
     String title;
     String livestockCategory;
@@ -14,11 +14,12 @@ public class ListingHelper {
     String cep;
     String state;
     Boolean allowSeparatedSell;
+    String imageName;
 
-    public ListingHelper() {
+    public Listing() {
     }
 
-    public ListingHelper(String title, String livestockCategory, String animalAge, String breed, String price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell) {
+    public Listing(String title, String livestockCategory, String animalAge, String breed, String price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageName) {
         this.title = title;
         this.livestockCategory = livestockCategory;
         this.animalAge = animalAge;
@@ -31,6 +32,7 @@ public class ListingHelper {
         this.cep = cep;
         this.state = state;
         this.allowSeparatedSell = allowSeparatedSell;
+        this.imageName = imageName;
     }
 
     public String getTitle() {
@@ -127,5 +129,13 @@ public class ListingHelper {
 
     public void setAllowSeparatedSell(Boolean allowSeparatedSell) {
         this.allowSeparatedSell = allowSeparatedSell;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 }

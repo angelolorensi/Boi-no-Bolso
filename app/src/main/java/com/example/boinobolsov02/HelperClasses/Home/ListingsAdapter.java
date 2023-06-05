@@ -33,7 +33,6 @@ public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.Listin
     public void onBindViewHolder(@NonNull ListingsViewHolder holder, int position) {
         ListingsHelper listingsHelper = listings.get(position);
 
-        holder.image.setImageResource(listingsHelper.getImage());
         holder.title.setText(listingsHelper.getTitle());
         holder.breed.setText(listingsHelper.getBreed());
         holder.maturity.setText(listingsHelper.getMaturity());
