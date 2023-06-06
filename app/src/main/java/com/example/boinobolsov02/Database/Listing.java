@@ -14,12 +14,13 @@ public class Listing {
     String cep;
     String state;
     Boolean allowSeparatedSell;
-    String imageName;
+    String imageUrl;
+    String ownerId;
 
     public Listing() {
     }
 
-    public Listing(String title, String livestockCategory, String animalAge, String breed, String price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageName) {
+    public Listing(String title, String livestockCategory, String animalAge, String breed, String price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId) {
         this.title = title;
         this.livestockCategory = livestockCategory;
         this.animalAge = animalAge;
@@ -32,7 +33,16 @@ public class Listing {
         this.cep = cep;
         this.state = state;
         this.allowSeparatedSell = allowSeparatedSell;
-        this.imageName = imageName;
+        this.imageUrl = imageUrl;
+        this.ownerId = ownerId;
+    }
+
+    public String getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
     }
 
     public String getTitle() {
@@ -131,11 +141,11 @@ public class Listing {
         this.allowSeparatedSell = allowSeparatedSell;
     }
 
-    public String getImageName() {
-        return imageName;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

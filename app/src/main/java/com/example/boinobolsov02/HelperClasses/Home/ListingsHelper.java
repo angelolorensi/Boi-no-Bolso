@@ -2,18 +2,27 @@ package com.example.boinobolsov02.HelperClasses.Home;
 
 public class ListingsHelper {
 
-    String title, breed, maturity, quantity, price;
+    String imageUrl, title, breed, maturity, quantity, price;
 
     public ListingsHelper(){
 
     }
 
-    public ListingsHelper( String title, String breed, String maturity, String quantity, String price) {
+    public ListingsHelper(String imageUrl, String title, String breed, String maturity, String quantity, String price) {
+        this.imageUrl = imageUrl;
         this.title = title;
         this.breed = breed;
         this.maturity = maturity;
         this.quantity = quantity;
         this.price = price;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getTitle() {

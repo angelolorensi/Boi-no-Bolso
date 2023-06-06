@@ -1,5 +1,6 @@
 package com.example.boinobolsov02.HelperClasses.Home;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.boinobolsov02.R;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -33,6 +37,7 @@ public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.Listin
     public void onBindViewHolder(@NonNull ListingsViewHolder holder, int position) {
         ListingsHelper listingsHelper = listings.get(position);
 
+        Glide.with(holder.itemView.getContext()).load(listingsHelper.getImageUrl()).into(holder.image);
         holder.title.setText(listingsHelper.getTitle());
         holder.breed.setText(listingsHelper.getBreed());
         holder.maturity.setText(listingsHelper.getMaturity());

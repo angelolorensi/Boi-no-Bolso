@@ -50,7 +50,6 @@ public class AddNewListing extends AppCompatActivity {
     SwitchMaterial allowSeparatedSell;
     AutoCompleteTextView cityAutocomplete, breedAutocomplete;
     TextView preVisTitle, preVisBreed, preVisAge, preVisQuantity, preVisPrice;
-    String imageName;
     RelativeLayout newListingPageOne, newListingPageTwo, newListingPageThree, newListingPageFour;
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -76,7 +75,7 @@ public class AddNewListing extends AppCompatActivity {
     private void saveListing() {
         finalizeBtn.setOnClickListener(view -> {
             //Get data from fields
-            String userPhone = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getPhoneNumber();
+            String _ownerId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getPhoneNumber();
             String _title = Objects.requireNonNull(title.getEditText()).getText().toString();
             String _breed = Objects.requireNonNull(breed.getEditText()).getText().toString();
             String _livestockCategory = livestockTypeSpinner.getSelectedItem().toString();
@@ -89,16 +88,11 @@ public class AddNewListing extends AppCompatActivity {
             String _cep = Objects.requireNonNull(cep.getEditText()).getText().toString();
             String _price = Objects.requireNonNull(price.getEditText()).getText().toString();
             Boolean _allowSeparatedSell = allowSeparatedSell.isChecked();
-            String _imageName = imageName;
+            String listingId = UUID.randomUUID().toString();
 
             //Create listing object
-            Listing listingInfo = new Listing(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell, _imageName);
-            uploadPicture();
-            String listingId = imageName;
-
-            //Save listing object in database
-            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Listings");
-            reference.child(listingId).setValue(listingInfo);
+            Listing listingInfo = new Listing(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell, " ", _ownerId);
+            uploadPictureAndSaveInDatabase(listingInfo, listingId);
 
             //redirect
             startActivity(new Intent(getApplicationContext(), Home.class));
@@ -124,14 +118,13 @@ public class AddNewListing extends AppCompatActivity {
         }
     }
 
-    private void uploadPicture() {
+    private void uploadPictureAndSaveInDatabase(Listing listing, String listingId) {
 
         final ProgressDialog pd = new ProgressDialog(this);
         pd.setTitle("Enviando imagem");
 
         //set image name
         final String randomKey = UUID.randomUUID().toString();
-        imageName = randomKey;
         StorageReference imageRef = storageReference.child("images/" + randomKey);
 
         //save image at firebase storage
@@ -139,6 +132,14 @@ public class AddNewListing extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                listing.setImageUrl(uri.toString());
+                                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Listings");
+                                reference.child(listingId).setValue(listing);
+                            }
+                        });
                         pd.dismiss();
                         Toast.makeText(AddNewListing.this, "Anuncio salvo com sucesso", Toast.LENGTH_SHORT).show();
                     }
