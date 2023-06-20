@@ -8,26 +8,24 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.boinobolsov02.Activities.Categories.CategoryListings;
 import com.example.boinobolsov02.HelperClasses.Home.ListingsAdapter;
 import com.example.boinobolsov02.HelperClasses.Home.ListingsHelper;
 import com.example.boinobolsov02.R;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -38,6 +36,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     ImageView menuIcon, addIcon;
+    RelativeLayout bovinosIcon, equinosIcon, suinosIcon, ovinosIcon;
     LinearLayout contentView;
     RecyclerView listingsRecycler;
     RecyclerView.Adapter adapter;
@@ -55,10 +54,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         menuIcon = findViewById(R.id.home_menu_icon);
         contentView = findViewById(R.id.home_content);
         listingsRecycler = findViewById(R.id.home_listings_recycler);
+        bovinosIcon = findViewById(R.id.bovinos_category_btn);
+        equinosIcon = findViewById(R.id.equinos_category_btn);
+        suinosIcon = findViewById(R.id.suinos_category_btn);
+        ovinosIcon = findViewById(R.id.ovinos_category_btn);
 
         //Methods
         navigationDrawer();
         listingsRecycler();
+        callCategoriesScreen();
     }
 
     private void navigationDrawer() {
@@ -115,10 +119,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(Home.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     private void animateNavigationDrawer() {
@@ -145,9 +148,31 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         switch (item.getItemId()){
 
             case R.id.nav_categories:
-                //CHANGE TO CATEGORIES CLASS LATER
+                startActivity(new Intent(getApplicationContext(), CategoryListings.class));
+                break;
+            case R.id.nav_home:
                 startActivity(new Intent(getApplicationContext(), Home.class));
-
+                break;
+            case R.id.nav_cow:
+                Intent intent = new Intent(getApplicationContext(), CategoryListings.class);
+                intent.putExtra("category", "Bovinos");
+                startActivity(intent);
+                break;
+            case R.id.nav_horse:
+                Intent intent2 = new Intent(getApplicationContext(), CategoryListings.class);
+                intent2.putExtra("category", "Equinos");
+                startActivity(intent2);
+                break;
+            case R.id.nav_pig:
+                Intent intent3 = new Intent(getApplicationContext(), CategoryListings.class);
+                intent3.putExtra("category", "Suínos");
+                startActivity(intent3);
+                break;
+            case R.id.nav_sheep:
+                Intent intent4 = new Intent(getApplicationContext(), CategoryListings.class);
+                intent4.putExtra("category", "Ovinos");
+                startActivity(intent4);
+                break;
         }
 
         return true;
@@ -155,5 +180,31 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     void callAddListingScreen(){
         addIcon.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), AddNewListing.class)));
+    }
+
+    void callCategoriesScreen(){
+        bovinosIcon.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), CategoryListings.class);
+            intent.putExtra("category", "Bovinos");
+            startActivity(intent);
+        });
+
+        equinosIcon.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), CategoryListings.class);
+            intent.putExtra("category", "Equinos");
+            startActivity(intent);
+        });
+
+        suinosIcon.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), CategoryListings.class);
+            intent.putExtra("category", "Suínos");
+            startActivity(intent);
+        });
+
+        ovinosIcon.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), CategoryListings.class);
+            intent.putExtra("category", "Ovinos");
+            startActivity(intent);
+        });
     }
 }

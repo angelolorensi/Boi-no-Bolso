@@ -41,19 +41,19 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_restaurants"
+                    android:id="@+id/nav_cow"
                     android:title="@string/bovinos_caps"
                     android:icon="@drawable/cow_icon"/>
                 <item
-                    android:id="@+id/nav_bank"
+                    android:id="@+id/nav_horse"
                     android:title="@string/equinos_caps"
                     android:icon="@drawable/horse_icon"/>
                 <item
-                    android:id="@+id/nav_education"
+                    android:id="@+id/nav_sheep"
                     android:title="@string/ovinos_caps"
                     android:icon="@drawable/sheep_icon"/>
                 <item
-                    android:id="@+id/nav_shops"
+                    android:id="@+id/nav_pig"
                     android:title="@string/suinos_caps"
                     android:icon="@drawable/pig_icon"/>
             </group>

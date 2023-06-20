@@ -104,6 +104,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/bovinos_category_btn"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:layout_margin="10dp"
@@ -132,6 +133,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/equinos_category_btn"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:layout_margin="10dp"
@@ -160,6 +162,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/suinos_category_btn"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:layout_margin="10dp"
@@ -188,6 +191,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
+                                android:id="@+id/ovinos_category_btn"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:layout_margin="10dp"

@@ -10,10 +10,10 @@
 
     <string-array name="breedSpinner">
         <item> </item>
-        <item>Bovino</item>
-        <item>Equino</item>
-        <item>Ovino</item>
-        <item>Suíno</item>
+        <item>Bovinos</item>
+        <item>Equinos</item>
+        <item>Ovinos</item>
+        <item>Suínos</item>
     </string-array>
 
     <array name="listingStepper">
@@ -112,6 +112,7 @@
     <string name="digite_a_raca_dos_animais">Digite a raça dos animais :</string>
     <string name="digite_a_raca_aqui">Digite a raça aqui</string>
     <string name="preco_total">Preço total:</string>
+    <string name="anuncios_de_bovinos">Anúncios de Bovinos</string>
 
     <string-array name="breeds">
         <item>Angus</item>

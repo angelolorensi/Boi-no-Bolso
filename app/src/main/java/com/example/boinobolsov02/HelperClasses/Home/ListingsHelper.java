@@ -4,9 +4,7 @@ public class ListingsHelper {
 
     String imageUrl, title, breed, maturity, quantity, price;
 
-    public ListingsHelper(){
-
-    }
+    public ListingsHelper(){}
 
     public ListingsHelper(String imageUrl, String title, String breed, String maturity, String quantity, String price) {
         this.imageUrl = imageUrl;
