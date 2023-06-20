@@ -113,6 +113,8 @@
     <string name="digite_a_raca_aqui">Digite a raça aqui</string>
     <string name="preco_total">Preço total:</string>
     <string name="anuncios_de_bovinos">Anúncios de Bovinos</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="no_content">No content</string>
 
     <string-array name="breeds">
         <item>Angus</item>

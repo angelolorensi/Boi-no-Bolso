@@ -130,11 +130,11 @@ public class Login extends AppCompatActivity {
                             progressBar.setVisibility(View.GONE);
                         } else {
                             progressBar.setVisibility(View.GONE);
-                            Toast.makeText(Login.this, "Password does not match!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Senha incorreta!", Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         progressBar.setVisibility(View.GONE);
-                        Toast.makeText(Login.this, "No such user exist!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "Usuario não existe!", Toast.LENGTH_SHORT).show();
                     }
                 }
 

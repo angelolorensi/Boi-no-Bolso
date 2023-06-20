@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.boinobolsov02.Activities.Categories.CategoryListings;
+import com.example.boinobolsov02.Activities.Profile.UserProfile;
 import com.example.boinobolsov02.HelperClasses.Home.ListingsAdapter;
 import com.example.boinobolsov02.HelperClasses.Home.ListingsHelper;
 import com.example.boinobolsov02.R;
@@ -172,6 +173,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 Intent intent4 = new Intent(getApplicationContext(), CategoryListings.class);
                 intent4.putExtra("category", "Ovinos");
                 startActivity(intent4);
+                break;
+            case R.id.nav_profile:
+                Intent intent5 = new Intent(getApplicationContext(), UserProfile.class);
+
+
+
+                startActivity(intent5);
                 break;
         }
 
