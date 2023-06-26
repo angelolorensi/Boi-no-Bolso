@@ -1,4 +1,4 @@
-package com.example.boinobolsov02.HelperClasses.Categories;
+package com.example.boinobolsov02.HelperClasses.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,15 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.boinobolsov02.HelperClasses.ListingsHelper;
 import com.example.boinobolsov02.R;
 
 import java.util.ArrayList;
 
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder> {
 
-    ArrayList<CategoriesHelper> listings;
+    ArrayList<ListingsHelper> listings;
 
-    public CategoriesAdapter(ArrayList<CategoriesHelper> listings){
+    public CategoriesAdapter(ArrayList<ListingsHelper> listings){
         this.listings = listings;
     }
 
@@ -32,7 +33,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
 
     @Override
     public void onBindViewHolder(@NonNull CategoriesViewHolder holder, int position) {
-        CategoriesHelper categoriesHelper = listings.get(position);
+        ListingsHelper categoriesHelper = listings.get(position);
 
         Glide.with(holder.itemView.getContext()).load(categoriesHelper.getImageUrl()).into(holder.image);
         holder.title.setText(categoriesHelper.getTitle());

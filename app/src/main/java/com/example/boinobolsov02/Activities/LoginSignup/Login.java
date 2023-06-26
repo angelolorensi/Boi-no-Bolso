@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.boinobolsov02.Activities.Home;
-import com.example.boinobolsov02.Database.SessionManager;
+import com.example.boinobolsov02.HelperClasses.SessionManager;
 import com.example.boinobolsov02.HelperClasses.CheckInternet;
 import com.example.boinobolsov02.R;
 import com.google.android.material.textfield.TextInputEditText;

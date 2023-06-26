@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="340dp"
+    android:layout_height="191dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="191dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/listing_image"
+            android:layout_width="128dp"
+            android:layout_height="122dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bois_angus" />
+
+        <TextView
+            android:id="@+id/listing_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/listing_image"
+            android:fontFamily="@font/muli_black"
+            android:text="@string/bois_angus"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="230dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/listing_title"
+            android:layout_marginStart="140dp"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/listing_info"
+            android:layout_width="194dp"
+            android:layout_height="123dp"
+            android:layout_below="@id/listing_title"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/listing_image">
+
+            <ImageView
+                android:id="@+id/dna_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/dna_icon" />
+
+            <TextView
+                android:id="@+id/listing_breed_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/dna_icon"
+                android:text="Angus"
+                android:textColor="@color/black"
+                android:layout_marginTop="3dp"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/maturity_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/dna_icon"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/baseline_access_time_24" />
+
+            <TextView
+                android:id="@+id/listing_maturity_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/listing_breed_txt"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="13dp"
+                android:layout_toEndOf="@id/maturity_icon"
+                android:text="Pronto para abate"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/listing_qnt_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/maturity_icon"
+                android:src="@drawable/cow_icon" />
+
+            <TextView
+                android:id="@+id/listing_quantity_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/listing_maturity_txt"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/listing_qnt_icon"
+                android:text="18 cabeças"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/price_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/listing_qnt_icon"
+                android:src="@drawable/baseline_attach_money_24" />
+
+
+            <TextView
+                android:id="@+id/listing_price_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/listing_quantity_txt"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/price_icon"
+                android:text="R$2000,00/cabeça"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

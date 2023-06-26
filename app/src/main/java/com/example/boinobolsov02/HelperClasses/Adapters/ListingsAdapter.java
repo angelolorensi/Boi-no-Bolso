@@ -1,6 +1,5 @@
-package com.example.boinobolsov02.HelperClasses.Home;
+package com.example.boinobolsov02.HelperClasses.Adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.boinobolsov02.HelperClasses.ListingsHelper;
 import com.example.boinobolsov02.R;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 

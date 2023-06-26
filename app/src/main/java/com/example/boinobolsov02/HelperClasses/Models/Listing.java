@@ -1,4 +1,4 @@
-package com.example.boinobolsov02.Database;
+package com.example.boinobolsov02.HelperClasses.Models;
 
 public class Listing {
 
@@ -16,11 +16,12 @@ public class Listing {
     Boolean allowSeparatedSell;
     String imageUrl;
     String ownerId;
+    Boolean sold;
 
     public Listing() {
     }
 
-    public Listing(String title, String livestockCategory, String animalAge, String breed, String price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId) {
+    public Listing(String title, String livestockCategory, String animalAge, String breed, String price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold) {
         this.title = title;
         this.livestockCategory = livestockCategory;
         this.animalAge = animalAge;
@@ -35,6 +36,15 @@ public class Listing {
         this.allowSeparatedSell = allowSeparatedSell;
         this.imageUrl = imageUrl;
         this.ownerId = ownerId;
+        this.sold = sold;
+    }
+
+    public Boolean getSold() {
+        return sold;
+    }
+
+    public void setSold(Boolean sold) {
+        this.sold = sold;
     }
 
     public String getOwnerId() {

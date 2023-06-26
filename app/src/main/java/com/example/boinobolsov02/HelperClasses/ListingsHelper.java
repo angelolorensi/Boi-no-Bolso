@@ -1,18 +1,28 @@
-package com.example.boinobolsov02.HelperClasses.Categories;
+package com.example.boinobolsov02.HelperClasses;
 
-public class CategoriesHelper {
+public class ListingsHelper {
 
     String imageUrl, title, breed, maturity, quantity, price;
+    Boolean sold;
 
-    public CategoriesHelper(){}
+    public ListingsHelper(){}
 
-    public CategoriesHelper(String imageUrl, String title, String breed, String maturity, String quantity, String price) {
+    public ListingsHelper(String imageUrl, String title, String breed, String maturity, String quantity, String price, Boolean sold) {
         this.imageUrl = imageUrl;
         this.title = title;
         this.breed = breed;
         this.maturity = maturity;
         this.quantity = quantity;
         this.price = price;
+        this.sold = sold;
+    }
+
+    public Boolean getSold() {
+        return sold;
+    }
+
+    public void setSold(Boolean sold) {
+        this.sold = sold;
     }
 
     public String getImageUrl() {

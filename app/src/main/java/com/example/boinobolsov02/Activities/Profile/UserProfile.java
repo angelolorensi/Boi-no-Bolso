@@ -8,18 +8,19 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.boinobolsov02.Activities.Home;
-import com.example.boinobolsov02.Activities.LoginSignup.Login;
-import com.example.boinobolsov02.Database.SessionManager;
+import com.example.boinobolsov02.HelperClasses.SessionManager;
 import com.example.boinobolsov02.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.Objects;
 
 public class UserProfile extends AppCompatActivity {
 
@@ -47,26 +48,26 @@ public class UserProfile extends AppCompatActivity {
 
         //Methods
         loadData();
-        setGoBackBtn();
+        setButtons();
     }
 
     void loadData(){
-        SessionManager sessionManager = new SessionManager(UserProfile.this, SessionManager.SESSION_USERSESSION);
-        String phone_ = sessionManager.getUserDetailsFromSession().get(sessionManager.KEY_PHONENUMBER);
+        String phone_ = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getPhoneNumber();
 
         database = FirebaseDatabase.getInstance().getReference("Users");
-        Query query = database.orderByChild(phone_).equalTo(phone_);
+        Query query = database.orderByChild("phoneNo").equalTo(phone_);
 
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+        query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    String fullname_ = dataSnapshot.child("fullname").getValue(String.class);
+                    String email_ = dataSnapshot.child("email").getValue(String.class);
 
-                String fullname_ = snapshot.child("fullname").getValue(String.class);
-                String email_ = snapshot.child("email").getValue(String.class);
-
-                email.setText(email_);
-                username.setText(fullname_);
-                phone.setText(phone_);
+                    email.setText(email_);
+                    username.setText(fullname_);
+                    phone.setText(phone_);
+                }
             }
 
             @Override
@@ -76,7 +77,11 @@ public class UserProfile extends AppCompatActivity {
         });
     }
 
-    void setGoBackBtn(){
+    void setButtons(){
         goBackBtn.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Home.class)));
+
+        listingsBtn.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), MyListings.class)));
+
+        salesBtn.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), MySales.class)));
     }
 }

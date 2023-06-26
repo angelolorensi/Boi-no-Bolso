@@ -1,4 +1,4 @@
-package com.example.boinobolsov02.Activities.Categories;
+package com.example.boinobolsov02.Activities.Profile;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,12 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.boinobolsov02.Activities.Home;
-import com.example.boinobolsov02.HelperClasses.Adapters.CategoriesAdapter;
+import com.example.boinobolsov02.HelperClasses.Adapters.MylistingsAdapter;
 import com.example.boinobolsov02.HelperClasses.ListingsHelper;
 import com.example.boinobolsov02.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,44 +21,44 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
-public class CategoryListings extends AppCompatActivity {
+public class MySales extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     DatabaseReference database;
-    TextView titleTxt;
     ImageView goBackBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category_listings);
+        setContentView(R.layout.activity_my_sales);
 
-        recyclerView = findViewById(R.id.categories_recycler);
-        titleTxt = findViewById(R.id.categories_title);
-        goBackBtn = findViewById(R.id.categories_back_btn);
-
-        String livestockCategory = getIntent().getStringExtra("category");
-        titleTxt.setText("Anúncios de " + livestockCategory);
+        recyclerView = findViewById(R.id.mysales_recycler);
+        goBackBtn = findViewById(R.id.mysales_back_btn);
 
         recyclerView();
         setGoBackBtn();
     }
 
-    private void recyclerView() {
-
+    void recyclerView(){
+        //recycler settings
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-        ArrayList<ListingsHelper> listings = new ArrayList<>();
+        //fetching data from database
         database = FirebaseDatabase.getInstance().getReference("Listings");
-        String livestockCategory_ = getIntent().getStringExtra("category");
-        Query query = database.orderByChild("livestockCategory").equalTo(livestockCategory_);
+        String userId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getPhoneNumber();
+        Query query = database.orderByChild("ownerId").equalTo(userId);
 
-        adapter = new CategoriesAdapter(listings);
+        //setting the adapter to the recycler
+        ArrayList<ListingsHelper> listings = new ArrayList<>();
+        adapter = new MylistingsAdapter(listings);
         recyclerView.setAdapter(adapter);
 
+        //attach a listener to retrieve the data
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -71,10 +70,14 @@ public class CategoryListings extends AppCompatActivity {
                     String _animalAge = dataSnapshot.child("animalAge").getValue(String.class);
                     String _quantity = dataSnapshot.child("quantity").getValue(String.class);
                     String _price = dataSnapshot.child("price").getValue(String.class);
+                    Boolean _sold = dataSnapshot.child("sold").getValue(Boolean.class);
 
-                    ListingsHelper categoriesHelper = new ListingsHelper(_imageUrl ,_title, _breed, _animalAge, _quantity, _price, false);
+                    ListingsHelper listingHelper = new ListingsHelper(_imageUrl ,_title, _breed, _animalAge, _quantity, _price, _sold);
 
-                    listings.add(categoriesHelper);
+                    if(listingHelper.getSold()){
+                        listings.add(listingHelper);
+                    }
+
                 }
                 adapter.notifyDataSetChanged();
             }
@@ -86,8 +89,7 @@ public class CategoryListings extends AppCompatActivity {
         });
     }
 
-    void setGoBackBtn(){
-        goBackBtn.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Home.class)));
+    void setGoBackBtn() {
+        goBackBtn.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), UserProfile.class)));
     }
-
 }

@@ -18,7 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.boinobolsov02.Database.Listing;
+import com.example.boinobolsov02.HelperClasses.Models.Listing;
 import com.example.boinobolsov02.R;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -91,7 +91,7 @@ public class AddNewListing extends AppCompatActivity {
             String listingId = UUID.randomUUID().toString();
 
             //Create listing object
-            Listing listingInfo = new Listing(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell, " ", _ownerId);
+            Listing listingInfo = new Listing(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell, " ", _ownerId, false);
             uploadPictureAndSaveInDatabase(listingInfo, listingId);
 
             //redirect

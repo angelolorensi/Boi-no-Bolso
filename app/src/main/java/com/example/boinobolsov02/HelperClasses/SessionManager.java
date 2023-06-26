@@ -1,4 +1,4 @@
-package com.example.boinobolsov02.Database;
+package com.example.boinobolsov02.HelperClasses;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -1,6 +1,6 @@
-package com.example.boinobolsov02.Database;
+package com.example.boinobolsov02.HelperClasses.Models;
 
-public class UserHelper {
+public class User {
 
     String fullname;
     String username;
@@ -10,9 +10,9 @@ public class UserHelper {
     String date;
     String gender;
 
-    public UserHelper(){}
+    public User(){}
 
-    public UserHelper(String fullname, String username, String email, String phoneNo, String password, String date, String gender) {
+    public User(String fullname, String username, String email, String phoneNo, String password, String date, String gender) {
         this.fullname = fullname;
         this.username = username;
         this.email = email;

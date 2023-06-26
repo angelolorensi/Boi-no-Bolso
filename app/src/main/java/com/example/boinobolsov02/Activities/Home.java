@@ -18,8 +18,8 @@ import android.widget.Toast;
 
 import com.example.boinobolsov02.Activities.Categories.CategoryListings;
 import com.example.boinobolsov02.Activities.Profile.UserProfile;
-import com.example.boinobolsov02.HelperClasses.Home.ListingsAdapter;
-import com.example.boinobolsov02.HelperClasses.Home.ListingsHelper;
+import com.example.boinobolsov02.HelperClasses.Adapters.ListingsAdapter;
+import com.example.boinobolsov02.HelperClasses.ListingsHelper;
 import com.example.boinobolsov02.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -110,7 +110,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     String _quantity = dataSnapshot.child("quantity").getValue(String.class);
                     String _price = dataSnapshot.child("price").getValue(String.class);
 
-                    ListingsHelper listingsHelper = new ListingsHelper(_imageUrl ,_title, _breed, _animalAge, _quantity, _price);
+                    ListingsHelper listingsHelper = new ListingsHelper(_imageUrl ,_title, _breed, _animalAge, _quantity, _price, false);
 
                     listings.add(listingsHelper);
 
