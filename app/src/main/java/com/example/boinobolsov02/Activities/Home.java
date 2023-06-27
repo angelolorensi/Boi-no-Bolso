@@ -20,6 +20,7 @@ import com.example.boinobolsov02.Activities.Categories.CategoryListings;
 import com.example.boinobolsov02.Activities.Profile.UserProfile;
 import com.example.boinobolsov02.HelperClasses.Adapters.ListingsAdapter;
 import com.example.boinobolsov02.HelperClasses.ListingsHelper;
+import com.example.boinobolsov02.HelperClasses.RecyclerViewInterface;
 import com.example.boinobolsov02.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -29,8 +30,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, RecyclerViewInterface {
 
     static final float END_SCALE = 0.7f;
 
@@ -42,6 +44,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     RecyclerView listingsRecycler;
     RecyclerView.Adapter adapter;
     DatabaseReference database;
+    ArrayList<ListingsHelper> listings = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,10 +95,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         listingsRecycler.setHasFixedSize(true);
         listingsRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-        ArrayList<ListingsHelper> listings = new ArrayList<>();
+
         database = FirebaseDatabase.getInstance().getReference("Listings");
 
-        adapter = new ListingsAdapter(listings);
+        adapter = new ListingsAdapter(listings, this);
         listingsRecycler.setAdapter(adapter);
 
         database.addValueEventListener(new ValueEventListener() {
@@ -214,5 +217,21 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             intent.putExtra("category", "Ovinos");
             startActivity(intent);
         });
+    }
+
+    @Override
+    public void onItemClick(int position) {
+
+        Intent intent = new Intent(getApplicationContext(), ProductPage.class);
+
+        intent.putExtra("breed", listings.get(position).getBreed());
+        intent.putExtra("quantity", listings.get(position).getQuantity());
+        intent.putExtra("price", listings.get(position).getPrice());
+        intent.putExtra("title", listings.get(position).getTitle());
+        intent.putExtra("maturity", listings.get(position).getMaturity());
+        intent.putExtra("imageUrl", listings.get(position).getImageUrl());
+
+        startActivity(intent);
+
     }
 }

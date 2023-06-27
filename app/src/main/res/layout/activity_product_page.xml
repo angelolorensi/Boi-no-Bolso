@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProductPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/product_page_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green">
+
+            <ImageView
+                android:id="@+id/product_page_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/botao_de_voltar"
+                android:padding="5dp"
+                android:src="@drawable/baseline_white_arrow_back_24"
+                android:transitionName="transition_back_arrow_btn" />
+
+            <TextView
+                android:id="@+id/product_page_listing_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/muli"
+                android:text="Bovinos"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/product_page_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/product_page_listing_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
+                android:includeFontPadding="false"
+                android:text="Bois angus"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/product_page_listing_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/product_page_listing_title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/muli"
+                android:includeFontPadding="false"
+                android:text="a 10km de você"
+                android:textSize="15sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/product_page_listing_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/product_page_image"
+                    android:layout_width="370dp"
+                    android:layout_height="280dp"
+                    android:layout_below="@id/product_page_listing_title"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/round_corners"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bois_angus" />
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/product_page_listing_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_page_listing_image"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/product_page_listing_info_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 12.400,00"
+                    android:textColor="@color/black"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/product_page_listing_info_payment_methods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_page_listing_info_price"
+                    android:text="Ver meios de pagamento"
+                    android:textColor="@color/teal_700"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/product_page_buy_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/product_page_listing_info"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Fechar negócio"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/white_rectangle"
+            android:elevation="30dp"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dna_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/dna_icon" />
+
+                <TextView
+                    android:id="@+id/listing_breed_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/dna_icon"
+                    android:text="Raça: "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/product_page_breed_txt_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/listing_breed_txt"
+                    android:text="XXXXXXX "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/maturity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/breed"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/development_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_access_time_24" />
+
+
+                <TextView
+                    android:id="@+id/listing_maturity_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/development_icon"
+                    android:text="Maturidade: "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/product_page_maturity_txt_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/listing_maturity_txt"
+                    android:text="XXXX"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maturity">
+
+                <ImageView
+                    android:id="@+id/listing_qnt_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/cow_icon" />
+
+                <TextView
+                    android:id="@+id/listing_quantity_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/listing_qnt_icon"
+                    android:text="Quantidade: "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/product_page_quantity_txt_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/listing_quantity_txt"
+                    android:text="XXXXXXX"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/allowSeparated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quantity">
+
+                <ImageView
+                    android:id="@+id/allowSeparated_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_black_ball_24" />
+
+                <TextView
+                    android:id="@+id/product_page_allowSeparated_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/allowSeparated_icon"
+                    android:text="Permite venda separada"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/allowSeparated">
+
+                <TextView
+                    android:id="@+id/description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Descrição"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/product_page_description_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/description_title"
+                    android:text="@string/descricao_de_venda_de_gado_ficticia" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

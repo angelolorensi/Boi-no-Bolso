@@ -11,23 +11,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.boinobolsov02.HelperClasses.ListingsHelper;
+import com.example.boinobolsov02.HelperClasses.RecyclerViewInterface;
 import com.example.boinobolsov02.R;
 
 import java.util.ArrayList;
 
 public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.ListingsViewHolder> {
 
+    private final RecyclerViewInterface recyclerViewInterface;
+
     ArrayList<ListingsHelper> listings;
 
-    public ListingsAdapter(ArrayList<ListingsHelper> listings){
+    public ListingsAdapter(ArrayList<ListingsHelper> listings, RecyclerViewInterface recyclerViewInterface){
         this.listings = listings;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
     @Override
     public ListingsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_listings_design, parent, false);
-        ListingsViewHolder listingsViewHolder = new ListingsViewHolder(view);
+        ListingsViewHolder listingsViewHolder = new ListingsViewHolder(view, recyclerViewInterface);
         return listingsViewHolder;
     }
 
@@ -54,7 +58,7 @@ public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.Listin
         ImageView image;
         TextView title, breed, maturity, quantity, price;
 
-        public ListingsViewHolder(@NonNull View itemView){
+        public ListingsViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface){
             super(itemView);
 
             //Hooks
@@ -64,6 +68,19 @@ public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.Listin
             maturity = itemView.findViewById(R.id.listing_maturity_txt);
             quantity = itemView.findViewById(R.id.listing_quantity_txt);
             price = itemView.findViewById(R.id.listing_price_txt);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(recyclerViewInterface != null){
+                        int pos = getBindingAdapterPosition();
+
+                        if(pos != RecyclerView.NO_POSITION){
+                            recyclerViewInterface.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
 
     }
