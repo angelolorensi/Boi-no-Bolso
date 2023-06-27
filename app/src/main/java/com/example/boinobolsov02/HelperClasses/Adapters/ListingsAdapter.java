@@ -14,6 +14,7 @@ import com.example.boinobolsov02.HelperClasses.ListingsHelper;
 import com.example.boinobolsov02.HelperClasses.RecyclerViewInterface;
 import com.example.boinobolsov02.R;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.ListingsViewHolder> {
@@ -44,7 +45,7 @@ public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.Listin
         holder.breed.setText(listingsHelper.getBreed());
         holder.maturity.setText(listingsHelper.getMaturity());
         holder.quantity.setText(listingsHelper.getQuantity());
-        holder.price.setText(listingsHelper.getPrice());
+        holder.price.setText(NumberFormat.getCurrencyInstance().format(listingsHelper.getPrice()));
 
     }
 

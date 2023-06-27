@@ -6,7 +6,7 @@ public class Listing {
     String livestockCategory;
     String animalAge;
     String breed;
-    String price;
+    Double price;
     String quantity;
     String address;
     String neighborhood;
@@ -21,7 +21,7 @@ public class Listing {
     public Listing() {
     }
 
-    public Listing(String title, String livestockCategory, String animalAge, String breed, String price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold) {
+    public Listing(String title, String livestockCategory, String animalAge, String breed, Double price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold) {
         this.title = title;
         this.livestockCategory = livestockCategory;
         this.animalAge = animalAge;
@@ -87,11 +87,11 @@ public class Listing {
         this.breed = breed;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

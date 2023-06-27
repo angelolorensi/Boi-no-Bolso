@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.example.boinobolsov02.HelperClasses.ListingsHelper;
 import com.example.boinobolsov02.R;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder> {
@@ -40,7 +41,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
         holder.breed.setText(categoriesHelper.getBreed());
         holder.maturity.setText(categoriesHelper.getMaturity());
         holder.quantity.setText(categoriesHelper.getQuantity());
-        holder.price.setText(categoriesHelper.getPrice());
+        holder.price.setText(NumberFormat.getCurrencyInstance().format(categoriesHelper.getPrice()));
 
     }
 

@@ -50,18 +50,15 @@ public class ProductPage extends AppCompatActivity {
 
     private void loadData(){
         String breed_ = getIntent().getStringExtra("breed");
-        String price_ = getIntent().getStringExtra("price");
+        Double price_ = getIntent().getDoubleExtra("price", 0);
         String maturity_ = getIntent().getStringExtra("maturity");
         String title_ = getIntent().getStringExtra("title");
         String quantity_ = getIntent().getStringExtra("quantity");
         String imageUrl_ = getIntent().getStringExtra("imageUrl");
 
         //format price
-        NumberFormat priceFormat = NumberFormat.getCurrencyInstance();
-        priceFormat.setMaximumFractionDigits(0);
-        priceFormat.setCurrency(Currency.getInstance("BRL"));
-        priceFormat.format(price_);
-        price.setText(price_);
+        String priceFormatted = NumberFormat.getCurrencyInstance().format(price_);
+        price.setText(priceFormatted);
 
         breed.setText(breed_);
         maturity.setText(maturity_);

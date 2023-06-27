@@ -86,7 +86,8 @@ public class AddNewListing extends AppCompatActivity {
             String _city = Objects.requireNonNull(city.getEditText()).getText().toString();
             String _state = stateSpinner.getSelectedItem().toString();
             String _cep = Objects.requireNonNull(cep.getEditText()).getText().toString();
-            String _price = Objects.requireNonNull(price.getEditText()).getText().toString();
+            String priceString = Objects.requireNonNull(price.getEditText()).getText().toString();
+            Double _price = Double.parseDouble(priceString);
             Boolean _allowSeparatedSell = allowSeparatedSell.isChecked();
             String listingId = UUID.randomUUID().toString();
 

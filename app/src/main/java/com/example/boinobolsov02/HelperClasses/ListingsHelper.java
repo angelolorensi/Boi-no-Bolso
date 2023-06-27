@@ -2,12 +2,13 @@ package com.example.boinobolsov02.HelperClasses;
 
 public class ListingsHelper {
 
-    String imageUrl, title, breed, maturity, quantity, price;
+    String imageUrl, title, breed, maturity, quantity;
+    Double price;
     Boolean sold;
 
     public ListingsHelper(){}
 
-    public ListingsHelper(String imageUrl, String title, String breed, String maturity, String quantity, String price, Boolean sold) {
+    public ListingsHelper(String imageUrl, String title, String breed, String maturity, String quantity, Double price, Boolean sold) {
         this.imageUrl = imageUrl;
         this.title = title;
         this.breed = breed;
@@ -65,11 +66,11 @@ public class ListingsHelper {
         this.quantity = quantity;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

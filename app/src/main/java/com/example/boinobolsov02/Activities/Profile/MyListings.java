@@ -68,7 +68,7 @@ public class MyListings extends AppCompatActivity {
                     String _breed = dataSnapshot.child("breed").getValue(String.class);
                     String _animalAge = dataSnapshot.child("animalAge").getValue(String.class);
                     String _quantity = dataSnapshot.child("quantity").getValue(String.class);
-                    String _price = dataSnapshot.child("price").getValue(String.class);
+                    Double _price = dataSnapshot.child("price").getValue(Double.class);
 
                     ListingsHelper mylistingsHelper = new ListingsHelper(_imageUrl ,_title, _breed, _animalAge, _quantity, _price, false);
 
