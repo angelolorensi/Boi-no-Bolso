@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.boinobolsov02.Activities.Home;
 import com.example.boinobolsov02.HelperClasses.Adapters.CategoriesAdapter;
-import com.example.boinobolsov02.HelperClasses.ListingsHelper;
+import com.example.boinobolsov02.HelperClasses.Models.Listing;
 import com.example.boinobolsov02.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -52,7 +52,7 @@ public class CategoryListings extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-        ArrayList<ListingsHelper> listings = new ArrayList<>();
+        ArrayList<Listing> listings = new ArrayList<>();
         database = FirebaseDatabase.getInstance().getReference("Listings");
         String livestockCategory_ = getIntent().getStringExtra("category");
         Query query = database.orderByChild("livestockCategory").equalTo(livestockCategory_);
@@ -68,11 +68,14 @@ public class CategoryListings extends AppCompatActivity {
                     String _imageUrl = dataSnapshot.child("imageUrl").getValue(String.class);
                     String _title = dataSnapshot.child("title").getValue(String.class);
                     String _breed = dataSnapshot.child("breed").getValue(String.class);
-                    String _animalAge = dataSnapshot.child("animalAge").getValue(String.class);
+                    String _maturity = dataSnapshot.child("maturity").getValue(String.class);
                     String _quantity = dataSnapshot.child("quantity").getValue(String.class);
                     Double _price = dataSnapshot.child("price").getValue(Double.class);
+                    String _livestockCategory = dataSnapshot.child("livestockCategory").getValue(String.class);
+                    Boolean _allowSeparatedSale = dataSnapshot.child("allowSeparatedSell").getValue(Boolean.class);
+                    String _ownerId = dataSnapshot.child("ownerId").getValue(String.class);
 
-                    ListingsHelper categoriesHelper = new ListingsHelper(_imageUrl ,_title, _breed, _animalAge, _quantity, _price, false);
+                    Listing categoriesHelper = new Listing(_title, _livestockCategory, _maturity, _breed, _price, _quantity, _allowSeparatedSale, _imageUrl, _ownerId,false);
 
                     listings.add(categoriesHelper);
                 }

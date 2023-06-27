@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.boinobolsov02.HelperClasses.ListingsHelper;
+import com.example.boinobolsov02.HelperClasses.Models.Listing;
 import com.example.boinobolsov02.R;
 
 import java.text.NumberFormat;
@@ -18,9 +18,9 @@ import java.util.ArrayList;
 
 public class MylistingsAdapter extends RecyclerView.Adapter<MylistingsAdapter.MylistingsViewHolder> {
 
-    ArrayList<ListingsHelper> listings;
+    ArrayList<Listing> listings;
 
-    public MylistingsAdapter(ArrayList<ListingsHelper> listings){
+    public MylistingsAdapter(ArrayList<Listing> listings){
         this.listings = listings;
     }
 
@@ -34,7 +34,7 @@ public class MylistingsAdapter extends RecyclerView.Adapter<MylistingsAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull MylistingsViewHolder holder, int position) {
-        ListingsHelper mylistingsHelper = listings.get(position);
+        Listing mylistingsHelper = listings.get(position);
 
         Glide.with(holder.itemView.getContext()).load(mylistingsHelper.getImageUrl()).into(holder.image);
         holder.title.setText(mylistingsHelper.getTitle());

@@ -4,7 +4,7 @@ public class Listing {
 
     String title;
     String livestockCategory;
-    String animalAge;
+    String maturity;
     String breed;
     Double price;
     String quantity;
@@ -21,10 +21,10 @@ public class Listing {
     public Listing() {
     }
 
-    public Listing(String title, String livestockCategory, String animalAge, String breed, Double price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold) {
+    public Listing(String title, String livestockCategory, String maturity, String breed, Double price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold) {
         this.title = title;
         this.livestockCategory = livestockCategory;
-        this.animalAge = animalAge;
+        this.maturity = maturity;
         this.breed = breed;
         this.price = price;
         this.quantity = quantity;
@@ -33,6 +33,19 @@ public class Listing {
         this.city = city;
         this.cep = cep;
         this.state = state;
+        this.allowSeparatedSell = allowSeparatedSell;
+        this.imageUrl = imageUrl;
+        this.ownerId = ownerId;
+        this.sold = sold;
+    }
+
+    public Listing(String title, String livestockCategory, String maturity, String breed, Double price, String quantity, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold){
+        this.title = title;
+        this.livestockCategory = livestockCategory;
+        this.maturity = maturity;
+        this.breed = breed;
+        this.price = price;
+        this.quantity = quantity;
         this.allowSeparatedSell = allowSeparatedSell;
         this.imageUrl = imageUrl;
         this.ownerId = ownerId;
@@ -71,12 +84,12 @@ public class Listing {
         this.livestockCategory = livestockCategory;
     }
 
-    public String getAnimalAge() {
-        return animalAge;
+    public String getMaturity() {
+        return maturity;
     }
 
-    public void setAnimalAge(String animalAge) {
-        this.animalAge = animalAge;
+    public void setMaturity(String maturity) {
+        this.maturity = maturity;
     }
 
     public String getBreed() {

@@ -220,7 +220,6 @@ public class AddNewListing extends AppCompatActivity {
         preVisAge.setText(_animalAge);
         preVisBreed.setText(_breed);
         preVisPrice.setText(_price);
-
     }
 
     private void goBackBtn() {

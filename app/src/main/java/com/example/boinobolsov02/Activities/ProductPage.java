@@ -49,12 +49,16 @@ public class ProductPage extends AppCompatActivity {
     }
 
     private void loadData(){
+        //get data from intent
         String breed_ = getIntent().getStringExtra("breed");
         Double price_ = getIntent().getDoubleExtra("price", 0);
         String maturity_ = getIntent().getStringExtra("maturity");
         String title_ = getIntent().getStringExtra("title");
         String quantity_ = getIntent().getStringExtra("quantity");
         String imageUrl_ = getIntent().getStringExtra("imageUrl");
+        Boolean allowSeparatedSale_ = getIntent().getBooleanExtra("allowSeparatedSale", false);
+        String livestockCategory_ = getIntent().getStringExtra("livestockCategory");
+
 
         //format price
         String priceFormatted = NumberFormat.getCurrencyInstance().format(price_);
@@ -64,7 +68,12 @@ public class ProductPage extends AppCompatActivity {
         maturity.setText(maturity_);
         listingTitle.setText(title_);
         quantity.setText(quantity_);
+        pageTitle.setText(livestockCategory_);
         Glide.with(this).load(imageUrl_).into(listingImage);
+
+        if (!allowSeparatedSale_){
+            allowSeparatedUnits.setText("Não permite venda de unidades separadas");
+        }
 
     }
 }

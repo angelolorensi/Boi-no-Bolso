@@ -19,7 +19,7 @@ import android.widget.Toast;
 import com.example.boinobolsov02.Activities.Categories.CategoryListings;
 import com.example.boinobolsov02.Activities.Profile.UserProfile;
 import com.example.boinobolsov02.HelperClasses.Adapters.ListingsAdapter;
-import com.example.boinobolsov02.HelperClasses.ListingsHelper;
+import com.example.boinobolsov02.HelperClasses.Models.Listing;
 import com.example.boinobolsov02.HelperClasses.RecyclerViewInterface;
 import com.example.boinobolsov02.R;
 import com.google.android.material.navigation.NavigationView;
@@ -30,7 +30,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, RecyclerViewInterface {
 
@@ -44,7 +43,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     RecyclerView listingsRecycler;
     RecyclerView.Adapter adapter;
     DatabaseReference database;
-    ArrayList<ListingsHelper> listings = new ArrayList<>();
+    ArrayList<Listing> listings = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,12 +108,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     String _imageUrl = dataSnapshot.child("imageUrl").getValue(String.class);
                     String _title = dataSnapshot.child("title").getValue(String.class);
                     String _breed = dataSnapshot.child("breed").getValue(String.class);
-                    String _animalAge = dataSnapshot.child("animalAge").getValue(String.class);
+                    String _maturity = dataSnapshot.child("maturity").getValue(String.class);
                     String _quantity = dataSnapshot.child("quantity").getValue(String.class);
                     Double _price = dataSnapshot.child("price").getValue(Double.class);
+                    String _livestockCategory = dataSnapshot.child("livestockCategory").getValue(String.class);
+                    Boolean _allowSeparatedSale = dataSnapshot.child("allowSeparatedSell").getValue(Boolean.class);
+                    String _ownerId = dataSnapshot.child("ownerId").getValue(String.class);
 
-
-                    ListingsHelper listingsHelper = new ListingsHelper(_imageUrl ,_title, _breed, _animalAge, _quantity, _price, false);
+                    Listing listingsHelper = new Listing(_title, _livestockCategory, _maturity, _breed, _price, _quantity, _allowSeparatedSale, _imageUrl, _ownerId,false);
 
                     listings.add(listingsHelper);
 
@@ -231,6 +232,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         intent.putExtra("title", listings.get(position).getTitle());
         intent.putExtra("maturity", listings.get(position).getMaturity());
         intent.putExtra("imageUrl", listings.get(position).getImageUrl());
+        intent.putExtra("allowSeparatedSale", listings.get(position).getAllowSeparatedSell());
+        intent.putExtra("livestockCategory", listings.get(position).getLivestockCategory());
 
         startActivity(intent);
 
