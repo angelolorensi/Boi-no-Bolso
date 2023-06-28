@@ -18,7 +18,7 @@ import java.util.Currency;
 public class ProductPage extends AppCompatActivity {
 
     ImageView goBackBtn, listingImage;
-    TextView pageTitle, listingTitle, distance, price, paymentMethodsBtn, breed, maturity, quantity, allowSeparatedUnits, listingDescription;
+    TextView pageTitle, listingTitle, location, price, paymentMethodsBtn, breed, maturity, quantity, allowSeparatedUnits, listingDescription;
     Button buyBtn;
 
     @Override
@@ -30,7 +30,7 @@ public class ProductPage extends AppCompatActivity {
         listingImage = findViewById(R.id.product_page_image);
         pageTitle = findViewById(R.id.product_page_listing_type);
         listingTitle = findViewById(R.id.product_page_listing_title);
-        distance = findViewById(R.id.product_page_listing_distance);
+        location = findViewById(R.id.product_page_listing_distance);
         paymentMethodsBtn = findViewById(R.id.product_page_listing_info_payment_methods);
         price = findViewById(R.id.product_page_listing_info_price);
         breed = findViewById(R.id.product_page_breed_txt_info);
@@ -56,8 +56,11 @@ public class ProductPage extends AppCompatActivity {
         String title_ = getIntent().getStringExtra("title");
         String quantity_ = getIntent().getStringExtra("quantity");
         String imageUrl_ = getIntent().getStringExtra("imageUrl");
+        String description_ = getIntent().getStringExtra("description");
         Boolean allowSeparatedSale_ = getIntent().getBooleanExtra("allowSeparatedSale", false);
         String livestockCategory_ = getIntent().getStringExtra("livestockCategory");
+        String city_ = getIntent().getStringExtra("city");
+        String state_ = getIntent().getStringExtra("state");
 
 
         //format price
@@ -69,6 +72,8 @@ public class ProductPage extends AppCompatActivity {
         listingTitle.setText(title_);
         quantity.setText(quantity_);
         pageTitle.setText(livestockCategory_);
+        listingDescription.setText(description_);
+        location.setText(city_ + ", " + state_);
         Glide.with(this).load(imageUrl_).into(listingImage);
 
         if (!allowSeparatedSale_){

@@ -29,7 +29,7 @@
         <activity
             android:name=".Activities.AddNewListing"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Activities.Home"
             android:exported="false" />

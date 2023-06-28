@@ -94,7 +94,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         listingsRecycler.setHasFixedSize(true);
         listingsRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-
         database = FirebaseDatabase.getInstance().getReference("Listings");
 
         adapter = new ListingsAdapter(listings, this);
@@ -110,12 +109,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     String _breed = dataSnapshot.child("breed").getValue(String.class);
                     String _maturity = dataSnapshot.child("maturity").getValue(String.class);
                     String _quantity = dataSnapshot.child("quantity").getValue(String.class);
+                    String _description = dataSnapshot.child("description").getValue(String.class);
                     Double _price = dataSnapshot.child("price").getValue(Double.class);
                     String _livestockCategory = dataSnapshot.child("livestockCategory").getValue(String.class);
                     Boolean _allowSeparatedSale = dataSnapshot.child("allowSeparatedSell").getValue(Boolean.class);
-                    String _ownerId = dataSnapshot.child("ownerId").getValue(String.class);
+                    String _city = dataSnapshot.child("city").getValue(String.class);
+                    String _state = dataSnapshot.child("state").getValue(String.class);
 
-                    Listing listingsHelper = new Listing(_title, _livestockCategory, _maturity, _breed, _price, _quantity, _allowSeparatedSale, _imageUrl, _ownerId,false);
+                    Listing listingsHelper = new Listing(_title, _livestockCategory, _maturity, _breed, _price, _quantity, _description, _city, _state, _allowSeparatedSale, _imageUrl ,false);
 
                     listings.add(listingsHelper);
 
@@ -223,7 +224,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public void onItemClick(int position) {
-
         Intent intent = new Intent(getApplicationContext(), ProductPage.class);
 
         intent.putExtra("breed", listings.get(position).getBreed());
@@ -232,10 +232,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         intent.putExtra("title", listings.get(position).getTitle());
         intent.putExtra("maturity", listings.get(position).getMaturity());
         intent.putExtra("imageUrl", listings.get(position).getImageUrl());
+        intent.putExtra("description", listings.get(position).getDescription());
         intent.putExtra("allowSeparatedSale", listings.get(position).getAllowSeparatedSell());
         intent.putExtra("livestockCategory", listings.get(position).getLivestockCategory());
+        intent.putExtra("city", listings.get(position).getCity());
+        intent.putExtra("state", listings.get(position).getState());
 
         startActivity(intent);
-
     }
 }

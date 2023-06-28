@@ -45,7 +45,7 @@ public class AddNewListing extends AppCompatActivity {
     Uri imageUri;
     StepView stepView;
     Spinner livestockTypeSpinner, maturitySpinner, stateSpinner;
-    TextInputLayout title, breed, quantity, address, neighborhood, city, cep, price;
+    TextInputLayout title, breed, quantity, address, neighborhood, city, cep, price, description;
     Button nextBtn, finalizeBtn;
     SwitchMaterial allowSeparatedSell;
     AutoCompleteTextView cityAutocomplete, breedAutocomplete;
@@ -81,6 +81,7 @@ public class AddNewListing extends AppCompatActivity {
             String _livestockCategory = livestockTypeSpinner.getSelectedItem().toString();
             String _animalAge = maturitySpinner.getSelectedItem().toString();
             String _quantity = Objects.requireNonNull(quantity.getEditText()).getText().toString();
+            String _description = Objects.requireNonNull(description.getEditText().getText().toString());
             String _address = Objects.requireNonNull(address.getEditText()).getText().toString();
             String _neighborhood = Objects.requireNonNull(neighborhood.getEditText()).getText().toString();
             String _city = Objects.requireNonNull(city.getEditText()).getText().toString();
@@ -92,7 +93,7 @@ public class AddNewListing extends AppCompatActivity {
             String listingId = UUID.randomUUID().toString();
 
             //Create listing object
-            Listing listingInfo = new Listing(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell, " ", _ownerId, false);
+            Listing listingInfo = new Listing(_title, _livestockCategory, _animalAge, _breed, _price, _quantity, _description, _address, _neighborhood, _city, _cep, _state, _allowSeparatedSell, " ", _ownerId, false);
             uploadPictureAndSaveInDatabase(listingInfo, listingId);
 
             //redirect
@@ -419,6 +420,7 @@ public class AddNewListing extends AppCompatActivity {
     }
 
     private void hookElements(){
+        description = findViewById(R.id.new_listing_description_input_layout);
         preVisImage = findViewById(R.id.new_listing_listing_image);
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();

@@ -8,6 +8,7 @@ public class Listing {
     String breed;
     Double price;
     String quantity;
+    String description;
     String address;
     String neighborhood;
     String city;
@@ -21,13 +22,14 @@ public class Listing {
     public Listing() {
     }
 
-    public Listing(String title, String livestockCategory, String maturity, String breed, Double price, String quantity, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold) {
+    public Listing(String title, String livestockCategory, String maturity, String breed, Double price, String quantity, String description, String address, String neighborhood, String city, String cep, String state, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold) {
         this.title = title;
         this.livestockCategory = livestockCategory;
         this.maturity = maturity;
         this.breed = breed;
         this.price = price;
         this.quantity = quantity;
+        this.description = description;
         this.address = address;
         this.neighborhood = neighborhood;
         this.city = city;
@@ -39,17 +41,27 @@ public class Listing {
         this.sold = sold;
     }
 
-    public Listing(String title, String livestockCategory, String maturity, String breed, Double price, String quantity, Boolean allowSeparatedSell, String imageUrl, String ownerId, Boolean sold){
+    public Listing(String title, String livestockCategory, String maturity, String breed, Double price, String quantity, String description, String city, String state, Boolean allowSeparatedSell, String imageUrl, Boolean sold){
         this.title = title;
         this.livestockCategory = livestockCategory;
         this.maturity = maturity;
         this.breed = breed;
         this.price = price;
+        this.city = city;
         this.quantity = quantity;
+        this.state = state;
+        this.description = description;
         this.allowSeparatedSell = allowSeparatedSell;
         this.imageUrl = imageUrl;
-        this.ownerId = ownerId;
         this.sold = sold;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Boolean getSold() {

@@ -55,7 +55,7 @@
 
             <TextView
                 android:id="@+id/product_page_listing_title"
-                android:layout_width="wrap_content"
+                android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/muli"
                 android:includeFontPadding="false"
@@ -66,11 +66,9 @@
 
             <TextView
                 android:id="@+id/product_page_listing_distance"
-                android:layout_width="wrap_content"
+                android:layout_width="85dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@id/product_page_listing_title"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/muli"
                 android:includeFontPadding="false"
                 android:text="xxxxxxxxxxx"
@@ -80,15 +78,15 @@
                 android:id="@+id/product_page_listing_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
                 android:elevation="10dp"
+                android:layout_below="@id/product_page_listing_title"
                 app:cardCornerRadius="10dp">
 
                 <ImageView
                     android:id="@+id/product_page_image"
                     android:layout_width="370dp"
                     android:layout_height="280dp"
-                    android:layout_below="@id/product_page_listing_title"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/round_corners"
                     android:scaleType="centerCrop"

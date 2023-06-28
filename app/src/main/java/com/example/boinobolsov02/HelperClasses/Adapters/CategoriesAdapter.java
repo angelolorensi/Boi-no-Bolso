@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.boinobolsov02.HelperClasses.Models.Listing;
+import com.example.boinobolsov02.HelperClasses.RecyclerViewInterface;
 import com.example.boinobolsov02.R;
 
 import java.text.NumberFormat;
@@ -18,17 +19,20 @@ import java.util.ArrayList;
 
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder> {
 
+    private final RecyclerViewInterface recyclerViewInterface;
+
     ArrayList<Listing> listings;
 
-    public CategoriesAdapter(ArrayList<Listing> listings){
+    public CategoriesAdapter(ArrayList<Listing> listings, RecyclerViewInterface recyclerViewInterface){
         this.listings = listings;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
     @Override
     public CategoriesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.categories_page_listings_design, parent, false);
-        CategoriesViewHolder categoriesViewHolder = new CategoriesViewHolder(view);
+        CategoriesViewHolder categoriesViewHolder = new CategoriesViewHolder(view, recyclerViewInterface);
         return categoriesViewHolder;
     }
 
@@ -55,7 +59,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
         ImageView image;
         TextView title, breed, maturity, quantity, price;
 
-        public CategoriesViewHolder(@NonNull View itemView){
+        public CategoriesViewHolder(@NonNull View itemView, RecyclerViewInterface recyclerViewInterface){
             super(itemView);
 
             //Hooks
@@ -65,6 +69,19 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
             maturity = itemView.findViewById(R.id.listing_maturity_txt);
             quantity = itemView.findViewById(R.id.listing_quantity_txt);
             price = itemView.findViewById(R.id.listing_price_txt);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(recyclerViewInterface != null){
+                        int pos = getBindingAdapterPosition();
+
+                        if(pos != RecyclerView.NO_POSITION){
+                            recyclerViewInterface.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
 
     }
