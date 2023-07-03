@@ -163,7 +163,7 @@ public class Login extends AppCompatActivity {
 
     void goToSignUpScreen() {
         signInBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), Signup1stClass.class);
+            Intent intent = new Intent(getApplicationContext(), Signup.class);
 
             Pair[] pairs = new Pair[1];
 

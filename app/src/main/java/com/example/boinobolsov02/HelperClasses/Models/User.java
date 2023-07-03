@@ -9,10 +9,11 @@ public class User {
     String password;
     String date;
     String gender;
+    String imageUrl;
 
     public User(){}
 
-    public User(String fullname, String username, String email, String phoneNo, String password, String date, String gender) {
+    public User(String fullname, String username, String email, String phoneNo, String password, String date, String gender, String imageUrl) {
         this.fullname = fullname;
         this.username = username;
         this.email = email;
@@ -20,6 +21,15 @@ public class User {
         this.password = password;
         this.date = date;
         this.gender = gender;
+        this.imageUrl = imageUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getFullname() {

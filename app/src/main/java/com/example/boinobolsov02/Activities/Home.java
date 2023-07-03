@@ -17,10 +17,12 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.boinobolsov02.Activities.Categories.CategoryListings;
+import com.example.boinobolsov02.Activities.LoginSignup.Login;
 import com.example.boinobolsov02.Activities.Profile.UserProfile;
 import com.example.boinobolsov02.HelperClasses.Adapters.ListingsAdapter;
 import com.example.boinobolsov02.HelperClasses.Models.Listing;
 import com.example.boinobolsov02.HelperClasses.RecyclerViewInterface;
+import com.example.boinobolsov02.HelperClasses.SessionManager;
 import com.example.boinobolsov02.R;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -182,10 +184,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
             case R.id.nav_profile:
                 Intent intent5 = new Intent(getApplicationContext(), UserProfile.class);
-
-
-
                 startActivity(intent5);
+                break;
+            case R.id.nav_logout:
+                SessionManager session = new SessionManager(Home.this, SessionManager.SESSION_USERSESSION);
+                SessionManager rememberMe = new SessionManager(Home.this, SessionManager.SESSION_REMEMBERME);
+                session.logoutUserFromSession();
+                rememberMe.logoutUserFromSession();
+                Intent intent6 = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent6);
                 break;
         }
 

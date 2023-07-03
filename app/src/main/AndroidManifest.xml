@@ -43,20 +43,13 @@
             android:name=".Activities.LoginSignup.ForgetPasswordSuccessScreen"
             android:exported="false" />
         <activity
-            android:name=".Activities.LoginSignup.VerifyOTP"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.LoginSignup.Signup2ndClass"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.LoginSignup.Signup1stClass"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.LoginSignup.ChooseRegistrationType"
-            android:exported="false" />
+            android:name=".Activities.LoginSignup.Signup"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Activities.LoginSignup.Login"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Activities.WelcomeScreen.SplashScreen"
             android:exported="true">

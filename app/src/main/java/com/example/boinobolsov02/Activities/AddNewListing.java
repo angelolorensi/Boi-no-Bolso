@@ -127,7 +127,7 @@ public class AddNewListing extends AppCompatActivity {
 
         //set image name
         final String randomKey = UUID.randomUUID().toString();
-        StorageReference imageRef = storageReference.child("images/" + randomKey);
+        StorageReference imageRef = storageReference.child("images/ListingsImages/" + randomKey);
 
         //save image at firebase storage
         imageRef.putFile(imageUri)

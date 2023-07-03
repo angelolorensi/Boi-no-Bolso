@@ -1,0 +1,469 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginSignup.Signup"
+    android:transitionName="transition_signup_first_class">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/signup_part1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:padding="30dp">
+
+            <ImageView
+                android:id="@+id/signup_back_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:transitionName="transition_back_arrow_btn"
+                android:contentDescription="@string/botao_de_voltar" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/signup_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_black"
+                    android:text="@string/criar_nconta"
+                    android:textAllCaps="true"
+                    android:textColor="@color/mainColor"
+                    android:textSize="50sp"
+                    android:transitionName="transition_title_text"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/signup_1nd_class_logo_image"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/logo"
+                    android:layout_alignParentEnd="true"
+                    android:transitionName="transition_logo"
+                    android:contentDescription="@string/logo_boi_no_bolso" />
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signup_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/signup_image_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/selecione_sua_imagem_de_perfil"
+                android:textColor="@color/green"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/signup_image_text"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/signup_part1_image_select"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/select_profile_image_icon"
+                android:background="@drawable/white_circle"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_part1_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nome_completo"
+                app:startIconDrawable="@drawable/baseline_pencil_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/black"
+                android:textColorHint="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:boxStrokeWidthFocused="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_part1_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nome_de_usuario"
+                app:startIconDrawable="@drawable/baseline_person_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/black"
+                android:textColorHint="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:boxStrokeWidthFocused="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_part1_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                app:startIconDrawable="@drawable/baseline_email_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/black"
+                android:textColorHint="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:boxStrokeWidthFocused="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_part1_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/senha"
+                app:startIconDrawable="@drawable/baseline_password_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/black"
+                android:textColorHint="@color/black"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/black"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/mainColor"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxStrokeColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sexo"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <RadioGroup
+            android:id="@+id/signup_part1_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/masculino"
+                android:buttonTint="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/feminino"
+                android:buttonTint="@color/black"/>
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_de_nascimento"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <DatePicker
+            android:id="@+id/signup_part1_age_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:spinnersShown="true"/>
+
+        <Button
+            android:id="@+id/signup_part1_next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/proximo"
+            android:backgroundTint="@color/mainColor"
+            android:textColor="@color/white"
+            android:elevation="5dp"
+            android:transitionName="transition_next_btn"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signup_part2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="30dp">
+
+            <ImageView
+                android:id="@+id/signup_back_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:transitionName="transition_back_arrow_btn"
+                android:contentDescription="@string/botao_de_voltar" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/signup_title_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_black"
+                    android:text="@string/criar_nconta"
+                    android:textAllCaps="true"
+                    android:textColor="@color/mainColor"
+                    android:textSize="50sp"
+                    android:transitionName="transition_title_text"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:id="@+id/signup_class_logo_image2"
+                    android:layout_width="150dp"
+                    android:layout_height="140dp"
+                    android:src="@mipmap/logo"
+                    android:layout_alignParentEnd="true"
+                    android:transitionName="transition_logo"
+                    android:contentDescription="@string/logo_boi_no_bolso" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/insira_seu_numero_de_telefone"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/signup_part2_country_code_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_rememberLastSelection="true"
+                app:ccp_showFlag="true"
+                app:ccp_showNameCode="true"
+                app:ccp_showFullName="true"
+                android:background="@drawable/black_border"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/signup_part2_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/telefone"
+                app:startIconDrawable="@drawable/baseline_phone_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/black"
+                android:textColorHint="@color/black"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:boxStrokeWidthFocused="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/signup_part2_next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="18sp"
+                android:text="@string/proximo"
+                android:backgroundTint="@color/mainColor"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:elevation="5dp"
+                android:transitionName="transition_next_btn"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signup_part3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="558dp"
+                android:background="@drawable/backgroundphone">
+
+                <ImageView
+                    android:id="@+id/signup_back_btn3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/baseline_close_24"
+                    android:transitionName="transition_back_arrow_btn"
+                    android:contentDescription="@string/botao_de_voltar" />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="211dp"
+                    app:srcCompat="@drawable/logo_redondo"
+                    tools:layout_editor_absoluteX="-2dp"
+                    tools:layout_editor_absoluteY="0dp"
+                    android:contentDescription="@string/logo_boi_no_bolso" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/bungee"
+                    android:text="@string/verificar_numero_de_telefone"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="359dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/antic"
+                    android:text="@string/digite_o_codigo_de_verifica_o_caso_nao_seja_verificado_automaticamente"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-82dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/layout1">
+
+                <com.chaos.view.PinView
+                    android:id="@+id/signup_part3_pin_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:itemCount="6"
+                    app:itemWidth="50dp"
+                    app:itemHeight="50dp"
+                    app:lineColor="@color/black"
+                    android:itemBackground="@color/white"
+                    style="@style/PinWidget.PinView"
+                    android:inputType="number"
+                    android:cursorVisible="true"
+                    app:cursorColor="@color/black"
+                    app:hideLineWhenFilled="true"
+                    app:itemRadius="5dp"/>
+
+                <Button
+                    android:id="@+id/signup_part3_verify_code_btn"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/signup_part3_pin_view"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/verificar_codigo"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"/>
+
+                <ProgressBar
+                    android:id="@+id/signup_part3_progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signup_part3_verify_code_btn"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
