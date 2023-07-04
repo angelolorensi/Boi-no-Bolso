@@ -31,19 +31,31 @@
                 android:src="@drawable/baseline_white_arrow_back_24"
                 android:transitionName="transition_back_arrow_btn" />
 
-            <ImageView
-                android:id="@+id/profile_image"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_image_card_view"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/white_circle"
-                android:layout_marginTop="70dp"
-                android:layout_centerHorizontal="true"/>
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/select_profile_image_icon"
+                    android:background="@drawable/white_circle"/>
+
+            </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:id="@+id/profile_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/profile_image"
+                android:layout_below="@id/profile_image_card_view"
                 android:text="@string/no_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
@@ -69,9 +81,10 @@
         <RelativeLayout
             android:id="@+id/profile_info_layout"
             android:layout_width="300dp"
-            android:layout_height="400dp"
+            android:layout_height="290dp"
             android:background="@drawable/white_rectangle"
             android:layout_marginTop="-120dp"
+            android:layout_marginBottom="200dp"
             android:layout_gravity="center"
             android:elevation="30dp">
 
@@ -241,79 +254,9 @@
                     android:background="@color/black"
                     android:layout_marginTop="10dp"/>
 
-                <TextView
-                    android:id="@+id/profile_info_adress"
-                    android:layout_width="89dp"
-                    android:layout_height="wrap_content"
-                    android:text="Endereço:"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="30dp"
-                    android:layout_below="@id/profile_info_phoneNo"
-                    android:textColor="@color/green"/>
-
-                <TextView
-                    android:id="@+id/profile_info_adress_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="no content"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_toEndOf="@id/profile_info_adress"
-                    android:layout_below="@id/profile_info_phoneNo_info"
-                    android:layout_marginTop="30dp"
-                    android:textColor="@color/black"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@id/profile_info_adress"
-                    android:background="@color/black"
-                    android:layout_marginTop="30dp"/>
-
-                <TextView
-                    android:id="@+id/profile_info_cep"
-                    android:layout_width="182dp"
-                    android:layout_height="wrap_content"
-                    android:text="CEP:"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="40dp"
-                    android:layout_below="@id/profile_info_adress"
-                    android:textColor="@color/green"/>
-
-                <TextView
-                    android:id="@+id/profile_info_cep_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="no content"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="40dp"
-                    android:layout_below="@id/profile_info_adress"
-                    android:layout_toEndOf="@id/profile_info_cep"
-                    android:textColor="@color/black"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@id/profile_info_cep"
-                    android:background="@color/black"
-                    android:layout_marginTop="10dp"/>
-
             </RelativeLayout>
 
         </RelativeLayout>
-
-        <Button
-            android:id="@+id/profile_edit_profile_btn"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:text="@string/editar_perfil"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
 

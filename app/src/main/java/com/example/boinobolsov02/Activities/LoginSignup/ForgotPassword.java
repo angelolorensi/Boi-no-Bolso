@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chaos.view.PinView;
@@ -42,6 +43,7 @@ public class ForgotPassword extends AppCompatActivity {
     ImageView goBackBtn;
     TextInputLayout phoneNo;
     PinView pinFromUser;
+    TextView title;
     LinearLayout verifyOTPScreen, forgotPasswordScreen;
     CountryCodePicker countryCodePicker;
     Button nextBtn, verifyCodeBtn;
@@ -65,6 +67,12 @@ public class ForgotPassword extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         pinFromUser = findViewById(R.id.verify_otp_pin_view);
         verifyCodeBtn = findViewById(R.id.verify_otp_verify_code_btn);
+        title = findViewById(R.id.forgot_password_title);
+
+        String changePassword = getIntent().getStringExtra("changePasswordFromProfile");
+        if (changePassword != null){
+            title.setText("MUDAR MINHA SENHA");
+        }
 
         //Methods
         verifyPhoneNumber();
@@ -109,11 +117,6 @@ public class ForgotPassword extends AppCompatActivity {
                         verifyOTPScreen.setVisibility(View.VISIBLE);
 
                         sendVerificationCodeToUser(completePhoneNumber);
-
-//                        Intent intent = new Intent(getApplicationContext(), VerifyOTP.class);
-//                        intent.putExtra("phoneNo", _completePhoneNumber);
-//                        startActivity(intent);
-//                        finish();
                     } else {
                         progressBar.setVisibility(View.GONE);
                         phoneNo.setError("Numero de telefone não registrado");
