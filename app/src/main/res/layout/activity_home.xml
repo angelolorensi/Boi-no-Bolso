@@ -38,6 +38,7 @@
                     android:src="@drawable/baseline_menu_24" />
 
                 <RelativeLayout
+                    android:id="@+id/home_search_Bar"
                     android:layout_width="260dp"
                     android:layout_height="40dp"
                     android:layout_centerInParent="true"

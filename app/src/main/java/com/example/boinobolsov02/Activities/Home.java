@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.boinobolsov02.Activities.Categories.CategoryListings;
@@ -40,7 +41,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     ImageView menuIcon, addIcon;
-    RelativeLayout bovinosIcon, equinosIcon, suinosIcon, ovinosIcon;
+    RelativeLayout searchBar,bovinosIcon, equinosIcon, suinosIcon, ovinosIcon;
     LinearLayout contentView;
     RecyclerView listingsRecycler;
     RecyclerView.Adapter adapter;
@@ -53,6 +54,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         setContentView(R.layout.activity_home);
 
         //Hooks
+        searchBar = findViewById(R.id.home_search_Bar);
         navigationView = findViewById(R.id.home_navigation_view);
         drawerLayout = findViewById(R.id.home_drawer_layout);
         addIcon = findViewById(R.id.home_add_icon);
@@ -68,6 +70,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         navigationDrawer();
         listingsRecycler();
         callCategoriesScreen();
+        search();
+    }
+
+    private void search() {
+        searchBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), SearchResults.class));
+            }
+        });
     }
 
     private void navigationDrawer() {
