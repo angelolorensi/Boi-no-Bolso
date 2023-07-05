@@ -140,6 +140,7 @@ Nossas instalações estão localizadas em uma região privilegiada, cercada por
 
 📞 Entre em contato agora mesmo para obter mais informações e agendar uma visita. Aproveite essa chance de fortalecer sua criação e alcançar o sucesso no mercado pecuário! 📞</string>
     <string name="selecione_sua_imagem_de_perfil">Selecione sua imagem de perfil</string>
+    <string name="login_caps">LOGIN</string>
 
     <string-array name="breeds">
         <item>Angus</item>
