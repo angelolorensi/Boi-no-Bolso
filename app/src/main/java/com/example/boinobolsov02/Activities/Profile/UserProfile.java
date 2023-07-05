@@ -12,17 +12,15 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.boinobolsov02.Activities.Home;
 import com.example.boinobolsov02.Activities.LoginSignup.ForgotPassword;
+import com.example.boinobolsov02.Activities.NotLoggedIn;
 import com.example.boinobolsov02.HelperClasses.SessionManager;
 import com.example.boinobolsov02.R;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.Objects;
 
 public class UserProfile extends AppCompatActivity {
 
@@ -35,6 +33,7 @@ public class UserProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
 
         //Hooks
         goBackBtn = findViewById(R.id.profile_back_btn);
@@ -50,6 +49,18 @@ public class UserProfile extends AppCompatActivity {
         //Methods
         loadData();
         setButtons();
+        checkLoggedIn();
+    }
+
+    private void checkLoggedIn(){
+        SessionManager sessionManager = new SessionManager(this, SessionManager.SESSION_USERSESSION);
+        boolean isLogged = sessionManager.checkLogin();
+        if (!isLogged){
+            Intent intent = new Intent(getApplicationContext(), NotLoggedIn.class);
+            intent.putExtra("message", "faça login para ter acesso a pagina de perfil do usuario");
+            startActivity(intent);
+            finish();
+        }
     }
 
     void loadData(){

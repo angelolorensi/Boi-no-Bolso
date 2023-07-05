@@ -17,6 +17,10 @@
             <menu>
                 <group android:checkableBehavior="single">
                     <item
+                        android:id="@+id/nav_login"
+                        android:title="@string/login_caps"
+                        android:icon="@drawable/baseline_login_24"/>
+                    <item
                         android:id="@+id/nav_profile"
                         android:title="@string/minha_conta_caps"
                         android:icon="@drawable/baseline_person_24"/>

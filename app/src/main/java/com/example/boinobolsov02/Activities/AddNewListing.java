@@ -26,7 +26,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -59,6 +58,7 @@ public class AddNewListing extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_listing);
+        checkLoggedIn();
 
         //Hooks
         hookElements();
@@ -71,6 +71,18 @@ public class AddNewListing extends AppCompatActivity {
         saveListing();
         setCityAutocomplete();
         setBreedAutocomplete();
+
+    }
+
+    private void checkLoggedIn(){
+        SessionManager sessionManager = new SessionManager(this, SessionManager.SESSION_USERSESSION);
+        boolean isLogged = sessionManager.checkLogin();
+        if (!isLogged){
+            Intent intent = new Intent(getApplicationContext(), NotLoggedIn.class);
+            intent.putExtra("message", "faça login para ter acesso a pagina de adição de anuncios");
+            startActivity(intent);
+            finish();
+        }
     }
 
     private void saveListing() {
@@ -83,7 +95,7 @@ public class AddNewListing extends AppCompatActivity {
             String _livestockCategory = livestockTypeSpinner.getSelectedItem().toString();
             String _animalAge = maturitySpinner.getSelectedItem().toString();
             String _quantity = Objects.requireNonNull(quantity.getEditText()).getText().toString();
-            String _description = Objects.requireNonNull(description.getEditText().getText().toString());
+            String _description = Objects.requireNonNull(description.getEditText()).getText().toString();
             String _address = Objects.requireNonNull(address.getEditText()).getText().toString();
             String _neighborhood = Objects.requireNonNull(neighborhood.getEditText()).getText().toString();
             String _city = Objects.requireNonNull(city.getEditText()).getText().toString();
@@ -100,6 +112,7 @@ public class AddNewListing extends AppCompatActivity {
 
             //redirect
             startActivity(new Intent(getApplicationContext(), Home.class));
+            finish();
         });
     }
 
@@ -133,34 +146,22 @@ public class AddNewListing extends AppCompatActivity {
 
         //save image at firebase storage
         imageRef.putFile(imageUri)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                listing.setImageUrl(uri.toString());
-                                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Listings");
-                                reference.child(listingId).setValue(listing);
-                            }
-                        });
-                        pd.dismiss();
-                        Toast.makeText(AddNewListing.this, "Anuncio salvo com sucesso", Toast.LENGTH_SHORT).show();
-                    }
+                .addOnSuccessListener(taskSnapshot -> {
+                    imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
+                        listing.setImageUrl(uri.toString());
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Listings");
+                        reference.child(listingId).setValue(listing);
+                    });
+                    pd.dismiss();
+                    Toast.makeText(AddNewListing.this, "Anuncio salvo com sucesso", Toast.LENGTH_SHORT).show();
                 })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        pd.dismiss();
-                        Toast.makeText(AddNewListing.this, "Falha ao enviar imagem", Toast.LENGTH_SHORT).show();
-                    }
+                .addOnFailureListener(e -> {
+                    pd.dismiss();
+                    Toast.makeText(AddNewListing.this, "Falha ao enviar imagem", Toast.LENGTH_SHORT).show();
                 })
-                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                        double progressPercent = (100.00 * snapshot.getBytesTransferred() / snapshot.getTotalByteCount());
-                        pd.setMessage("Progress: " + (int) progressPercent + "%");
-                    }
+                .addOnProgressListener(snapshot -> {
+                    double progressPercent = (100.00 * snapshot.getBytesTransferred() / snapshot.getTotalByteCount());
+                    pd.setMessage("Progress: " + (int) progressPercent + "%");
                 });
     }
 
@@ -264,14 +265,14 @@ public class AddNewListing extends AppCompatActivity {
 
     private void setCityAutocomplete() {
         String[] cities = getResources().getStringArray(R.array.cities_array);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, cities);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cities);
         cityAutocomplete.setAdapter(arrayAdapter);
 
     }
 
     private void setBreedAutocomplete() {
         String[] breeds = getResources().getStringArray(R.array.breeds);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, breeds);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, breeds);
         breedAutocomplete.setAdapter(arrayAdapter);
 
     }

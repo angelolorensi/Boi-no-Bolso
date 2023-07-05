@@ -13,11 +13,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.boinobolsov02.Activities.LoginSignup.Login;
+import com.example.boinobolsov02.Activities.Home;
 import com.example.boinobolsov02.R;
 
 public class SplashScreen extends AppCompatActivity {
-
 
     private static int SPLASH_SCREEN = 5000;
 
@@ -47,7 +46,7 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(getApplicationContext(), Login.class);
+                Intent intent = new Intent(getApplicationContext(), Home.class);
                 Pair[] pairs = new Pair[2];
                 pairs[0] = new Pair<View,String>(image, "logo_image");
                 pairs[1] = new Pair<View,String>(logo, "logo_text");

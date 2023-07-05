@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.boinobolsov02.Activities.Categories.CategoryListings;
@@ -74,12 +73,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
     private void search() {
-        searchBar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), SearchResults.class));
-            }
-        });
+        searchBar.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), SearchResults.class)));
     }
 
     private void navigationDrawer() {
@@ -88,14 +82,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_home);
 
-        menuIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(drawerLayout.isDrawerVisible(GravityCompat.START)){
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                } else {
-                    drawerLayout.openDrawer(GravityCompat.START);
-                }
+        menuIcon.setOnClickListener(view -> {
+            if(drawerLayout.isDrawerVisible(GravityCompat.START)){
+                drawerLayout.closeDrawer(GravityCompat.START);
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
 
@@ -168,6 +159,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
 
+            case R.id.nav_login:
+                startActivity(new Intent(getApplicationContext(), Login.class));
+                break;
             case R.id.nav_home:
                 startActivity(new Intent(getApplicationContext(), Home.class));
                 break;

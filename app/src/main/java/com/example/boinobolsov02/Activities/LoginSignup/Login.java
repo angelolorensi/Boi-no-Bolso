@@ -56,6 +56,7 @@ public class Login extends AppCompatActivity {
         phoneNoEditTxt = findViewById(R.id.login_phone_number_edit_txt);
 
         //Methods
+        checkLoggedIn();
         goToForgotPasswordScreen();
         goToSignUpScreen();
         login();
@@ -66,6 +67,17 @@ public class Login extends AppCompatActivity {
             HashMap<String,String> rememberMeDetails = sessionManager.getRememberMeDetailsFromSession();
             phoneNoEditTxt.setText(rememberMeDetails.get(SessionManager.KEY_SESSIONPHONENUMBER));
             passwordEditTxt.setText(rememberMeDetails.get(SessionManager.KEY_SESSIONPASSWORD));
+        }
+    }
+
+    private void checkLoggedIn(){
+        SessionManager sessionManager = new SessionManager(this, SessionManager.SESSION_USERSESSION);
+        boolean isLogged = sessionManager.checkLogin();
+        if (isLogged){
+            Intent intent = new Intent(getApplicationContext(), Home.class);
+            Toast.makeText(this, "Você ja está logado", Toast.LENGTH_LONG).show();
+            startActivity(intent);
+            finish();
         }
     }
 
