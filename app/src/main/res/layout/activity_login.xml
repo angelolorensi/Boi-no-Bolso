@@ -139,6 +139,7 @@
                 android:layout_marginBottom="30dp"
                 android:text="@string/entrar"
                 android:textSize="18sp"
+                android:textColor="@color/white"
                 android:backgroundTint="@color/green"
                 android:transitionName="login_btn"/>
 

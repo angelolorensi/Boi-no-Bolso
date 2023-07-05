@@ -53,7 +53,8 @@ public class UserProfile extends AppCompatActivity {
     }
 
     void loadData(){
-        String phone_ = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getPhoneNumber();
+        SessionManager sessionManager = new SessionManager(this, SessionManager.SESSION_USERSESSION);
+        String phone_ = sessionManager.getUserDetailsFromSession().get(SessionManager.KEY_PHONENUMBER);
 
         database = FirebaseDatabase.getInstance().getReference("Users");
         Query query = database.orderByChild("phoneNo").equalTo(phone_);

@@ -13,6 +13,7 @@ import com.example.boinobolsov02.Activities.ProductPage;
 import com.example.boinobolsov02.HelperClasses.Adapters.MylistingsAdapter;
 import com.example.boinobolsov02.HelperClasses.Models.Listing;
 import com.example.boinobolsov02.HelperClasses.RecyclerViewInterface;
+import com.example.boinobolsov02.HelperClasses.SessionManager;
 import com.example.boinobolsov02.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -52,7 +53,8 @@ public class MySales extends AppCompatActivity implements RecyclerViewInterface 
 
         //fetching data from database
         database = FirebaseDatabase.getInstance().getReference("Listings");
-        String userId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getPhoneNumber();
+        SessionManager sessionManager = new SessionManager(this, SessionManager.SESSION_USERSESSION);
+        String userId = sessionManager.getUserDetailsFromSession().get(SessionManager.KEY_PHONENUMBER);
         Query query = database.orderByChild("ownerId").equalTo(userId);
 
         //setting the adapter to the recycler

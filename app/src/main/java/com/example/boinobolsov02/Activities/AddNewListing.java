@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.boinobolsov02.HelperClasses.Models.Listing;
+import com.example.boinobolsov02.HelperClasses.SessionManager;
 import com.example.boinobolsov02.R;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -75,7 +76,8 @@ public class AddNewListing extends AppCompatActivity {
     private void saveListing() {
         finalizeBtn.setOnClickListener(view -> {
             //Get data from fields
-            String _ownerId = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getPhoneNumber();
+            SessionManager sessionManager = new SessionManager(this, SessionManager.SESSION_USERSESSION);
+            String _ownerId = sessionManager.getUserDetailsFromSession().get(SessionManager.KEY_PHONENUMBER);
             String _title = Objects.requireNonNull(title.getEditText()).getText().toString();
             String _breed = Objects.requireNonNull(breed.getEditText()).getText().toString();
             String _livestockCategory = livestockTypeSpinner.getSelectedItem().toString();

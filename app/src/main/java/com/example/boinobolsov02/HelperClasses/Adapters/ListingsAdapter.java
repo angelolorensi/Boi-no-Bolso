@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.ListingsViewHolder> {
 
     private final RecyclerViewInterface recyclerViewInterface;
-
+    private final int limit = 5;
     ArrayList<Listing> listings;
 
     public ListingsAdapter(ArrayList<Listing> listings, RecyclerViewInterface recyclerViewInterface){
@@ -51,7 +51,13 @@ public class ListingsAdapter extends RecyclerView.Adapter<ListingsAdapter.Listin
 
     @Override
     public int getItemCount() {
-        return listings.size();
+        if(listings.size() > limit){
+            return limit;
+        }
+        else
+        {
+            return listings.size();
+        }
     }
 
     public static class ListingsViewHolder extends RecyclerView.ViewHolder{
